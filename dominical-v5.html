@@ -10,7 +10,8 @@
        ========================================== -->
   <link rel="stylesheet" href="biblioteca/vendor/leaflet.css" />
   <script src="biblioteca/vendor/leaflet.js"></script>
-  
+  <script src="https://unpkg.com/@maptiler/leaflet-maptilersdk@latest/leaflet-maptilersdk.umd.js"></script>
+
   <!-- ==========================================
        MARKER CLUSTER (Agrupamento de marcadores)
        ========================================== -->
@@ -1238,9 +1239,10 @@ function criarMapaComLocaisDaLicao(dadosLicao) {
     
     const map = L.map(el).setView(centro, zoom);
     
-    L.tileLayer('https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=pPCRMe3I0BpFWRO10nZR', {
-        attribution: '© <a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a> © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors',
-        maxZoom: 20
+    new window.MaptilerLayer({
+        apiKey: 'pPCRMe3I0BpFWRO10nZR',
+        style: 'basic',
+        language: 'english'
     }).addTo(map);
     
     mapaAtual = map;
