@@ -714,9 +714,10 @@ function initMapa() {
         zoomControl: true
     });
     
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        subdomains: 'abc',
+    // Tiles "internacionais" (nomes em inglês/alfabeto latino, em vez do idioma
+    // local do país — hebraico, árabe etc.), sem precisar de chave de API
+    L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, style &copy; Wikimedia',
         maxZoom: 19
     }).addTo(map);
     
