@@ -666,3 +666,109 @@ window.bibliotecaPerguntas["3T2026-licao7"] = [
     refs: ["jz9.7-15"]
   }
 ];
+
+window.bibliotecaPerguntas["3T2026-licao13"] = [
+  // ── perguntas extras de aprofundamento ──
+  {
+    pergunta: "Por que o crime cometido em Gibeá desencadeou uma guerra civil, e o que isso revela sobre como o pecado não fica restrito a quem o pratica?",
+    topicoOrigem: "I.1 Clamor por justiça",
+    pagina: 92,
+    tags: "crime dos gibeonitas / Jz 20.1-11 / consequências coletivas do pecado",
+    refs: ["jz20.1-11"]
+  },
+  {
+    pergunta: "Os benjamitas preferiram proteger seus parentes culpados a entregá-los à justiça. De que forma essa lealdade tribal antecipa o problema da 'cumplicidade com o pecado' citado em Provérbios 17.15 e Romanos 1.32?",
+    topicoOrigem: "I.2 Benjamim não reconhece o erro",
+    pagina: 93,
+    tags: "recusa em entregar os culpados / lealdade tribal / cumplicidade com o mal",
+    refs: ["jz20.12-16", "pv17.15", "rm1.32"]
+  },
+  {
+    pergunta: "Israel tinha uma superioridade numérica esmagadora sobre Benjamim, mas perdeu as duas primeiras batalhas. O que esse detalhe ensina sobre a diferença entre força humana e direção divina?",
+    topicoOrigem: "I.3 Guerra civil",
+    pagina: 93,
+    tags: "400.000 x 26.700 / derrotas antes da vitória / direção divina x quantidade numérica",
+    refs: ["jz20.17-48"]
+  },
+  {
+    pergunta: "Segundo o Subsídio 1, qual atitude a comunidade deveria ter tomado diante do crime, e por que a atitude severa precisa ser 'rápida, sábia e enérgica' antes que a situação saia do controle?",
+    topicoOrigem: "I — Subsídio 1",
+    pagina: 93,
+    tags: "Subsídio 1 / justiça tardia / atitude severa e rápida",
+    refs: []
+  },
+  {
+    pergunta: "Israel cometeu ao menos quatro decisões precipitadas depois da guerra (o juramento contra os benjamitas, o juramento contra Jabes-Gileade, o extermínio da cidade e o rapto em Siló). O que essa sequência ensina sobre como um voto impulsivo pode gerar novos erros em cadeia?",
+    topicoOrigem: "II.1 Decisões trágicas",
+    pagina: 94,
+    tags: "juramentos precipitados / Jabes-Gileade / rapto em Siló / erros em cadeia",
+    refs: ["jz21.1-3", "jz21.5", "jz21.10-12", "jz21.19-23"]
+  },
+  {
+    pergunta: "O povo continuava oferecendo culto e holocaustos a Deus em meio a todo esse caos moral. Como Mateus 23.23-24 ajuda a entender por que essa religiosidade era hipócrita?",
+    topicoOrigem: "II.2 A religiosidade legalista e hipócrita",
+    pagina: 94,
+    tags: "culto em meio ao caos / coar mosquito e engolir camelo / hipocrisia religiosa",
+    refs: ["jz21.22", "mt23.23", "mt23.24"]
+  },
+  {
+    pergunta: "O livro de Juízes termina com a frase 'não havia rei em Israel'. De que forma a trajetória de Samuel, Saul e Davi responde a esse vazio de liderança apontado no versículo final?",
+    topicoOrigem: "III.1 À espera de um rei",
+    pagina: 94,
+    tags: "não havia rei em Israel / Samuel / Saul rejeitado / Davi escolhido",
+    refs: ["jz21.25", "1sm8.5", "1sm13.13-14"]
+  },
+  {
+    pergunta: "A aliança davídica prometia um reino eterno vindo do trono de Davi. Como Lucas 1.32-33 mostra que essa promessa não terminou com a dinastia humana de Davi?",
+    topicoOrigem: "III.2 O reinado de Davi",
+    pagina: 95,
+    tags: "aliança davídica / reino eterno / cumprimento em Jesus Cristo",
+    refs: ["2sm7.12-16", "lc1.32-33"]
+  },
+
+  // ── pergunta extra livre ──
+  {
+    pergunta: "Segundo a nota final do professor, o que o versículo final de Juízes ensina sobre o que acontece quando um povo segue apenas os desejos do próprio coração — e o que isso revela sobre a fidelidade de Deus mesmo diante da infidelidade humana?",
+    topicoOrigem: "III — Nota do professor",
+    pagina: 95,
+    tags: "versículo final de Juízes / depravação / fidelidade de Deus à aliança",
+    refs: ["jz21.25"]
+  },
+
+  // ── 5 perguntas oficiais da Hora da Revisão (apostila, pág. 97) ──
+  {
+    pergunta: "Hora da Revisão — 1. O que o ato do levita de cortar e enviar as partes do corpo da mulher gerou entre os israelitas?",
+    topicoOrigem: "I.1 Clamor por justiça",
+    pagina: 97,
+    tags: "gerou comoção nacional e provocou revolta entre os israelitas",
+    refs: []
+  },
+  {
+    pergunta: "Hora da Revisão — 2. O que esse capítulo sangrento mostra que o pecado pode causar?",
+    topicoOrigem: "I.3 Guerra civil",
+    pagina: 97,
+    tags: "mostra que o pecado pode causar divisão, guerra e mortes espirituais mesmo em meio ao povo de Deus, comprometendo a sua missão",
+    refs: []
+  },
+  {
+    pergunta: "Hora da Revisão — 3. Qual juramento precipitado Israel fez?",
+    topicoOrigem: "II.1 Decisões trágicas",
+    pagina: 97,
+    tags: "de proibir que suas filhas se casem com os benjamitas",
+    refs: ["jz21.1-3"]
+  },
+  {
+    pergunta: "Hora da Revisão — 4. O que é hipocrisia religiosa?",
+    topicoOrigem: "II.2 A religiosidade legalista e hipócrita",
+    pagina: 97,
+    tags: "quando cuidam de detalhes cerimoniais, mas negligenciam o mais importante da Lei: o juízo, a misericórdia e a fé (Mt 23.23)",
+    refs: ["mt23.23"]
+  },
+  {
+    pergunta: "Hora da Revisão — 5. Por meio da aliança davídica (2 Sm 7.12-16), o que Deus prometeu?",
+    topicoOrigem: "III.2 O reinado de Davi",
+    pagina: 97,
+    tags: "prometeu que do trono de Davi viria um reino eterno, como sombra e figura do reinado de Cristo",
+    refs: ["2sm7.12-16"]
+  }
+];

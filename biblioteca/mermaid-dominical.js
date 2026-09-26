@@ -233,3 +233,36 @@ window.bibliotecaMermaid["3T2026-licao7"] = `mindmap
         Parábola de Jotão cumprida
         Justiça de Deus implacável
 `;
+
+window.bibliotecaMermaid["3T2026-licao13"] = `mindmap
+  root((Esperança em Meio\\nao Caos: Aguardando\\na Vinda do Rei))
+    I – Vingança e Guerra Civil
+      Clamor por justiça
+        Crime dos gibeonitas
+        Exército unido contra Benjamim
+      Benjamim não reconhece o erro
+        Recusa entregar os culpados
+        Cumplicidade com o mal
+      Guerra civil
+        400.000 x 26.700 guerreiros
+        Derrotas antes da vitória
+        Gibeá destruída
+    II – Hipocrisia de Israel
+      Decisões trágicas
+        Juramento contra os benjamitas
+        Extermínio de Jabes-Gileade
+        Rapto das moças em Siló
+      Religiosidade legalista
+        Culto em meio ao caos
+        Coar mosquito, engolir camelo
+    III – Aguardando o Rei
+      À espera de um rei
+        Cada um fazia o que era reto a seus olhos
+        Samuel, Saul e Davi
+      O reinado de Davi
+        Aliança davídica
+        Sombra do reinado de Cristo
+      Aguardando o Rei dos reis
+        Igreja como instrumento do Senhor
+        Cristo reinará em plenitude
+`;
