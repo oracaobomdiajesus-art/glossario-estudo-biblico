@@ -366,6 +366,16 @@ window.dadosLicaoV4 = {
   ],
 
   // ============================================
+  // IMAGENS RELACIONADAS (CONTROLE)
+  // Vazio por enquanto — a biblioteca de imagens pode
+  // receber, no futuro, imagens ligadas a qualquer uma
+  // das referências bíblicas já cadastradas acima (por
+  // id), mesmo que a imagem seja adicionada depois desta
+  // lição já estar pronta.
+  // ============================================
+  imagens: [],
+
+  // ============================================
   // LISTA DE APARIÇÃO - COM LOCAIS
   // ============================================
   listaAparicao: [
