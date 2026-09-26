@@ -34,7 +34,10 @@ function buscarImagensPorReferencias(refsDaLicao) {
 
         const temMatch = imagem.refs.some(refImagem => {
             const refNorm = refImagem.toLowerCase();
-            return capitulosDaLicao.some(cap => cap === refNorm || refNorm.includes(cap) || cap.includes(refNorm));
+            // Comparação exata de livro+capítulo (ex.: "rm12" só bate com "rm12",
+            // nunca com "rm1" — antes o .includes() confundia Rm 1 com Rm 12,
+            // Is 1 com Is 11, etc.)
+            return capitulosDaLicao.some(cap => cap === refNorm);
         });
 
         if (temMatch && !idsVistos.has(id)) {
