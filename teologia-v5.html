@@ -1059,10 +1059,9 @@ function criarMapaComLocaisDaLicao(dadosLicao) {
 
     const map = L.map(el).setView(centro, zoom);
 
-    // Tiles "internacionais" (nomes em inglês/alfabeto latino, em vez do idioma
-    // local do país — hebraico, árabe etc.), sem precisar de chave de API
-    L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', {
-        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, style © Wikimedia',
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        subdomains: 'abc',
         maxZoom: 19
     }).addTo(map);
 
