@@ -11,11 +11,6 @@
   <link rel="stylesheet" href="biblioteca/vendor/leaflet.css" />
   <script src="biblioteca/vendor/leaflet.js"></script>
 
-  <!-- MapTiler SDK (para forçar rótulos em inglês no mapa) -->
-  <script src="https://cdn.maptiler.com/maptiler-sdk-js/v3.9.0/maptiler-sdk.umd.min.js"></script>
-  <link href="https://cdn.maptiler.com/maptiler-sdk-js/v3.9.0/maptiler-sdk.css" rel="stylesheet"/>
-  <script src="https://cdn.maptiler.com/leaflet-maptilersdk/v4.1.1/leaflet-maptilersdk.umd.min.js"></script>
-
   <!-- ==========================================
        MARKER CLUSTER (Agrupamento de marcadores)
        ========================================== -->
@@ -1287,10 +1282,9 @@ function criarMapaComLocaisDaLicao(dadosLicao) {
     
     const map = L.map(el).setView(centro, zoom);
     
-    new L.MaptilerLayer({
-        apiKey: 'pPCRMe3I0BpFWRO10nZR',
-        style: 'streets-v2',
-        language: L.MaptilerLanguage.ENGLISH
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors',
+        maxZoom: 19
     }).addTo(map);
     
     mapaAtual = map;
