@@ -9,6 +9,65 @@ window.bibliotecaPerguntas = window.bibliotecaPerguntas || {};
 //   { pergunta: "...", pagina: 3, tags: "...", refs: ["mt16.18"] }
 // ];
 
+window.bibliotecaPerguntas["lv6-cp1"] = [
+  {
+    pergunta: "Se os anjos existiam antes da criação do homem e já louvavam a Deus, o que isso revela sobre a existência de uma realidade espiritual além do que vemos?",
+    topicoOrigem: "1.b) Os anjos foram criados antes da humanidade",
+    pagina: 4,
+    tags: "anjos testemunharam a criação / realidade espiritual anterior à humana",
+    refs: ["job38.4-7", "hb1.14a"]
+  },
+  {
+    pergunta: "Por que a queda de parte dos anjos não pode ser explicada como se eles tivessem sido criados maus desde o início?",
+    topicoOrigem: "1.d) Os anjos foram criados bons e perfeitos",
+    pagina: 4,
+    tags: "não havia maldade na origem dos anjos / a queda foi abandono voluntário da obediência",
+    refs: ["gn1.31", "ez28.15"]
+  },
+  {
+    pergunta: "Qual é a diferença entre a natureza espiritual permanente dos anjos e as ocasiões em que eles assumem forma visível?",
+    topicoOrigem: "2.b) Os anjos podem assumir forma visível quando Deus permite",
+    pagina: 9,
+    tags: "forma visível é missão específica, não é a natureza permanente do anjo",
+    refs: ["gn18.1-2a", "lc24.4"]
+  },
+  {
+    pergunta: "Por que o capítulo afirma que os anjos não se casam nem geram descendência, e o que isso ensina sobre o número de anjos existentes?",
+    topicoOrigem: "2.c) Os anjos não se reproduzem",
+    pagina: 9,
+    tags: "cada anjo foi criado diretamente por Deus / número definido na criação, não aumenta por reprodução",
+    refs: ["mt22.30a", "hb1.5"]
+  },
+  {
+    pergunta: "O que significa dizer que os anjos agem 'com obediência imediata', e como isso contrasta com a forma como muitas vezes respondemos às ordens de Deus?",
+    topicoOrigem: "3.b) Os anjos agem com obediência imediata",
+    pagina: 14,
+    tags: "os anjos não questionam nem adiam o que o Senhor determina / prontidão revela submissão total",
+    refs: ["sl103.20c", "mt6.10"]
+  },
+  {
+    pergunta: "Segundo o capítulo, os anjos participam de batalhas espirituais invisíveis. O que isso revela sobre a realidade espiritual que não vemos ao nosso redor?",
+    topicoOrigem: "3.d) Os anjos agem em batalhas espirituais invisíveis",
+    pagina: 14,
+    tags: "conflitos espirituais reais, mesmo que não vistos pelos olhos humanos",
+    refs: ["dn10.13a", "ap12.7a"]
+  },
+  {
+    pergunta: "Por que é importante saber que existem funções diferentes entre os anjos — mensageiros, querubins, serafins, o arcanjo Miguel — sem que isso gere competição ou disputa entre eles?",
+    topicoOrigem: "4.a) Funções diferentes no mundo celestial",
+    pagina: 19,
+    tags: "ordem e hierarquia no mundo espiritual sem orgulho ou disputa / cada função tem seu lugar",
+    refs: ["cl1.16e", "ef1.21"]
+  },
+  {
+    pergunta: "A Bíblia menciona apenas Miguel como arcanjo. O que essa exclusividade ensina sobre como não devemos exagerar ou inventar hierarquias que a Escritura não afirma?",
+    topicoOrigem: "4.e) Arcanjo Miguel — líder no exército de Deus",
+    pagina: 22,
+    tags: "somente Miguel é chamado explicitamente de arcanjo na Bíblia / cuidado com especulações sem base bíblica",
+    refs: ["jd1.9a", "jd1.9b"]
+  }
+];
+
 window.bibliotecaPerguntas["lv6-cp2"] = [
   // ── perguntas extras de aprofundamento, uma para cada subtópico principal ──
   {

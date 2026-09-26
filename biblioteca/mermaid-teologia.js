@@ -11,6 +11,51 @@ window.bibliotecaMermaid = window.bibliotecaMermaid || {};
 //     Ramo 2
 // `;
 
+window.bibliotecaMermaid["lv6-cp1"] = `mindmap
+  root((Quem são os\\\\nAnjos, Afinal?))
+    O que a Bíblia ensina sobre a origem dos anjos?
+      Criados por Deus
+        Não são eternos nem autônomos
+      Criados antes da humanidade
+        Testemunharam a criação
+      Criados em grande número
+        Milhares de milhares
+      Criados bons e perfeitos
+        A queda foi abandono voluntário da obediência
+    Como são os anjos segundo a Bíblia?
+      Seres espirituais
+        Essência não material, invisível
+      Podem assumir forma visível
+        Missão específica, não permanente
+      Não se reproduzem
+        Cada um criado diretamente por Deus
+      Não envelhecem nem morrem
+        Existência contínua desde a criação
+    Como é a ação dos anjos no mundo espiritual
+      Adoram constantemente no céu
+        Miríades de anjos, serafins
+      Agem com obediência imediata
+        Não questionam nem adiam
+      Agem conforme a vontade de Deus
+        Não por iniciativa própria
+      Agem em batalhas espirituais invisíveis
+        Lutam contra forças do mal
+      São enviados para cumprir missões na terra
+        Protegem, orientam, livram
+    Existe hierarquia entre os anjos?
+      Funções diferentes no mundo celestial
+        Tronos, dominações, principados, potestades
+      Anjos — mensageiros
+        Significado literal: mensageiro
+      Querubins — guardiões do espaço sagrado
+        Éden, Arca da Aliança, trono de Deus
+      Serafins — seres de adoração intensa
+        Seis asas, Santo Santo Santo
+      Arcanjo Miguel — líder no exército de Deus
+        Único chamado explicitamente de arcanjo
+`;
+
+
 window.bibliotecaMermaid["lv6-cp2"] = `mindmap
   root((Missão dos\\nAnjos de Deus))
     Por que Deus delega tarefas aos anjos?

@@ -85,15 +85,25 @@
       <p>Selecione um curso para começar</p>
     </div>
     <div class="cursos">
+      <a href="teologia-v5.html" class="card">
+        <div class="emoji">📘</div>
+        <h2>Teologia Descomplicada <span style="font-size:0.7em;opacity:0.7;">v5</span></h2>
+        <p>Livro 6 • Capítulo 1 • Contextos automáticos + Mapa de Locais + Imagens/Filmes</p>
+      </a>
       <a href="teologia-v4.html" class="card">
         <div class="emoji">📘</div>
         <h2>Teologia Descomplicada <span style="font-size:0.7em;opacity:0.7;">v4</span></h2>
-        <p>Livro 6 • Capítulos 5 e 6 • Contextos automáticos</p>
+        <p>Livro 6 • Capítulos 1, 5 e 6 • Contextos automáticos</p>
       </a>
       <a href="teologia-v2.html" class="card">
         <div class="emoji">📘</div>
         <h2>Teologia Descomplicada <span style="font-size:0.7em;opacity:0.7;">v2</span></h2>
         <p>Curso para jovens • Todos os livros e capítulos</p>
+      </a>
+      <a href="dominical-v5.html" class="card">
+        <div class="emoji">📖</div>
+        <h2>Escola Dominical <span style="font-size:0.7em;opacity:0.7;">v5</span></h2>
+        <p>3º Trimestre 2026 • Lição 7 • Contextos automáticos + Mapa de Locais + Imagens/Filmes</p>
       </a>
       <a href="dominical-v4.html" class="card">
         <div class="emoji">📖</div>
@@ -120,15 +130,5 @@
       <p>📍 Estudo bíblico com contextos históricos e dados para vestibular</p>
     </div>
   </div>
-  <script>
-    // Registra o Service Worker para permitir uso offline após a 1ª visita
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(() => console.log('✅ Service Worker registrado — site disponível offline.'))
-          .catch(err => console.warn('⚠️ Falha ao registrar Service Worker:', err));
-      });
-    }
-  </script>
 </body>
 </html>

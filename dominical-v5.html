@@ -3,69 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teologia Descomplicada v4</title>
+  <title>Escola Dominical v5</title>
+  
   <!-- ==========================================
        LEAFLET (Biblioteca de mapas)
        ========================================== -->
   <link rel="stylesheet" href="biblioteca/vendor/leaflet.css" />
   <script src="biblioteca/vendor/leaflet.js"></script>
-
+  
   <!-- ==========================================
        MARKER CLUSTER (Agrupamento de marcadores)
        ========================================== -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-
+  
   <!-- ==========================================
        CORES DOS LOCAIS (Central de Cores)
        ========================================== -->
   <script src="biblioteca/cores-locais-biblicos.js"></script>
-
+  
   <!-- ==========================================
        DADOS DOS LOCAIS (940 locais bíblicos)
        ========================================== -->
   <script src="biblioteca/locais-biblicos.js"></script>
-
+  
   <!-- ==========================================
        TRADUÇÕES PT
        ========================================== -->
   <script src="biblioteca/locais-biblicos-pt.js"></script>
-
+  
   <script src="biblioteca/vendor/mermaid.min.js"></script>
-
+  
   <!-- ==========================================
        BIBLIOTECA DE IMAGENS
        ========================================== -->
+       <!-- ==========================================
+       BIBLIOTECA DE IMAGENS
+       ========================================== -->
   <script src="biblioteca/imagens-biblicas.js"></script>
-
+  
   <!-- ==========================================
        FILMES BÍBLICOS
        ========================================== -->
   <script src="biblioteca/filmes-biblicos.js"></script>
-
+  
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #e4e0d4; padding: 20px; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #e8e4d4; padding: 20px; }
     .container { max-width: 1400px; margin: 0 auto; background-color: #fffef7; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); overflow: hidden; }
-    header { background-color: #4a3b6e; color: white; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; }
+    header { background-color: #3b5e3b; color: white; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
     header h1 { font-size: 1.8rem; }
-    header a { color: white; background-color: #362b52; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 14px; }
-    .seletor-area { background-color: #f5f3f0; padding: 15px 30px; border-bottom: 1px solid #c9c0d4; display: flex; flex-direction: column; gap: 15px; }
+    header a { color: white; background-color: #2d4a2d; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 14px; }
+    header .btn-mapa { background-color: #c99b4a; color: #191510; font-weight: 600; }
+    header .btn-mapa:hover { background-color: #d4aa5a; }
+    .seletor-area { background-color: #f9f7e8; padding: 15px 30px; border-bottom: 1px solid #d4c9a6; display: flex; flex-direction: column; gap: 15px; }
     .seletor-linha { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
-    .seletor-area select, .seletor-area button { padding: 8px 15px; font-size: 14px; border-radius: 6px; border: 1px solid #c9c0d4; background-color: white; }
-    .seletor-area button { background-color: #4a3b6e; color: white; border: none; cursor: pointer; }
-    .seletor-area button:hover { background-color: #362b52; }
-    .titulo-capitalizado { background-color: #e4e0d4; padding: 10px 15px; border-radius: 6px; font-weight: bold; color: #4a3b6e; border-left: 4px solid #4a3b6e; font-size: 13px; }
-    section { padding: 20px 30px; border-bottom: 1px solid #c9c0d4; }
-    section h2 { color: #4a3b6e; margin-bottom: 15px; font-size: 1.4rem; border-left: 4px solid #4a3b6e; padding-left: 12px; }
+    .seletor-area select, .seletor-area button { padding: 8px 15px; font-size: 14px; border-radius: 6px; border: 1px solid #d4c9a6; background-color: white; }
+    .seletor-area button { background-color: #3b5e3b; color: white; border: none; cursor: pointer; }
+    .seletor-area button:hover { background-color: #2d4a2d; }
+    .titulo-capitalizado { background-color: #e8e4d4; padding: 10px 15px; border-radius: 6px; font-weight: bold; color: #3b5e3b; border-left: 4px solid #3b5e3b; font-size: 13px; }
+    section { padding: 20px 30px; border-bottom: 1px solid #d4c9a6; }
+    section h2 { color: #3b5e3b; margin-bottom: 15px; font-size: 1.4rem; border-left: 4px solid #3b5e3b; padding-left: 12px; }
     table { width: 100%; border-collapse: collapse; font-size: 12px; }
-    th, td { border: 1px solid #c9c0d4; padding: 8px 10px; text-align: left; vertical-align: top; }
-    th { background-color: #e4e0d4; font-weight: 600; color: #4a3b6e; }
+    th, td { border: 1px solid #d4c9a6; padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background-color: #e8e4d4; font-weight: 600; color: #3b5e3b; }
     .col-num { width: 50px; text-align: center; }
-    .col-ref { width: 160px; font-family: monospace; }
+    .col-ref { width: 130px; font-family: monospace; }
     .col-pag { width: 60px; text-align: center; }
-    /* ── MAPA DOS LOCAIS ── */
+    
+    /* ── MAPA ── */
     .mapa-container {
       background: #2d2d44;
       border-radius: 12px;
@@ -83,215 +90,474 @@
       flex-wrap: wrap;
       gap: 10px;
     }
-    .mapa-container .mapa-titulo h3 { color: #ffd700; font-size: 18px; }
-    .mapa-container .mapa-titulo .info-locais { color: #aaa; font-size: 14px; }
-    .mapa-container .mapa-titulo .info-locais span { color: #ffd700; font-weight: 700; }
+    .mapa-container .mapa-titulo h3 {
+      color: #ffd700;
+      font-size: 18px;
+    }
+    .mapa-container .mapa-titulo .info-locais {
+      color: #aaa;
+      font-size: 14px;
+    }
+    .mapa-container .mapa-titulo .info-locais span {
+      color: #ffd700;
+      font-weight: 700;
+    }
     .mapa-container .mapa-titulo .btn-toggle-indice {
-      background: #4a3b6e; color: white; border: none; padding: 4px 14px;
-      border-radius: 4px; font-size: 12px; cursor: pointer; transition: background 0.2s;
+      background: #3b5e3b;
+      color: white;
+      border: none;
+      padding: 4px 14px;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
     }
-    .mapa-container .mapa-titulo .btn-toggle-indice:hover { background: #362b52; }
-
+    .mapa-container .mapa-titulo .btn-toggle-indice:hover {
+      background: #2d4a2d;
+    }
+    
     #mapaInterativo { height: 400px; border-radius: 8px; margin-bottom: 20px; background: #1a1a2e; }
-
+    
     .btn-abrir-mapa-completo {
-      display: inline-block; padding: 12px 28px; background: #ffd700; color: #1a1a2e;
-      border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 14px;
-      transition: transform 0.2s; border: none; cursor: pointer; margin: 4px 0;
+      display: inline-block;
+      padding: 12px 28px;
+      background: #ffd700;
+      color: #1a1a2e;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      transition: transform 0.2s;
+      border: none;
+      cursor: pointer;
+      margin: 4px 0;
     }
-    .btn-abrir-mapa-completo:hover { transform: scale(1.03); }
-
+    .btn-abrir-mapa-completo:hover {
+      transform: scale(1.03);
+    }
+    
     .mapa-botoes {
-      display: flex; gap: 12px; flex-wrap: wrap; padding: 12px 20px;
-      background: rgba(0,0,0,0.2); border-top: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 12px 20px;
+      background: rgba(0,0,0,0.2);
+      border-top: 1px solid rgba(255,255,255,0.05);
     }
-
-    /* ── LISTA DE LOCAIS DO CAPÍTULO ── */
+    
+    /* ── LISTA DE LOCAIS DA LIÇÃO ── */
     #lista-locais-licao {
-      background: #f5f3f0; border-radius: 8px; border: 1px solid #c9c0d4;
-      margin-top: 15px; padding: 12px 16px; display: none;
+      background: #f9f7e8;
+      border-radius: 8px;
+      border: 1px solid #d4c9a6;
+      margin-top: 15px;
+      padding: 12px 16px;
+      display: none;
     }
-    #lista-locais-licao .header-indice { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-    #lista-locais-licao .header-indice h4 { color: #4a3b6e; font-size: 14px; margin: 0; }
+    #lista-locais-licao .header-indice {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    #lista-locais-licao .header-indice h4 {
+      color: #3b5e3b;
+      font-size: 14px;
+      margin: 0;
+    }
     #lista-locais-licao .header-indice .count {
-      background: #4a3b6e; color: white; padding: 0 10px; border-radius: 10px;
-      font-size: 11px; line-height: 20px; display: inline-block;
+      background: #3b5e3b;
+      color: white;
+      padding: 0 10px;
+      border-radius: 10px;
+      font-size: 11px;
+      line-height: 20px;
+      display: inline-block;
     }
-    #lista-locais-licao .btn-fechar-indice { background: none; border: none; font-size: 18px; cursor: pointer; color: #888; }
-    #lista-locais-licao .btn-fechar-indice:hover { color: #333; }
-    #itens-indice-locais { display: flex; flex-wrap: wrap; gap: 6px; }
+    #lista-locais-licao .btn-fechar-indice {
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      color: #888;
+    }
+    #lista-locais-licao .btn-fechar-indice:hover {
+      color: #333;
+    }
+    #itens-indice-locais {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
     .item-indice-local {
-      display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px;
-      border-radius: 6px; cursor: pointer; transition: all 0.2s; font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 12px;
       border: 1px solid rgba(0,0,0,0.05);
     }
-    .item-indice-local:hover { transform: scale(1.03); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .item-indice-local:hover {
+      transform: scale(1.03);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
     .item-indice-local .emoji-indice { font-size: 14px; }
     .item-indice-local .nome-indice { font-weight: 600; color: #2d2d2d; }
-    .item-indice-local .tipo-indice { font-size: 10px; color: #888; background: #e4e0d4; padding: 0 6px; border-radius: 4px; }
-    .item-indice-local .ref-indice { font-size: 10px; color: #4a3b6e; font-family: monospace; background: #ede9f5; padding: 0 6px; border-radius: 4px; }
-
+    .item-indice-local .tipo-indice { font-size: 10px; color: #888; background: #f0ede0; padding: 0 6px; border-radius: 4px; }
+    .item-indice-local .ref-indice { font-size: 10px; color: #3b5e3b; font-family: monospace; background: #e8f0e8; padding: 0 6px; border-radius: 4px; }
+    
     /* ── LOCAIS NO CONTEXTO ── */
     .locais-contexto-box {
-      margin-top: 8px; padding: 8px 12px; background: rgba(255, 215, 0, 0.08);
-      border-radius: 6px; border-left: 3px solid #ffd700;
+      margin-top: 8px;
+      padding: 8px 12px;
+      background: rgba(255, 215, 0, 0.08);
+      border-radius: 6px;
+      border-left: 3px solid #ffd700;
     }
-    .locais-contexto-box .label { font-size: 11px; font-weight: 600; color: #5c4a1e; margin-bottom: 4px; }
+    .locais-contexto-box .label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #5c4a1e;
+      margin-bottom: 4px;
+    }
     .locais-contexto-tag {
-      display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 10px;
-      margin: 2px 4px 2px 0; color: white; font-weight: 500; cursor: pointer;
-      transition: transform 0.2s; border: 1px solid rgba(255,255,255,0.2);
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 10px;
+      margin: 2px 4px 2px 0;
+      color: white;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.2s;
+      border: 1px solid rgba(255,255,255,0.2);
     }
-    .locais-contexto-tag:hover { transform: scale(1.05); }
+    .locais-contexto-tag:hover {
+      transform: scale(1.05);
+    }
     .btn-ver-mapa-contexto {
-      display: inline-block; margin-top: 6px; padding: 4px 12px; background: #4a3b6e;
-      color: white; border: none; border-radius: 4px; font-size: 11px; cursor: pointer;
-      text-decoration: none; transition: background 0.2s;
+      display: inline-block;
+      margin-top: 6px;
+      padding: 4px 12px;
+      background: #3b5e3b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 11px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
     }
-    .btn-ver-mapa-contexto:hover { background: #362b52; }
-
-    /* ── POPUP E CLUSTER DO MAPA ── */
-    .custom-popup .leaflet-popup-content-wrapper { border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
-    .custom-popup .leaflet-popup-content { font-size: 13px; line-height: 1.5; min-width: 200px; }
-    .marker-cluster-small { background-color: rgba(255, 215, 0, 0.6); }
-    .marker-cluster-small div { background-color: rgba(255, 215, 0, 0.8); color: #1a1a2e; }
-    .marker-cluster-medium { background-color: rgba(255, 165, 0, 0.6); }
-    .marker-cluster-medium div { background-color: rgba(255, 165, 0, 0.8); color: #1a1a2e; }
-    .marker-cluster-large { background-color: rgba(220, 20, 60, 0.6); }
-    .marker-cluster-large div { background-color: rgba(220, 20, 60, 0.8); color: white; }
-
-    /* ── FILMES BÍBLICOS ── */
-    .filmes-card {
-        margin-top: 10px; padding: 8px 12px; background: rgba(74, 59, 110, 0.06);
-        border-radius: 6px; border-left: 3px solid #4a3b6e;
+    .btn-ver-mapa-contexto:hover {
+      background: #2d4a2d;
     }
-    .filmes-card .label { font-size: 11px; font-weight: 600; color: #362b52; margin-bottom: 4px; }
-    .filme-item {
-        margin-bottom: 6px; padding: 6px 10px; background: white; border-radius: 4px;
-        border: 1px solid #e8e8e8; transition: box-shadow 0.2s;
-    }
-    .filme-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-    .filme-item .titulo { font-size: 13px; font-weight: 600; color: #2d2d2d; }
-    .filme-item .ano { font-size: 11px; color: #888; }
-    .filme-item .diretor { font-size: 11px; color: #888; }
-    .filme-item .descricao { font-size: 12px; color: #555; margin-top: 2px; }
-    .filme-item .observacao { font-size: 11px; color: #888; font-style: italic; }
-    .filme-item .links { margin-top: 4px; display: flex; flex-wrap: wrap; gap: 4px; }
-    .filme-link {
-        display: inline-block; background: #4a3b6e; color: white; font-size: 11px;
-        padding: 3px 10px; border-radius: 10px; text-decoration: none; transition: background 0.2s;
-    }
-    .filme-link:hover { background: #362b52; }
-
-    .netlify-section { background: #f5f3f0; padding: 15px; border-radius: 8px; border: 1px solid #c9c0d4; }
-    .netlify-section input { width: 70%; padding: 8px 12px; border: 1px solid #c9c0d4; border-radius: 4px; margin-right: 10px; }
-    .netlify-section button { background-color: #4a3b6e; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; }
-    #api-config.oculto { display: none; }
-    .contexto-card { background-color: #f5f3f0; border-left: 5px solid #4a3b6e; padding: 15px; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
-    .contexto-titulo { font-weight: bold; font-size: 13px; margin-bottom: 10px; color: #4a3b6e; background-color: #e4e0d4; padding: 8px; border-radius: 6px; }
-    .contexto-versiculo { font-style: italic; background: white; padding: 10px; border-radius: 6px; margin: 10px 0; border: 1px solid #c9c0d4; }
+    
+    .netlify-section { background: #f9f7e8; padding: 15px; border-radius: 8px; border: 1px solid #d4c9a6; margin-top: 20px; }
+    .netlify-section input { width: 70%; padding: 8px 12px; border: 1px solid #d4c9a6; border-radius: 4px; margin-right: 10px; }
+    .netlify-section button { background-color: #3b5e3b; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; }
+    .contexto-card { background-color: #f9f7e8; border-left: 5px solid #3b5e3b; padding: 15px; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
+    .contexto-titulo { font-weight: bold; font-size: 13px; margin-bottom: 10px; color: #3b5e3b; background-color: #e8e4d4; padding: 8px; border-radius: 6px; }
+    .contexto-versiculo { font-style: italic; background: white; padding: 10px; border-radius: 6px; margin: 10px 0; border: 1px solid #d4c9a6; }
     .contexto-versiculo.loading { color: #999; }
     .contexto-campo { margin-bottom: 10px; font-size: 13px; }
-    .contexto-campo strong { color: #4a3b6e; }
-    .contexto-tags-linha { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0; background-color: #e4e0d4; padding: 6px 8px; border-radius: 4px; }
+    .contexto-campo strong { color: #5c4a1e; }
+    .contexto-tags-linha { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0; background-color: #e8e4d4; padding: 6px 8px; border-radius: 4px; }
     .contexto-tags-label { font-size: 11px; color: #666; }
     .assuntos { display: flex; flex-wrap: wrap; gap: 6px; }
-    .assunto-tag { background-color: #4a3b6e; color: white; padding: 2px 8px; border-radius: 15px; font-size: 10px; white-space: nowrap; }
+    .assunto-tag { background-color: #3b5e3b; color: white; padding: 2px 8px; border-radius: 15px; font-size: 10px; white-space: nowrap; }
     .link-volta { text-align: right; margin-top: 10px; font-size: 18px; display: flex; gap: 15px; justify-content: flex-end; }
-    .link-volta a { color: #4a3b6e; text-decoration: none; }
+    .link-volta a { color: #3b5e3b; text-decoration: none; }
     .footer-links { margin-top: 15px; text-align: right; font-size: 12px; }
-    .footer-links a { color: #4a3b6e; text-decoration: none; margin-left: 15px; }
+    .footer-links a { color: #3b5e3b; text-decoration: none; margin-left: 15px; }
     .loading { text-align: center; padding: 40px; color: #666; }
+    
     /* ── HIERARQUIA ── */
     .hierarquia-lista { list-style: none; padding-left: 0; }
     .hierarquia-lista li { margin-bottom: 4px; }
     .hierarquia-item { display: flex; align-items: flex-start; gap: 8px; padding: 5px 8px; border-radius: 6px; }
-    .hierarquia-item:hover { background: #ede9f5; }
-    .hierarquia-label { font-size: 13px; font-weight: 600; color: #4a3b6e; }
+    .hierarquia-item:hover { background: #f0ede0; }
+    .hierarquia-label { font-size: 13px; font-weight: 600; color: #3b5e3b; }
     .hierarquia-refs { margin-top: 4px; padding-left: 16px; }
     .hierarquia-ref-item { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; font-size: 12px; }
-    .hierarquia-ref-link { color: #4a3b6e; font-weight: bold; text-decoration: none; font-family: monospace; }
+    .hierarquia-ref-link { color: #3b5e3b; font-weight: bold; text-decoration: none; font-family: monospace; white-space: nowrap; }
     .hierarquia-ref-link:hover { text-decoration: underline; }
     .hierarquia-tags { color: #888; font-size: 11px; font-style: italic; }
-    .hierarquia-filhos { padding-left: 20px; margin-top: 4px; border-left: 2px solid #c9c0d4; }
-    .nivel-1 > .hierarquia-item > .hierarquia-label { font-size: 14px; color: #362b52; }
+    .hierarquia-filhos { padding-left: 20px; margin-top: 4px; border-left: 2px solid #d4c9a6; }
+    .nivel-1 > .hierarquia-item > .hierarquia-label { font-size: 14px; color: #2d4a2d; }
+    .nivel-2 > .hierarquia-item > .hierarquia-label { font-size: 13px; }
+    .nivel-3 > .hierarquia-item > .hierarquia-label { font-size: 12px; color: #555; }
+    
     /* ── MERMAID ── */
-    .mermaid-wrapper { background: #f5f3f0; border: 1px solid #c9c0d4; border-radius: 8px; padding: 20px; overflow-x: auto; }
-    .sem-mermaid, .sem-perguntas { color: #999; font-style: italic; font-size: 13px; padding: 20px; text-align: center; }
+    .mermaid-wrapper { background: #f9f7e8; border: 1px solid #d4c9a6; border-radius: 8px; padding: 20px; overflow-x: auto; }
+    .mermaid-wrapper .mermaid { min-height: 200px; }
+    .sem-mermaid { color: #999; font-style: italic; font-size: 13px; padding: 20px; text-align: center; }
+    
     /* ── PERGUNTAS ── */
-    .pergunta-card { background: #f5f3f0; border: 1px solid #c9c0d4; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }
-    .pergunta-subtitulo { color: #4a3b6e; font-size: 13px; margin: 18px 0 10px; padding-bottom: 4px; border-bottom: 2px solid #c9c0d4; }
+    .pergunta-card { background: #f9f7e8; border: 1px solid #d4c9a6; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }
+    .pergunta-subtitulo { color: #3b5e3b; font-size: 13px; margin: 18px 0 10px; padding-bottom: 4px; border-bottom: 2px solid #d4c9a6; }
     .pergunta-subtitulo:first-child { margin-top: 0; }
     .icone-gabarito { cursor: pointer; font-size: 14px; margin-left: 4px; user-select: none; }
     .icone-gabarito:hover { transform: scale(1.15); display: inline-block; }
-    .gabarito-box { display: none; margin-top: 10px; padding: 10px 12px; background: #f3eefc; border: 1px dashed #b3a3d4; border-radius: 6px; font-size: 12px; }
+    .gabarito-box { display: none; margin-top: 10px; padding: 10px 12px; background: #fff8e1; border: 1px dashed #d4b86a; border-radius: 6px; font-size: 12px; }
     .gabarito-box.aberto { display: block; animation: fadeIn 0.25s ease; }
     .gabarito-linha { margin-bottom: 5px; }
-    .gabarito-linha strong { color: #4a3b6e; }
+    .gabarito-linha strong { color: #5c4a1e; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
-    .pergunta-texto { font-weight: 600; font-size: 13px; color: #362b52; margin-bottom: 8px; }
+    .pergunta-texto { font-weight: 600; font-size: 13px; color: #2d4a2d; margin-bottom: 8px; }
     .pergunta-meta { display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; color: #666; }
-    .pergunta-pagina { background: #4a3b6e; color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
+    .pergunta-pagina { background: #3b5e3b; color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
     .pergunta-tags { font-style: italic; color: #888; }
     .pergunta-refs { display: flex; gap: 6px; flex-wrap: wrap; }
-    .pergunta-ref-badge { background: #e4e0d4; color: #4a3b6e; padding: 2px 7px; border-radius: 10px; font-size: 10px; font-family: monospace; cursor: pointer; }
-    .pergunta-ref-badge:hover { background: #c9c0d4; }
-    /* ── API CONFIG ── */
+    .pergunta-ref-badge { background: #e8e4d4; color: #3b5e3b; padding: 2px 7px; border-radius: 10px; font-size: 10px; font-family: monospace; cursor: pointer; }
+    .pergunta-ref-badge:hover { background: #d4c9a6; }
+    .sem-perguntas { color: #999; font-style: italic; font-size: 13px; padding: 20px; text-align: center; }
+    
+    /* ── API STATUS ── */
     .api-config { background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 14px 18px; margin-bottom: 16px; }
-    .api-config label { font-size: 13px; font-weight: 600; color: #4a3b6e; }
-    .api-config select, .api-config input { padding: 6px 10px; border: 1px solid #c9c0d4; border-radius: 4px; font-size: 13px; }
+    .api-config label { font-size: 13px; font-weight: 600; color: #5c4a1e; }
+    .api-config select, .api-config input { padding: 6px 10px; border: 1px solid #d4c9a6; border-radius: 4px; font-size: 13px; }
     .api-config input { width: 300px; }
-    .api-config button { background: #4a3b6e; color: white; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: 13px; }
+    .api-config button { background: #5c4a1e; color: white; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: 13px; }
     .api-config .api-linha { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 8px; }
     .api-config .api-linha:first-child { margin-top: 0; }
     .api-status-badge { font-size: 12px; padding: 2px 10px; border-radius: 12px; font-weight: 500; }
     .api-status-badge.ativa { background: #c8e6c9; color: #2e7d32; }
     .api-status-badge.inativa { background: #ffcdd2; color: #c62828; }
     .api-status-badge.aguardando { background: #fff3e0; color: #e65100; }
+    
     /* ── MODAL LEGENDA EMOJIS ── */
     .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; }
     .modal-overlay.aberto { display: flex; }
     .modal-box { background: white; border-radius: 12px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
-    .modal-header { background: #4a3b6e; color: white; padding: 16px 20px; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; }
+    .modal-header { background: #3b5e3b; color: white; padding: 16px 20px; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; }
     .modal-header h3 { font-size: 16px; }
     .modal-fechar { background: none; border: none; color: white; font-size: 22px; cursor: pointer; line-height: 1; }
     .modal-body { padding: 16px 20px; }
     .legenda-grid-modal { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; }
     .legenda-item-modal { display: flex; align-items: center; gap: 10px; font-size: 13px; padding: 6px 8px; border-radius: 6px; }
-    .legenda-item-modal:hover { background: #ede9f5; }
+    .legenda-item-modal:hover { background: #f0ede0; }
     .legenda-emoji-modal { font-size: 18px; min-width: 32px; text-align: center; }
-    @media (max-width: 600px) { .legenda-grid-modal { grid-template-columns: 1fr; } }
+    
+    /* ── INFO DO MAPA ── */
+    .mapa-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px 15px;
+      background: #f9f7e8;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #d4c9a6;
+    }
+    .mapa-info .contador {
+      font-size: 14px;
+      color: #3b5e3b;
+      font-weight: 600;
+    }
+    .mapa-info .contador span {
+      color: #2d4a2d;
+      font-size: 18px;
+    }
+    
+    /* ── POPUP E CLUSTER ── */
+    .custom-popup .leaflet-popup-content-wrapper {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    .custom-popup .leaflet-popup-content {
+      font-size: 13px;
+      line-height: 1.5;
+      min-width: 200px;
+    }
+    .marker-cluster-small {
+      background-color: rgba(255, 215, 0, 0.6);
+    }
+    .marker-cluster-small div {
+      background-color: rgba(255, 215, 0, 0.8);
+      color: #1a1a2e;
+    }
+    .marker-cluster-medium {
+      background-color: rgba(255, 165, 0, 0.6);
+    }
+    .marker-cluster-medium div {
+      background-color: rgba(255, 165, 0, 0.8);
+      color: #1a1a2e;
+    }
+    .marker-cluster-large {
+      background-color: rgba(220, 20, 60, 0.6);
+    }
+    .marker-cluster-large div {
+      background-color: rgba(220, 20, 60, 0.8);
+      color: white;
+    }
+    
+    @media (max-width: 600px) { 
+      .legenda-grid-modal { grid-template-columns: 1fr; }
+      .mapa-info { flex-direction: column; align-items: flex-start; }
+    }
     @media (max-width: 768px) { section { padding: 15px; } .api-config input { width: 100%; } }
+    
+    /* ── BIBLIOTECA DE IMAGENS ── */
+    .imagens-licao-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 16px;
+        margin-top: 12px;
+    }
+    .imagem-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        border: 1px solid #e0e0e0;
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+    }
+    .imagem-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    .imagem-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        display: block;
+        background: #f5f0e8;
+    }
+    .imagem-card .info {
+        padding: 12px 14px;
+    }
+    .imagem-card .info h4 {
+        font-size: 13px;
+        margin: 0 0 4px 0;
+        color: #2d2d2d;
+    }
+    .imagem-card .info .refs {
+        font-size: 11px;
+        color: #888;
+        font-family: monospace;
+        margin: 0;
+    }
+    .imagem-card .info .badge-imagem {
+        display: inline-block;
+        background: #3b5e3b;
+        color: white;
+        padding: 1px 10px;
+        border-radius: 12px;
+        font-size: 10px;
+        margin-top: 4px;
+    }
+    .sem-imagens {
+        color: #999;
+        font-style: italic;
+        padding: 12px 0;
+    }
+
+    /* ── FILMES BÍBLICOS ── */
+    .filmes-card {
+        margin-top: 10px;
+        padding: 8px 12px;
+        background: rgba(0, 100, 200, 0.06);
+        border-radius: 6px;
+        border-left: 3px solid #3b5e3b;
+    }
+    .filmes-card .label {
+        font-size: 11px;
+        font-weight: 600;
+        color: #1a3b5e;
+        margin-bottom: 4px;
+    }
+    .filme-item {
+        margin-bottom: 6px;
+        padding: 6px 10px;
+        background: white;
+        border-radius: 4px;
+        border: 1px solid #e8e8e8;
+        transition: box-shadow 0.2s;
+    }
+    .filme-item:hover {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .filme-item .titulo {
+        font-size: 13px;
+        font-weight: 600;
+        color: #2d2d2d;
+    }
+    .filme-item .ano {
+        font-size: 11px;
+        color: #888;
+    }
+    .filme-item .diretor {
+        font-size: 11px;
+        color: #888;
+    }
+    .filme-item .descricao {
+        font-size: 12px;
+        color: #555;
+        margin-top: 2px;
+    }
+    .filme-item .observacao {
+        font-size: 11px;
+        color: #888;
+        font-style: italic;
+    }
+    .filme-item .links {
+        margin-top: 4px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    .filme-link {
+        display: inline-block;
+        background: #3b5e3b;
+        color: white;
+        padding: 2px 10px;
+        border-radius: 4px;
+        font-size: 11px;
+        text-decoration: none;
+        border: 1px solid rgba(255,255,255,0.2);
+        transition: background 0.2s;
+    }
+    .filme-link:hover {
+        background: #2d4a2d;
+        color: white;
+    }
+
   </style>
 </head>
 <body>
 <div class="container">
   <header>
-    <h1>📚 Teologia Descomplicada <span style="font-size:0.7em;opacity:0.8;">v4</span></h1>
-    <div style="display:flex;gap:10px;">
-      <button id="btnLegendaEmojis" style="color:white;background-color:#4a3b6e;padding:8px 16px;border-radius:6px;border:none;font-size:14px;cursor:pointer;">📋 Legenda de Emojis</button>
+    <h1>📖 Escola Dominical <span style="font-size:0.7em;opacity:0.8;">v5</span></h1>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <a href="biblioteca/mapa-com-indice.html" target="_blank" class="btn-mapa" style="color:white;background-color:#c99b4a;padding:8px 16px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600;">🗺️ Mapa Completo</a>
+      <button id="btnLegendaEmojis" style="color:white;background-color:#5c4a1e;padding:8px 16px;border-radius:6px;border:none;font-size:14px;cursor:pointer;">📋 Legenda de Emojis</button>
       <a href="index.html">🏠 Cursos</a>
     </div>
   </header>
 
   <div class="seletor-area">
     <div class="seletor-linha">
-      <label>Livro:</label>
-      <select id="seletorLivro"></select>
-      <label>Capítulo:</label>
-      <select id="seletorCapitulo"></select>
-      <button id="carregarBtn">🔤 Carregar Capítulo</button>
-      <button id="btnToggleApiConfig" style="background:#e4e0d4;color:#4a3b6e;border:1px solid #c9c0d4;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:13px;">🔑 Mostrar Configuração das APIs</button>
+      <label>Trimestre:</label>
+      <select id="seletorTrimestre"></select>
+      <label>Lição:</label>
+      <select id="seletorLicao"></select>
+      <button id="carregarBtn">🔤 Carregar Lição</button>
     </div>
-    <div id="tituloDinamico" class="titulo-capitalizado">Selecione um capítulo</div>
+    <div id="tituloDinamico" class="titulo-capitalizado">Selecione uma lição</div>
     <p style="font-size:11px;color:#888;margin-top:6px;">
-      ℹ️ A v4 só lista capítulos que já têm arquivo <code>-v4.js</code> próprio. Capítulos ainda não migrados continuam disponíveis na
-      <a href="teologia-v2.html">Teologia Descomplicada v2</a>.
+      ℹ️ A v4 só lista lições que já têm arquivo <code>-v4.js</code> próprio. Lições ainda não migradas continuam disponíveis na
+      <a href="dominical-v3.html">Escola Dominical v3</a>.
     </p>
   </div>
 
   <div id="conteudo-principal">
-    <div class="loading">📚 Selecione um capítulo e clique em "Carregar Capítulo"</div>
+    <div class="loading">📖 Selecione uma lição e clique em "Carregar Lição"</div>
   </div>
 </div>
 
@@ -317,8 +583,8 @@
 <script src="biblioteca/titulos-biblicos.js"></script>
 <script src="biblioteca/motor-contextos.js"></script>
 <script src="biblioteca/legendas-emogis.js"></script>
-<script src="biblioteca/perguntas-teologia.js"></script>
-<script src="biblioteca/mermaid-teologia.js"></script>
+<script src="biblioteca/perguntas-dominical.js"></script>
+<script src="biblioteca/mermaid-dominical.js"></script>
 
 <script>
 // ============================================
@@ -330,8 +596,6 @@ const apiKeys = {
 };
 
 // Status de cada API: 'ativa' | 'inativa' | 'aguardando'
-// A Bíblia (bible-api.com) é gratuita e não precisa de chave, então já começa ativa,
-// a não ser que o usuário desative manualmente (fica salvo no localStorage).
 let apiStatus = {
   biblia: localStorage.getItem('bibliaAtiva') === 'false' ? 'inativa' : 'ativa',
   groq: apiKeys.groq ? 'ativa' : 'inativa',
@@ -341,14 +605,13 @@ let apiStatus = {
 // Configuração do rodízio
 const config = {
   delay: parseInt(localStorage.getItem('apiDelay')) || 2000,
-  providerOrder: ['groq', 'mistral'], // fallback secundário, usado só se a Bíblia falhar
+  providerOrder: ['groq', 'mistral'],
   currentIndex: 0,
   isRunning: false,
   shouldStop: false,
 };
 
-// Nome completo em português de cada livro, no formato que o bible-api.com espera
-// (tradução "almeida" = João Ferreira de Almeida, domínio público)
+// Nome completo em português de cada livro
 const NOME_LIVRO_PT = {
   gn:"Gênesis", ex:"Êxodo", lv:"Levítico", nm:"Números", dt:"Deuteronômio",
   js:"Josué", jz:"Juízes", rt:"Rute", "1sm":"1 Samuel", "2sm":"2 Samuel",
@@ -366,7 +629,6 @@ const NOME_LIVRO_PT = {
   "1jo":"1 João", "2jo":"2 João", "3jo":"3 João", jd:"Judas", ap:"Apocalipse"
 };
 
-// Mapa "Js 24.26-30" / "1 Sm 17.24,27" -> { livroSlug, capitulo, versiculos:[26,27,28,29,30] }
 const LIVRO_SLUG = {
   "gn":"gn","gênesis":"gn","genesis":"gn",
   "êx":"ex","ex":"ex","êxodo":"ex","exodo":"ex",
@@ -437,9 +699,7 @@ const LIVRO_SLUG = {
 };
 
 function parseReferencia(referencia) {
-  // Aceita tanto "Jz 3.15" (padrão dominical, com ponto) quanto
-  // "Jz 6:12" (padrão teologia, extraído direto do livro, com dois-pontos)
-  const m = referencia.match(/^(\d?\s?[^\d.:]+?)\s*(\d+)[.:](\d+(?:[-,]\d+)*)/);
+  const m = referencia.match(/^(\d?\s?[^\d.]+?)\s*(\d+)\.(\d+(?:[-,]\d+)*)/);
   if (!m) return null;
   const livroTxt = m[1].trim().toLowerCase().replace(/\s+/g, ' ');
   const capitulo = parseInt(m[2], 10);
@@ -447,8 +707,6 @@ function parseReferencia(referencia) {
   if (!slug) return null;
   const versParte = m[3];
   let versiculos = [];
-  // Trata cada pedaço separado por vírgula individualmente, expandindo
-  // ranges com hífen dentro de cada pedaço (ex: "2,18-20" -> [2,18,19,20])
   versParte.split(',').forEach(pedaco => {
     if (pedaco.includes('-')) {
       const [ini, fim] = pedaco.split('-').map(Number);
@@ -482,9 +740,6 @@ function criarFila(concorrenciaMax) {
 }
 const filaVersiculos = criarFila(1);
 
-// ── Bíblia (bible-api.com) — fonte PRIMÁRIA, gratuita, sem chave necessária ──
-// Rate limit do serviço: 15 requisições a cada 30s por IP. Por isso ela também
-// respeita o mesmo "delay entre tentativas" configurado na tela.
 async function buscarVersiculoBibliaAPI(referencia, tentativa = 0) {
   const ref = parseReferencia(referencia);
   if (!ref) return null;
@@ -507,8 +762,6 @@ async function buscarVersiculoBibliaAPI(referencia, tentativa = 0) {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
 
-    // Quando a referência cobre 2+ versículos, a bible-api.com devolve um
-    // array "verses" com cada versículo separado — usamos isso para numerar.
     if (Array.isArray(data.verses) && data.verses.length > 1) {
       const numerado = data.verses
         .map(v => `<strong>${v.verse}</strong> ${(v.text || '').trim().replace(/\s+/g, ' ')}`)
@@ -519,9 +772,6 @@ async function buscarVersiculoBibliaAPI(referencia, tentativa = 0) {
     const texto = (data.text || '').trim().replace(/\s+/g, ' ');
     return texto || null;
   } catch (e) {
-    // "Failed to fetch" costuma ser o rate limit (429) do bible-api.com
-    // aparecendo como erro de CORS no navegador (a resposta de erro do
-    // serviço não inclui cabeçalho CORS). Vale tentar de novo antes de desistir.
     if (tentativa < 2) {
       await esperar(1500 * (tentativa + 1));
       return buscarVersiculoBibliaAPI(referencia, tentativa + 1);
@@ -531,7 +781,6 @@ async function buscarVersiculoBibliaAPI(referencia, tentativa = 0) {
   }
 }
 
-// ── Groq ──
 async function buscarVersiculoGroq(referencia, tentativa = 0) {
   if (!apiKeys.groq) return null;
   const prompt = `Forneça APENAS o texto do(s) versículo(s) bíblico(s) "${referencia}" na versão Almeida Revista e Corrigida (ARC) em português. Se a referência cobrir mais de um versículo, numere cada um antes do seu respectivo texto (formato: "19 texto do versículo 20 texto do versículo"). Não inclua nenhuma explicação, comentário ou formatação adicional.`;
@@ -562,7 +811,6 @@ async function buscarVersiculoGroq(referencia, tentativa = 0) {
   }
 }
 
-// ── Mistral ──
 async function buscarVersiculoMistral(referencia, tentativa = 0) {
   if (!apiKeys.mistral) return null;
   const prompt = `Forneça APENAS o texto do(s) versículo(s) bíblico(s) "${referencia}" na versão Almeida Revista e Corrigida (ARC) em português. Se a referência cobrir mais de um versículo, numere cada um antes do seu respectivo texto (formato: "19 texto do versículo 20 texto do versículo"). Não inclua nenhuma explicação, comentário ou formatação adicional.`;
@@ -593,10 +841,8 @@ async function buscarVersiculoMistral(referencia, tentativa = 0) {
   }
 }
 
-// ── Bíblia local (arquivo estático "biblioteca/biblia-almeida.js", domínio público) ──
-// Busca instantânea, sem rede, sem rate limit. Sempre a primeira tentativa.
 function buscarVersiculoLocal(referencia) {
-  if (!window.BIBLIA_ALMEIDA) return null; // arquivo não carregou por algum motivo
+  if (!window.BIBLIA_ALMEIDA) return null;
   const ref = parseReferencia(referencia);
   if (!ref) return null;
   const capitulos = window.BIBLIA_ALMEIDA[ref.slug];
@@ -609,50 +855,35 @@ function buscarVersiculoLocal(referencia) {
     .filter(v => v.texto);
   if (encontrados.length === 0) return null;
 
-  // Referência de um único versículo: mantém o texto simples, sem numeração.
   if (encontrados.length === 1) return encontrados[0].texto;
-
-  // Referência com 2+ versículos: numera cada um para facilitar a leitura.
   return encontrados.map(v => `<strong>${v.numero}</strong> ${v.texto}`).join(' ');
 }
 
-// ── Busca automática: Bíblia local (primária) → bible-api.com (secundária) ──
-// A IA (Groq/Mistral) NÃO entra aqui — só é usada sob demanda, veja buscarVersiculoComIA().
 async function buscarVersiculoSemIA(referencia) {
   return filaVersiculos(async () => {
-    // 0) Tenta a Bíblia local — instantâneo, sem rede, sem limite de requisições
     const resultadoLocal = buscarVersiculoLocal(referencia);
-    if (resultadoLocal) {
-      return resultadoLocal;
-    }
+    if (resultadoLocal) return resultadoLocal;
 
-    // 1) Tenta a Bíblia (bible-api.com) — opção secundária, gratuita, sem chave
     if (apiStatus.biblia !== 'inativa') {
       const resultadoBiblia = await buscarVersiculoBibliaAPI(referencia);
       if (resultadoBiblia && typeof resultadoBiblia === 'string') {
         return resultadoBiblia;
       }
     }
-
     return null;
   });
 }
 
-// ── Busca manual de emergência: rodízio Groq ↔ Mistral (IA) ──
-// Só é chamada quando o usuário clica no botão "🆘 Tentar com IA" de um versículo que falhou.
 async function buscarVersiculoComIA(referencia) {
   return filaVersiculos(async () => {
     const provedores = ['groq', 'mistral'];
     let tentativas = 0;
-    const maxTentativas = 4; // 2 provedores * 2 tentativas cada
+    const maxTentativas = 4;
 
     const algumConfigurado = provedores.some(p => !!apiKeys[p]);
-    if (!algumConfigurado) {
-      return null;
-    }
+    if (!algumConfigurado) return null;
 
     while (tentativas < maxTentativas) {
-      // Pega o próximo provedor da lista (round-robin)
       const provider = provedores[config.currentIndex % provedores.length];
       config.currentIndex++;
 
@@ -673,24 +904,939 @@ async function buscarVersiculoComIA(referencia) {
         return resultado;
       }
 
-      if (resultado?.rateLimited) {
-        await esperar(1500);
-      }
-
+      if (resultado?.rateLimited) await esperar(1500);
       tentativas++;
-
-      if (tentativas < maxTentativas) {
-        await esperar(config.delay);
-      }
+      if (tentativas < maxTentativas) await esperar(config.delay);
     }
-
     return null;
   });
 }
 
-// Versão antiga para compatibilidade (usada só nas buscas automáticas, sem IA)
-const buscarVersiculoComRodizio = buscarVersiculoSemIA;
-const buscarVersiculo = buscarVersiculoSemIA;
+// ============================================
+// CONTEXTOS BÍBLICOS
+// ============================================
+function obterContexto(id, dadosLicao, referencia) {
+  const fino = dadosLicao?.contextosReferencias?.[id];
+  if (fino && typeof window.montarContextoCompleto === 'function') {
+    return window.montarContextoCompleto(fino);
+  }
+  if (referencia && typeof window.inferirContextoAutomatico === 'function') {
+    return window.inferirContextoAutomatico(id, referencia);
+  }
+  return null;
+}
+
+function formatarCabecalhoContexto(ctx) {
+  let h = `📖 ${ctx.referencia}`;
+  if (ctx.autoInferido)         h += ` 🔮`;
+  if (ctx.data)                h += ` | 📅 ${ctx.data}`;
+  if (ctx.local)                h += ` | 🚩 ${ctx.local}`;
+  if (ctx.lider)                h += ` | 👑 ${ctx.lider}`;
+  if (ctx.era)                  h += ` | 📜 ${ctx.era}${ctx.eraDatas ? ' (' + ctx.eraDatas + ')' : ''}`;
+  if (ctx.classificacao)        h += ` | 📚 ${ctx.classificacao}`;
+  if (ctx.periodoSecular)       h += ` | ⏳ ${ctx.periodoSecular}${ctx.periodoSecularDatas ? ' (' + ctx.periodoSecularDatas + ')' : ''}`;
+  if (ctx.periodoHumanidade)    h += ` | 🏰 ${ctx.periodoHumanidade}${ctx.periodoHumanidadeDatas ? ' (' + ctx.periodoHumanidadeDatas + ')' : ''}`;
+  return h;
+}
+
+// ============================================
+// HIERARQUIA
+// ============================================
+function renderizarHierarquia(nos, nivel) {
+  if (!nos || nos.length === 0) return '';
+  let html = `<ul class="hierarquia-lista">`;
+  nos.forEach(no => {
+    html += `<li class="nivel-${nivel}">
+      <div class="hierarquia-item">
+        <div>
+          <div class="hierarquia-label">${no.label}</div>`;
+    if (no.refs && no.refs.length > 0) {
+      html += `<div class="hierarquia-refs">`;
+      no.refs.forEach(r => {
+        html += `<div class="hierarquia-ref-item">
+          <a class="hierarquia-ref-link" href="#${r.id}-contexto">${r.referencia}</a>
+          <span class="hierarquia-tags">${r.tags || ''}</span>
+        </div>`;
+      });
+      html += `</div>`;
+    }
+    html += `</div></div>`;
+    if (no.filhos && no.filhos.length > 0) {
+      html += `<div class="hierarquia-filhos">${renderizarHierarquia(no.filhos, nivel + 1)}</div>`;
+    }
+    html += `</li>`;
+  });
+  html += `</ul>`;
+  return html;
+}
+
+// ============================================
+// MAPA MENTAL MERMAID
+// ============================================
+function renderizarMermaid(chave) {
+  const diagrama = (window.bibliotecaMermaid || {})[chave];
+  if (!diagrama) return `<div class="sem-mermaid">⚠️ Diagrama não disponível para esta lição.</div>`;
+  return `<div class="mermaid-wrapper"><div class="mermaid">${diagrama}</div></div>`;
+}
+
+// ============================================
+// PERGUNTAS SUGERIDAS
+// ============================================
+function embaralhar(array) {
+  const a = [...array];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+let _perguntaIdCounter = 0;
+
+function renderizarCardPergunta(p, numero) {
+  const id = `gab-${_perguntaIdCounter++}`;
+  const refsHtml = (p.refs || []).map(r =>
+    `<span class="pergunta-ref-badge" onclick="event.stopPropagation();document.getElementById('${r}-contexto')?.scrollIntoView({behavior:'smooth'})">${r}</span>`
+  ).join('');
+  const textoLimpo = p.pergunta.replace(/^Hora da Revisão\s*—\s*\d+\.\s*/, '');
+  return `<div class="pergunta-card">
+    <div class="pergunta-texto">${numero}. ${textoLimpo} <span class="icone-gabarito" id="icone-${id}" onclick="const box=document.getElementById('${id}');box.classList.toggle('aberto');document.getElementById('icone-${id}').textContent=box.classList.contains('aberto')?'🙈':'🔑'" title="Ver/ocultar gabarito">🔑</span></div>
+    <div class="gabarito-box" id="${id}">
+      <div class="gabarito-linha"><strong>📋 Tópico:</strong> ${p.topicoOrigem || '—'}</div>
+      <div class="gabarito-linha"><strong>📄 Página:</strong> ${p.pagina}</div>
+      <div class="gabarito-linha"><strong>#️⃣ Tags:</strong> ${p.tags}</div>
+      ${refsHtml ? `<div class="gabarito-linha"><strong>📖 Refs:</strong> <div class="pergunta-refs" style="display:inline-flex;">${refsHtml}</div></div>` : ''}
+    </div>
+  </div>`;
+}
+
+function renderizarPerguntas(chave) {
+  const todas = (window.bibliotecaPerguntas || {})[chave];
+  if (!todas || todas.length === 0)
+    return `<div class="sem-perguntas">⚠️ Perguntas não disponíveis para esta lição.</div>`;
+
+  const extras  = embaralhar(todas.filter(p => !p.pergunta.startsWith('Hora da Revisão')));
+  const revisao = embaralhar(todas.filter(p =>  p.pergunta.startsWith('Hora da Revisão')));
+
+  let html = '';
+
+  if (extras.length > 0) {
+    html += `<h3 class="pergunta-subtitulo">💡 Perguntas de Aprofundamento</h3>`;
+    html += extras.map((p, i) => renderizarCardPergunta(p, i + 1)).join('');
+  }
+
+  if (revisao.length > 0) {
+    html += `<h3 class="pergunta-subtitulo">📝 Hora da Revisão (Apostila)</h3>`;
+    html += revisao.map((p, i) => renderizarCardPergunta(p, i + 1)).join('');
+  }
+
+  return html;
+}
+
+// ============================================
+// VARIÁVEIS GLOBAIS
+// ============================================
+let mapaAtual = null;
+let scriptCarregado = null;
+let dadosLicaoAtual = null;
+let refsUnicasAtual = [];
+let locaisDaLicaoAtual = [];
+let marcadoresMapa = {};
+
+// ============================================
+// FUNÇÃO: EXTRAIR LOCAIS DA LIÇÃO
+// ============================================
+function extrairLocaisDaLicao(dadosLicao) {
+    if (!dadosLicao) return [];
+    if (typeof window.locaisBiblicos === 'undefined') {
+        console.warn('locaisBiblicos não carregado');
+        return [];
+    }
+    
+    // 1. Pegar todas as referências da lição
+    const refsLicao = [];
+    
+    // Da lista de aparição
+    if (dadosLicao.listaAparicao) {
+        dadosLicao.listaAparicao.forEach(item => {
+            if (item.referencia) refsLicao.push(item.referencia);
+        });
+    }
+    
+    // Da hierarquia (refs aninhadas)
+    if (dadosLicao.hierarquia) {
+        function extrairRefs(nos) {
+            nos.forEach(no => {
+                if (no.refs) {
+                    no.refs.forEach(r => {
+                        if (r.referencia) refsLicao.push(r.referencia);
+                    });
+                }
+                if (no.filhos) extrairRefs(no.filhos);
+            });
+        }
+        extrairRefs(dadosLicao.hierarquia);
+    }
+    
+    // Remover duplicatas
+    const refsUnicas = [...new Set(refsLicao)];
+    console.log(`📖 ${refsUnicas.length} referências únicas encontradas na lição`);
+    
+    // 2. Buscar locais correspondentes
+    const locaisEncontrados = [];
+    const locaisData = window.locaisBiblicos;
+    
+    refsUnicas.forEach(ref => {
+        const refNorm = ref.trim();
+        
+        Object.values(locaisData).forEach(local => {
+            if (!local.referencias || !Array.isArray(local.referencias)) return;
+            
+            const match = local.referencias.some(r => {
+                const rNorm = r.trim();
+                return rNorm === refNorm || 
+                       rNorm.includes(refNorm) || 
+                       refNorm.includes(rNorm);
+            });
+            
+            if (match) {
+                const id = local.id || local.nomeOriginal || local.nome;
+                if (!locaisEncontrados.some(l => (l.id || l.nomeOriginal || l.nome) === id)) {
+                    locaisEncontrados.push({
+                        ...local,
+                        referenciaMatch: ref
+                    });
+                }
+            }
+        });
+    });
+    
+    console.log(`📍 ${locaisEncontrados.length} locais encontrados para a lição`);
+    return locaisEncontrados;
+}
+
+// ============================================
+// FUNÇÃO: ADICIONAR MARCADORES NO MAPA
+// ============================================
+function adicionarMarcadoresNoMapa(map, locais) {
+    if (!map || !locais || locais.length === 0) return;
+    
+    const markers = L.markerClusterGroup({
+        maxClusterRadius: 50,
+        spiderfyOnMaxZoom: true,
+        showCoverageOnHover: false,
+        zoomToBoundsOnClick: true,
+        iconCreateFunction: function(cluster) {
+            const count = cluster.getChildCount();
+            const size = count < 10 ? 'small' : count < 50 ? 'medium' : 'large';
+            return L.divIcon({
+                html: `<div><span>${count}</span></div>`,
+                className: `marker-cluster marker-cluster-${size}`,
+                iconSize: [40, 40]
+            });
+        }
+    });
+    
+    locais.forEach(local => {
+        const lat = parseFloat(local.latitude);
+        const lng = parseFloat(local.longitude);
+        
+        if (isNaN(lat) || isNaN(lng)) return;
+        if (lat === 0 && lng === 0) return;
+        if (lat === 0 && lng === 14) return;
+        
+        const tipo = local.tipo || 'local';
+        const cor = window.getCorLocal ? window.getCorLocal(tipo) : '#FFD700';
+        const corTexto = window.getCorTextoLocal ? window.getCorTextoLocal(tipo) : '#FFFFFF';
+        const emoji = window.getEmojiLocal ? window.getEmojiLocal(tipo) : '📍';
+        
+        const icon = L.divIcon({
+            className: 'custom-icon',
+            html: `<div style="
+                width: 14px;
+                height: 14px;
+                background: ${cor};
+                border-radius: 50%;
+                border: 3px solid white;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+            "></div>`,
+            iconSize: [14, 14],
+            iconAnchor: [7, 7],
+            popupAnchor: [0, -7]
+        });
+        
+        const nome = local.nome || local.nomeOriginal || local.id || 'Local';
+        const refs = local.referencias ? local.referencias.join(' ') : '';
+        const refMatch = local.referenciaMatch || '';
+        const id = local.id || local.nomeOriginal || local.nome;
+        
+        let popupContent = `
+            <div style="font-weight:700;font-size:15px;color:#1a1a2e;">
+                ${emoji} ${nome}
+            </div>
+            <div style="color:#555;font-size:12px;margin:4px 0;">
+                ${local.nomeOriginal || ''} ${local.nomeAntigo ? '| ' + local.nomeAntigo : ''}
+            </div>
+        `;
+        
+        if (local.descricao) {
+            popupContent += `
+                <div style="font-size:12px;color:#555;max-height:80px;overflow-y:auto;margin:4px 0;">
+                    ${local.descricao.substring(0, 120)}${local.descricao.length > 120 ? '...' : ''}
+                </div>
+            `;
+        }
+        
+        popupContent += `
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;">
+                <span style="background:${cor};color:${corTexto};padding:1px 10px;border-radius:12px;font-size:11px;font-weight:600;">
+                    ${tipo}
+                </span>
+                ${refs ? `<span style="background:#f0f0f0;padding:1px 8px;border-radius:4px;font-size:11px;font-family:monospace;">📖 ${refs}</span>` : ''}
+                ${refMatch ? `<span style="background:#FFD700;padding:1px 8px;border-radius:4px;font-size:10px;font-weight:600;color:#1a1a2e;">🎯 Destaque da Lição</span>` : ''}
+            </div>
+        `;
+        
+        const marker = L.marker([lat, lng], { icon });
+        marker.bindPopup(popupContent, { 
+            maxWidth: 320,
+            maxHeight: 300,
+            className: 'custom-popup'
+        });
+        marker._id = id;
+        marker._localData = local;
+        
+        markers.addLayer(marker);
+        marcadoresMapa[id] = marker;
+    });
+    
+    map.addLayer(markers);
+}
+
+// ============================================
+// FUNÇÃO: CRIAR MAPA COM LOCAIS DA LIÇÃO
+// ============================================
+function criarMapaComLocaisDaLicao(dadosLicao) {
+    const el = document.getElementById('mapaInterativo');
+    if (!el) {
+        console.warn('Elemento #mapaInterativo não encontrado');
+        return null;
+    }
+    
+    if (typeof L === 'undefined') {
+        console.warn('Leaflet não carregado');
+        return null;
+    }
+    
+    if (mapaAtual) {
+        mapaAtual.remove();
+        mapaAtual = null;
+    }
+    
+    const centro = dadosLicao?.mapaConfig?.centro || [32.6, 35.3];
+    const zoom = dadosLicao?.mapaConfig?.zoom || 8;
+    
+    const map = L.map(el).setView(centro, zoom);
+    
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, © CartoDB',
+        subdomains: 'abcd',
+        maxZoom: 19
+    }).addTo(map);
+    
+    mapaAtual = map;
+    
+    const locaisDaLicao = extrairLocaisDaLicao(dadosLicao);
+    locaisDaLicaoAtual = locaisDaLicao;
+    
+    if (locaisDaLicao.length > 0) {
+        adicionarMarcadoresNoMapa(map, locaisDaLicao);
+        
+        try {
+            const group = L.featureGroup();
+            locaisDaLicao.forEach(local => {
+                const lat = parseFloat(local.latitude);
+                const lng = parseFloat(local.longitude);
+                if (!isNaN(lat) && !isNaN(lng)) {
+                    group.addLayer(L.marker([lat, lng]));
+                }
+            });
+            map.fitBounds(group.getBounds(), { padding: [50, 50] });
+        } catch(e) {
+            console.warn('Não foi possível ajustar o zoom:', e);
+        }
+    }
+    
+    const contador = document.getElementById('contador-locais');
+    if (contador) {
+        contador.textContent = locaisDaLicao.length;
+    }
+    
+    // Renderizar índice de locais
+    renderizarIndiceLocais(locaisDaLicao);
+    
+    console.log(`✅ Mapa carregado com ${locaisDaLicao.length} locais da lição`);
+    return map;
+}
+
+// ============================================
+// RENDERIZAR ÍNDICE DE LOCAIS DA LIÇÃO
+// ============================================
+function renderizarIndiceLocais(locais) {
+    const container = document.getElementById('lista-locais-licao');
+    const itensContainer = document.getElementById('itens-indice-locais');
+    const contador = document.getElementById('contador-indice');
+    
+    if (!container || !itensContainer || !contador) return;
+    
+    contador.textContent = locais.length;
+    
+    if (locais.length === 0) {
+        container.style.display = 'none';
+        return;
+    }
+    
+    container.style.display = 'block';
+    
+    let html = '';
+    locais.forEach(local => {
+        const cor = window.getCorLocal ? window.getCorLocal(local.tipo || 'local') : '#808080';
+        const emoji = window.getEmojiLocal ? window.getEmojiLocal(local.tipo || 'local') : '📍';
+        const nome = local.nome || local.nomeOriginal || local.id || 'Local';
+        const refs = local.referencias ? local.referencias.join(' ') : '';
+        const id = local.id || local.nomeOriginal || local.nome;
+        const refMatch = local.referenciaMatch || '';
+        const refExibicao = refMatch || refs;
+        
+        html += `
+            <div class="item-indice-local" onclick="irParaLocalNoMapa('${id}')" style="border-left-color: ${cor}; background: ${cor}22;">
+                <span class="emoji-indice">${emoji}</span>
+                <span class="nome-indice">${nome}</span>
+                <span class="tipo-indice">${local.tipo || 'local'}</span>
+                ${refExibicao ? `<span class="ref-indice">📖 ${refExibicao}</span>` : ''}
+            </div>
+        `;
+    });
+    
+    itensContainer.innerHTML = html;
+}
+
+// ============================================
+// IR PARA LOCAL NO MAPA (PELA LISTA)
+// ============================================
+function irParaLocalNoMapa(id) {
+    const local = locaisDaLicaoAtual.find(l => (l.id || l.nomeOriginal || l.nome) === id);
+    if (!local) return;
+    
+    if (mapaAtual) {
+        const lat = parseFloat(local.latitude);
+        const lng = parseFloat(local.longitude);
+        if (!isNaN(lat) && !isNaN(lng)) {
+            mapaAtual.setView([lat, lng], 12, { animate: true, duration: 0.6 });
+            
+            setTimeout(() => {
+                const marker = marcadoresMapa[id];
+                if (marker) {
+                    marker.openPopup();
+                }
+            }, 400);
+        }
+    }
+}
+
+// ============================================
+// TOGGLE LISTA DE LOCAIS
+// ============================================
+function toggleListaLocais() {
+    const container = document.getElementById('lista-locais-licao');
+    if (container) {
+        container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    }
+}
+
+function fecharListaLocais() {
+    const container = document.getElementById('lista-locais-licao');
+    if (container) container.style.display = 'none';
+}
+
+// ============================================
+// SALVAR LOCAIS DA LIÇÃO NO LOCALSTORAGE
+// ============================================
+function salvarLocaisDaLicao(dadosLicao) {
+    if (!dadosLicao) return;
+    
+    try {
+        const locais = extrairLocaisDaLicao(dadosLicao);
+        
+        const dadosParaSalvar = {
+            titulo: dadosLicao.titulo || 'Lição',
+            trimestre: dadosLicao.trimestre || '',
+            locais: locais.map(local => ({
+                id: local.id || local.nomeOriginal || local.nome,
+                nome: local.nome || local.nomeOriginal,
+                tipo: local.tipo,
+                latitude: local.latitude,
+                longitude: local.longitude,
+                referencias: local.referencias
+            }))
+        };
+        
+        localStorage.setItem('licaoAtual', JSON.stringify(dadosParaSalvar));
+        console.log(`💾 ${locais.length} locais da lição salvos no localStorage`);
+    } catch (e) {
+        console.warn('Erro ao salvar locais da lição:', e);
+    }
+}
+
+// ============================================
+// RENDERIZAR CONTEÚDO PRINCIPAL
+// ============================================
+function atualizarStatusAPI() {
+  document.querySelectorAll('.api-status-badge').forEach(el => {
+    const api = el.dataset.api;
+    if (apiStatus[api] === 'ativa') {
+      el.textContent = '✅ Ativa';
+      el.className = 'api-status-badge ativa';
+    } else if (apiStatus[api] === 'aguardando') {
+      el.textContent = '⏳ Aguardando...';
+      el.className = 'api-status-badge aguardando';
+    } else {
+      el.textContent = '⛔ Inativa';
+      el.className = 'api-status-badge inativa';
+    }
+  });
+}
+
+// ============================================
+// RENDERIZAR CONTEÚDO PRINCIPAL (continuação)
+// ============================================
+async function renderizarConteudo(dados) {
+  dadosLicaoAtual = dados;
+  
+  // Salvar locais da lição para o mapa completo
+  salvarLocaisDaLicao(dados);
+  
+  const tituloHeader = document.getElementById('tituloDinamico');
+  tituloHeader.innerHTML = dados.titulo || 'Lição carregada';
+  if (dados.trimestre) tituloHeader.innerHTML += ' | ' + dados.trimestre;
+  if (dados.paginas)   tituloHeader.innerHTML += ' | Páginas ' + dados.paginas;
+
+  const trimestre = document.getElementById('seletorTrimestre').value;
+  const licaoNum  = document.getElementById('seletorLicao').value;
+  const chaveLib  = `${trimestre}-licao${licaoNum}`;
+
+  const container = document.getElementById('conteudo-principal');
+
+  // ── CONFIG API ──
+  let html = `
+  <section id="api-config">
+    <h2>🔑 Configuração das APIs</h2>
+    <div class="api-config">
+      <div style="font-size:12px;color:#5c4a1e;margin-bottom:10px;">
+        📚 <strong>Bíblia local</strong> (arquivo salvo no projeto, domínio público) é a fonte principal — instantânea, sem rede, sem limite de requisições.
+        <br>📖 Se algo não for encontrado localmente, tenta a <strong>Bíblia (bible-api.com)</strong> online, também gratuita e sem chave.
+        <br>🆘 Se as duas falharem, a IA (Groq/Mistral) fica disponível <strong>só sob demanda</strong>, por um botão em cada versículo — não é usada automaticamente.
+      </div>
+
+      <div class="api-linha">
+        <label>📖 Bíblia (bible-api.com):</label>
+        <span style="font-size:12px;color:#666;">Tradução Almeida · sem necessidade de chave</span>
+        <button onclick="alternarBiblia()">${apiStatus.biblia === 'ativa' ? '‖ Desativar' : '▶️ Ativar'}</button>
+        <span class="api-status-badge ${apiStatus.biblia === 'ativa' ? 'ativa' : 'inativa'}" data-api="biblia">${apiStatus.biblia === 'ativa' ? '✅ Ativa' : '⛔ Inativa'}</span>
+      </div>
+
+      <div class="api-linha">
+        <label>⚡ Groq <span style="font-weight:400;color:#666;">(IA · botão manual)</span>:</label>
+        <input type="password" id="keyGroq" placeholder="Chave da Groq" value="${apiKeys.groq}">
+        <button onclick="salvarChave('groq')">💾 Salvar</button>
+        <span class="api-status-badge ${apiStatus.groq === 'ativa' ? 'ativa' : 'inativa'}" data-api="groq">${apiStatus.groq === 'ativa' ? '✅ Ativa' : '⛔ Inativa'}</span>
+      </div>
+
+      <div class="api-linha">
+        <label>🌀 Mistral <span style="font-weight:400;color:#666;">(IA · botão manual)</span>:</label>
+        <input type="password" id="keyMistral" placeholder="Chave da Mistral" value="${apiKeys.mistral}">
+        <button onclick="salvarChave('mistral')">💾 Salvar</button>
+        <span class="api-status-badge ${apiStatus.mistral === 'ativa' ? 'ativa' : 'inativa'}" data-api="mistral">${apiStatus.mistral === 'ativa' ? '✅ Ativa' : '⛔ Inativa'}</span>
+      </div>
+
+      <div class="api-linha" style="margin-top:12px;padding-top:12px;border-top:1px solid #e0e0e0;">
+        <label>🐌 Delay entre tentativas:</label>
+        <input type="number" id="delayInput" value="${config.delay}" min="500" max="10000" step="100" style="width:100px;">
+        <span style="font-size:12px;color:#666;">ms (atual: <span id="delayDisplay">${config.delay}</span>ms)</span>
+        <button onclick="salvarDelay()">💾 Salvar Delay</button>
+        <span style="font-size:11px;color:#999;">(usado entre pedidos à bible-api.com e no botão de IA — o site limita a 15 pedidos a cada 30s)</span>
+      </div>
+
+      <div class="api-linha" style="margin-top:12px;padding-top:12px;border-top:1px solid #e0e0e0;">
+        <button onclick="buscarVersiculosNovamente()">↻ Buscar versículos que falharam</button>
+        <span style="font-size:12px;color:#666;">Tenta de novo na Bíblia local/bible-api.com. Para IA, use o botão 🆘 em cada versículo.</span>
+      </div>
+    </div>
+  </section>`;
+
+    // ── HIERARQUIA ──
+    html += `<section id="hierarquia"><h2>📋 Hierarquia de Tópicos</h2>`;
+  if (dados.hierarquia && dados.hierarquia.length > 0) {
+    html += renderizarHierarquia(dados.hierarquia, 1);
+  } else {
+    html += `<p style="color:#999;font-style:italic;">Hierarquia não disponível neste modelo de dados.</p>`;
+  }
+  html += `</section>`;
+
+    // ── IMAGENS RELACIONADAS (AGORA DENTRO DOS CARDS DE CONTEXTO) ──
+  // A função que renderiza os cards de contexto foi modificada para incluir imagens
+
+  // ── MAPA MENTAL ──
+  html += `<section id="mapa-mental"><h2>Ψ Mapa Mental</h2>${renderizarMermaid(chaveLib)}</section>`;
+
+  // ── PERGUNTAS ──
+  html += `<section id="perguntas"><h2>❓ Perguntas Sugeridas</h2>${renderizarPerguntas(chaveLib)}</section>`;
+
+  // ── LISTA ALFABÉTICA ──
+  if (dados.listaAlfabetica && dados.listaAlfabetica.length > 0) {
+    const listaAlf = [...dados.listaAlfabetica];
+    html += `<section id="alfabetica"><h2>🔤 Lista Alfabética de Referências</h2>
+      <p style="font-size:12px;color:#666;margin-bottom:10px;">📌 ${listaAlf.length} referências únicas</p>
+      <table><thead><tr>
+        <th class="col-num">1️⃣</th>
+        <th class="col-ref">📖</th>
+        <th>#️⃣ Tags</th>
+        <th class="col-pag">📄</th>
+      </tr></thead><tbody>`;
+    listaAlf.forEach((item, idx) => {
+      const refLink = item.id
+        ? `<a href="#${item.id}-contexto" style="color:#3b5e3b;font-weight:bold;">${item.referencia}</a>`
+        : (item.referencia || '');
+      html += `<tr>
+        <td class="col-num">${idx + 1}</td>
+        <td class="col-ref">${refLink}</td>
+        <td>${item.tags || ''}</td>
+        <td class="col-pag">${item.pagina || ''}</td>
+      </tr>`;
+    });
+    html += `</tbody></table>
+      <div class="footer-links"><a href="#hierarquia">📋 Hierarquia de tópicos ↑</a></div>
+    </section>`;
+  }
+
+  // ── MAPA ──
+  html += `
+  <section id="mapas">
+    <h2>🌏⛺ Mapa dos Locais Bíblicos</h2>
+    
+    <div class="mapa-container">
+      <div class="mapa-titulo">
+        <h3>🗺️ Mapa Interativo</h3>
+        <div class="info-locais">
+          🏛️ <span id="contador-locais">0</span> locais carregados
+          <span style="margin-left:12px;color:#666;">|</span>
+          <span style="color:#888;font-size:13px;">Clique nos marcadores para ver detalhes</span>
+        </div>
+        <button class="btn-toggle-indice" onclick="toggleListaLocais()">📋 Mostrar Locais</button>
+      </div>
+      
+      <div id="mapaInterativo"></div>
+      
+      <!-- LISTA DE LOCAIS DA LIÇÃO -->
+      <div id="lista-locais-licao">
+        <div class="header-indice">
+          <h4>📍 Locais da Lição <span class="count" id="contador-indice">0</span></h4>
+          <button class="btn-fechar-indice" onclick="fecharListaLocais()">✕</button>
+        </div>
+        <div id="itens-indice-locais">
+          <span style="color:#888;font-size:13px;font-style:italic;">Nenhum local encontrado</span>
+        </div>
+      </div>
+      
+      <div class="mapa-botoes">
+        <a href="biblioteca/mapa-com-indice.html" target="_blank" class="btn-abrir-mapa-completo">
+          🗺️ Abrir Mapa Completo com Índice
+        </a>
+        <span style="font-size:12px;color:#888;align-self:center;">
+          🔍 Busque, filtre, veja em PT/EN e clique para ir ao local
+        </span>
+      </div>
+    </div>
+    
+    <div class="netlify-section">
+      <h3>🔗 Link do Projeto (Netlify)</h3>
+      <input type="text" id="netlifyInput" placeholder="Cole o link do projeto">
+      <button id="salvarLink">Salvar Link</button>
+      <div id="linkSalvo"></div>
+    </div>
+  </section>`;
+
+  // ── PLANILHAS ──
+  html += `<section id="planilhaEventos"><h2>📊 Planilhas de Referência</h2>
+    <p style="font-size:12px;color:#666;margin-bottom:8px;">
+      Consulta geral da Bíblia inteira — ficam em páginas separadas pra não pesar aqui na lição.
+    </p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <a href="planilha-cronologica.html?filtro=arco" target="_blank" style="padding:8px 14px;border:1px solid #3b5e3b;border-radius:6px;text-decoration:none;color:#3b5e3b;background:#f4f1e4;">🌟 Só eventos do arco ↗</a>
+      <a href="planilha-cronologica.html?filtro=almeida" target="_blank" style="padding:8px 14px;border:1px solid #3b5e3b;border-radius:6px;text-decoration:none;color:#3b5e3b;background:#f4f1e4;">📑 Só títulos Almeida ↗</a>
+      <a href="planilha-cronologica.html" target="_blank" style="padding:8px 14px;border:1px solid #3b5e3b;border-radius:6px;text-decoration:none;color:#3b5e3b;background:#f4f1e4;">📖 Geralzão completo — eventos + títulos ARC ↗</a>
+    </div>
+  </section>`;
+
+  // ── CONTEXTOS ──
+  html += `<section id="contextos"><h2>💬 Contextos das Passagens</h2>
+    <p style="font-size:12px;color:#666;margin-bottom:15px;">
+      📚 Os versículos vêm primeiro da <strong>Bíblia local</strong> (domínio público, instantânea), depois da <strong>bible-api.com</strong>${apiStatus.biblia === 'ativa' ? '' : ' <strong style="color:#c62828;">— desativada agora</strong>'} online.
+      <br>↻ Se ambas falharem, cai no <strong>rodízio</strong> Groq ↔ Mistral (IA) com delay de ${config.delay}ms.
+    </p>
+    <div id="containerContextos"></div>
+  </section>`;
+
+  container.innerHTML = html;
+
+  // ── INIT MERMAID ──
+  if (typeof mermaid !== 'undefined') {
+    mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+    mermaid.run({ nodes: document.querySelectorAll('.mermaid') });
+  }
+
+  // ── MAPA COM LOCAIS DA LIÇÃO ──
+  setTimeout(() => {
+    if (dadosLicaoAtual) {
+        criarMapaComLocaisDaLicao(dadosLicaoAtual);
+    }
+  }, 500);
+
+  // ── NETLIFY ──
+  const netlifyInput = document.getElementById('netlifyInput');
+  const salvarBtn = document.getElementById('salvarLink');
+  const linkSalvoDiv = document.getElementById('linkSalvo');
+  if (netlifyInput && salvarBtn) {
+    const salvo = localStorage.getItem('netlifyLink');
+    if (salvo) {
+      netlifyInput.value = salvo;
+      linkSalvoDiv.innerHTML = `✅ <a href="${salvo}" target="_blank">${salvo}</a>`;
+    }
+    salvarBtn.onclick = () => {
+      const link = netlifyInput.value.trim();
+      if (link) {
+        localStorage.setItem('netlifyLink', link);
+        linkSalvoDiv.innerHTML = `✅ <a href="${link}" target="_blank">${link}</a>`;
+      }
+    };
+  }
+
+  // ── RENDERIZAR CARDS DE CONTEXTO ──
+  const containerCtx = document.getElementById('containerContextos');
+  if (!containerCtx) return;
+
+  const listaRef = dados.listaAparicao || [];
+  const idsVistos = new Set();
+  const idsParaRenderizar = [];
+  const referenciaPorId = new Map(listaRef.filter(i => i.id).map(i => [i.id, i.referencia]));
+
+  listaRef.forEach(item => {
+    if (!item.id || idsVistos.has(item.id)) return;
+    idsVistos.add(item.id);
+    idsParaRenderizar.push(item.id);
+  });
+
+  if (idsParaRenderizar.length === 0) {
+    containerCtx.innerHTML = '<p>Nenhum contexto disponível.</p>';
+    return;
+  }
+
+  idsParaRenderizar.forEach(id => {
+    const ctx = obterContexto(id, dados, referenciaPorId.get(id) || id);
+    const card = document.createElement('div');
+    card.className = 'contexto-card';
+    card.id = `${id}-contexto`;
+
+    // Buscar locais mencionados nesta referência - PRIORIZA O CAMPO locais DO DADO
+let locaisMencionados = [];
+
+// 1. Primeiro, tenta pegar do campo 'locais' do próprio item da listaAparicao
+const itemLicao = dados.listaAparicao?.find(item => item.id === id);
+if (itemLicao && itemLicao.locais && itemLicao.locais.length > 0) {
+    locaisMencionados = itemLicao.locais.map(local => ({
+        nome: local.nome,
+        tipo: local.tipo,
+        // Tenta encontrar o local correspondente em locaisDaLicaoAtual para ter mais dados
+        ...locaisDaLicaoAtual.find(l => (l.nome || l.nomeOriginal) === local.nome)
+    }));
+} 
+// 2. Fallback: busca nos locais encontrados
+else if (locaisDaLicaoAtual.length > 0) {
+    locaisMencionados = locaisDaLicaoAtual.filter(local => {
+        return local.referencias && local.referencias.some(r => {
+            const refNorm = r.trim();
+            const refId = id;
+            return refNorm.includes(refId) || refId.includes(refNorm);
+        });
+    });
+}
+
+    if (ctx) {
+      const cabecalho = formatarCabecalhoContexto(ctx);
+      const assuntosHtml = (ctx.assuntos || []).map(a =>
+        `<span class="assunto-tag">#${a}</span>`).join('');
+
+      const panorama = ctx.panorama || {};
+      const pTag = (item) => (item?.personagens?.length ? ` 👤🔗 ${item.personagens.join(', ')}` : '');
+      const linhaPanorama = (panorama.antes || panorama.durante || panorama.depois) ? `
+        <div class="contexto-campo">🌟
+          ${panorama.antes   ? `⏪ ${panorama.antes.titulo} (${panorama.antes.referencia})${pTag(panorama.antes)}`   : ''}
+          ${panorama.durante ? `⏺️ ${panorama.durante.titulo} (${panorama.durante.referencia})${pTag(panorama.durante)}` : ''}
+          ${panorama.depois  ? `⏩ ${panorama.depois.titulo} (${panorama.depois.referencia})${pTag(panorama.depois)}`      : ''}
+        </div>` : '';
+
+      const secao = ctx.secaoEspecifica || {};
+      const linhaSecao = (secao.antes || secao.durante || secao.depois) ? `
+        <div class="contexto-campo" style="font-size:11px;color:#777;">📑
+          ${secao.antes   ? `⏪ ${secao.antes.titulo} (${secao.antes.referencia})`   : ''}
+          ${secao.durante ? `⏺️ ${secao.durante.titulo} (${secao.durante.referencia})` : ''}
+          ${secao.depois  ? `⏩ ${secao.depois.titulo} (${secao.depois.referencia})` : ''}
+        </div>` : '';
+
+        let locaisHtml = '';
+      if (locaisMencionados.length > 0) {
+        locaisHtml = `
+          <div class="locais-contexto-box">
+            <div class="label">📍 Locais Mencionados:</div>
+            ${locaisMencionados.map(local => {
+              const cor = window.getCorLocal ? window.getCorLocal(local.tipo || 'local') : '#808080';
+              const nome = local.nome || local.nomeOriginal || local.id || 'Local';
+              const idLocal = local.id || local.nomeOriginal || local.nome || nome;
+              return `<span class="locais-contexto-tag" style="background:${cor};" onclick="irParaLocalNoMapa('${idLocal}')" title="Clique para ir ao local no mapa">📍 ${nome} (${local.tipo || 'local'})</span>`;
+            }).join('')}
+            <br>
+            <button class="btn-ver-mapa-contexto" onclick="document.getElementById('mapas').scrollIntoView({behavior:'smooth'})">🗺️ Ver todos no Mapa</button>
+          </div>
+        `;
+      }
+
+      const imagemHtml = renderizarImagemDoContexto(id);
+      const filmesHtml = renderizarFilmesDoContexto(id);
+
+      card.innerHTML = `
+        <div class="contexto-titulo">${cabecalho}</div>
+        <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo (Bíblia local → bible-api.com)...</div>
+        ${assuntosHtml ? `<div class="contexto-campo">${assuntosHtml}</div>` : ''}
+        ${linhaPanorama}
+        ${linhaSecao}
+        ${locaisHtml}
+        ${imagemHtml}
+        ${filmesHtml}
+        <div class="link-volta">
+          <a href="#perguntas" title="Perguntas Sugeridas">❓</a>
+          <a href="#alfabetica" title="Lista alfabética">🔤</a>
+          <a href="#hierarquia" title="Hierarquia">📋</a>
+        </div>`;
+
+    } else {
+      const referenciaLimpa = referenciaPorId.get(id) || id;
+      
+      
+      let locaisHtml = '';
+      if (locaisMencionados.length > 0) {
+        locaisHtml = `
+          <div class="locais-contexto-box">
+            <div class="label">📍 Locais Mencionados:</div>
+            ${locaisMencionados.map(local => {
+              const cor = window.getCorLocal ? window.getCorLocal(local.tipo || 'local') : '#808080';
+              const nome = local.nome || local.nomeOriginal || local.id || 'Local';
+              const idLocal = local.id || local.nomeOriginal || local.nome || nome;
+              return `<span class="locais-contexto-tag" style="background:${cor};" onclick="irParaLocalNoMapa('${idLocal}')" title="Clique para ir ao local no mapa">📍 ${nome} (${local.tipo || 'local'})</span>`;
+            }).join('')}
+            <br>
+            <button class="btn-ver-mapa-contexto" onclick="document.getElementById('mapas').scrollIntoView({behavior:'smooth'})">🗺️ Ver todos no Mapa</button>
+          </div>
+        `;
+      }
+      
+      const imagemHtml = renderizarImagemDoContexto(id);
+      const filmesHtml = renderizarFilmesDoContexto(id);
+
+      card.innerHTML = `
+        <div class="contexto-titulo">📖 ${referenciaLimpa}</div>
+        <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo (Bíblia local → bible-api.com)...</div>
+        ${locaisHtml}
+        ${imagemHtml}
+        ${filmesHtml}
+        <p style="font-size:12px;color:#999;">Contexto não pôde ser inferido automaticamente (livro/capítulo não reconhecido). Pode cadastrar manualmente em contextosReferencias no dados-licaoN.js.</p>
+        <div class="link-volta">
+          <a href="#perguntas" title="Perguntas Sugeridas">❓</a>
+          <a href="#alfabetica" title="Lista alfabética">🔤</a>
+          <a href="#hierarquia" title="Hierarquia">📋</a>
+        </div>`;
+    }
+    containerCtx.appendChild(card);
+  });
+
+  const refs = listaRef.filter(i => i.id && idsParaRenderizar.includes(i.id));
+  const refsUnicas = [...new Map(refs.map(r => [r.id, r])).values()];
+  refsUnicasAtual = refsUnicas;
+
+  await buscarTodosVersiculos(refsUnicas);
+}
+
+// ============================================
+// BUSCA DOS VERSÍCULOS
+// ============================================
+async function buscarTodosVersiculos(refsUnicas, somenteFalhas = false) {
+  if (!refsUnicas || refsUnicas.length === 0) return;
+
+  const itensParaBuscar = refsUnicas.filter(item => {
+    if (!somenteFalhas) return true;
+    const el = document.getElementById(`versiculo-${item.id}`);
+    return el && !el.classList.contains('ok');
+  });
+
+  await Promise.all(itensParaBuscar.map(async (item, index) => {
+    const el = document.getElementById(`versiculo-${item.id}`);
+    if (!el) return;
+
+    el.classList.add('loading');
+    el.classList.remove('ok');
+    el.innerHTML = '⏳ Buscando versículo (Bíblia local → bible-api.com)...';
+
+    if (index > 0) await esperar(config.delay);
+
+    const texto = await buscarVersiculoSemIA(item.referencia);
+    el.classList.remove('loading');
+    if (texto) {
+      el.classList.add('ok');
+      el.innerHTML = `<strong>✝️ ${item.referencia}:</strong><br>"${texto}"`;
+    } else {
+      el.innerHTML = `<em style="color:#c62828;">Não encontrado na Bíblia local nem na bible-api.com.</em>
+        <br><button onclick="tentarComIA('${item.id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#3b5e3b;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar com IA (Groq/Mistral)</button>`;
+    }
+  }));
+}
+
+async function tentarComIA(id) {
+  const item = refsUnicasAtual.find(i => i.id === id);
+  const el = document.getElementById(`versiculo-${id}`);
+  if (!item || !el) return;
+
+  const algumConfigurado = apiKeys.groq || apiKeys.mistral;
+  if (!algumConfigurado) {
+    alert('⚠️ Configure a chave da Groq ou da Mistral na seção "Configuração das APIs" antes de usar esse botão.');
+    return;
+  }
+
+  el.classList.add('loading');
+  el.innerHTML = '⏳ Consultando IA (Groq/Mistral)...';
+
+  const texto = await buscarVersiculoComIA(item.referencia);
+  el.classList.remove('loading');
+  if (texto) {
+    el.classList.add('ok');
+    el.innerHTML = `<strong>✝️ ${item.referencia} <span style="font-size:11px;color:#999;font-weight:400;">(via IA)</span>:</strong><br>"${texto}"`;
+  } else {
+    el.innerHTML = `<em style="color:#c62828;">A IA também não conseguiu buscar. Verifique as chaves configuradas.</em>
+      <br><button onclick="tentarComIA('${id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#3b5e3b;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar novamente com IA</button>`;
+  }
+}
+
+function buscarVersiculosNovamente() {
+  buscarTodosVersiculos(refsUnicasAtual, true);
+}
 
 // ============================================
 // FUNÇÕES DE CONFIGURAÇÃO DAS APIs
@@ -708,8 +1854,8 @@ function alternarBiblia() {
   const botao = badge?.parentElement?.querySelector('button');
   if (botao) botao.textContent = ativarAgora ? '‖ Desativar' : '▶️ Ativar';
 
-  if (ativarAgora && window._refsUnicasAtual && window._refsUnicasAtual.length > 0) {
-    buscarTodosVersiculos(window._refsUnicasAtual, true);
+  if (ativarAgora && refsUnicasAtual.length > 0) {
+    buscarTodosVersiculos(refsUnicasAtual, true);
   }
 }
 
@@ -753,1038 +1899,73 @@ function salvarDelay() {
   }
 }
 
-// ── CONTEXTOS (v4 — motor automático, igual dominical v4) ──
-function obterContexto(id, dadosLicao, referencia) {
-  const fino = dadosLicao?.contextosReferencias?.[id];
-  if (fino && typeof window.montarContextoCompleto === 'function') {
-    return window.montarContextoCompleto(fino);
-  }
-  if (referencia && typeof window.inferirContextoAutomatico === 'function') {
-    return window.inferirContextoAutomatico(id, referencia);
-  }
-  return null;
-}
-
-function formatarCabecalhoContexto(ctx) {
-  let h = `📖 ${ctx.referencia}`;
-  if (ctx.autoInferido)         h += ` 🔮`;
-  if (ctx.data)                h += ` | 📅 ${ctx.data}`;
-  if (ctx.local)                h += ` | 🚩 ${ctx.local}`;
-  if (ctx.lider)                h += ` | 👑 ${ctx.lider}`;
-  if (ctx.era)                  h += ` | 📜 ${ctx.era}${ctx.eraDatas ? ' (' + ctx.eraDatas + ')' : ''}`;
-  if (ctx.classificacao)        h += ` | 📚 ${ctx.classificacao}`;
-  if (ctx.periodoSecular)       h += ` | ⏳ ${ctx.periodoSecular}${ctx.periodoSecularDatas ? ' (' + ctx.periodoSecularDatas + ')' : ''}`;
-  if (ctx.periodoHumanidade)    h += ` | 🏰 ${ctx.periodoHumanidade}${ctx.periodoHumanidadeDatas ? ' (' + ctx.periodoHumanidadeDatas + ')' : ''}`;
-  return h;
-}
-
-// ── HIERARQUIA ──
-function renderizarHierarquia(nos, nivel) {
-  if (!nos || nos.length === 0) return '';
-  let html = `<ul class="hierarquia-lista">`;
-  nos.forEach(no => {
-    html += `<li class="nivel-${nivel}"><div class="hierarquia-item"><div>
-      <div class="hierarquia-label">${no.label}</div>`;
-    if (no.refs?.length) {
-      html += `<div class="hierarquia-refs">`;
-      no.refs.forEach(r => {
-        html += `<div class="hierarquia-ref-item">
-          <a class="hierarquia-ref-link" href="#${r.id}-contexto">${r.referencia}</a>
-          <span class="hierarquia-tags">${r.tags || ''}</span>
-        </div>`;
-      });
-      html += `</div>`;
-    }
-    html += `</div></div>`;
-    if (no.filhos?.length) html += `<div class="hierarquia-filhos">${renderizarHierarquia(no.filhos, nivel + 1)}</div>`;
-    html += `</li>`;
-  });
-  return html + `</ul>`;
-}
-
-// ── MERMAID ──
-function renderizarMermaid(chave) {
-  const d = (window.bibliotecaMermaid || {})[chave];
-  if (!d) return `<div class="sem-mermaid">⚠️ Diagrama não disponível para este capítulo.</div>`;
-  return `<div class="mermaid-wrapper"><div class="mermaid">${d}</div></div>`;
-}
-
-// ── PERGUNTAS ──
-function embaralhar(array) {
-  const a = [...array];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-let _perguntaIdCounter = 0;
-
-function renderizarCardPergunta(p, numero) {
-  const id = `gab-${_perguntaIdCounter++}`;
-  const refsHtml = (p.refs || []).map(r =>
-    `<span class="pergunta-ref-badge" onclick="event.stopPropagation();document.getElementById('${r}-contexto')?.scrollIntoView({behavior:'smooth'})">${r}</span>`
-  ).join('');
-  const textoLimpo = p.pergunta.replace(/^Hora da Revisão\s*—\s*\d+\.\s*/, '');
-  return `<div class="pergunta-card">
-    <div class="pergunta-texto">${numero}. ${textoLimpo} <span class="icone-gabarito" id="icone-${id}" onclick="const box=document.getElementById('${id}');box.classList.toggle('aberto');document.getElementById('icone-${id}').textContent=box.classList.contains('aberto')?'🙈':'🔑'" title="Ver/ocultar gabarito">🔑</span></div>
-    <div class="gabarito-box" id="${id}">
-      <div class="gabarito-linha"><strong>📋 Tópico:</strong> ${p.topicoOrigem || '—'}</div>
-      <div class="gabarito-linha"><strong>📄 Página:</strong> ${p.pagina}</div>
-      <div class="gabarito-linha"><strong>#️⃣ Tags:</strong> ${p.tags}</div>
-      ${refsHtml ? `<div class="gabarito-linha"><strong>📖 Refs:</strong> <div class="pergunta-refs" style="display:inline-flex;">${refsHtml}</div></div>` : ''}
-    </div>
-  </div>`;
-}
-
-function renderizarPerguntas(chave) {
-  const todas = (window.bibliotecaPerguntas || {})[chave];
-  if (!todas?.length) return `<div class="sem-perguntas">⚠️ Perguntas não disponíveis para este capítulo.</div>`;
-
-  const extras  = embaralhar(todas.filter(p => !p.pergunta.startsWith('Hora da Revisão')));
-  const revisao = embaralhar(todas.filter(p =>  p.pergunta.startsWith('Hora da Revisão')));
-
-  let html = '';
-  if (extras.length > 0) {
-    html += `<h3 class="pergunta-subtitulo">💡 Perguntas de Aprofundamento</h3>`;
-    html += extras.map((p, i) => renderizarCardPergunta(p, i + 1)).join('');
-  }
-  if (revisao.length > 0) {
-    html += `<h3 class="pergunta-subtitulo">📝 Hora da Revisão (Apostila)</h3>`;
-    html += revisao.map((p, i) => renderizarCardPergunta(p, i + 1)).join('');
-  }
-  return html;
-}
-
-// ── RENDERIZAR ──
-let mapaAtual = null;
-let scriptCarregado = null;
-let dadosLicaoAtual = null;
-let locaisDaLicaoAtual = [];
-let marcadoresMapa = {};
-
 // ============================================
-// FUNÇÃO: EXTRAIR LOCAIS DO CAPÍTULO
+// LIÇÕES DISPONÍVEIS NA V4
 // ============================================
-function extrairLocaisDaLicao(dadosLicao) {
-    if (!dadosLicao) return [];
-    if (typeof window.locaisBiblicos === 'undefined') {
-        console.warn('locaisBiblicos não carregado');
-        return [];
-    }
-
-    // 1. Pegar todas as referências do capítulo
-    const refsLicao = [];
-
-    // Da lista de aparição
-    if (dadosLicao.listaAparicao) {
-        dadosLicao.listaAparicao.forEach(item => {
-            if (item.referencia) refsLicao.push(item.referencia);
-        });
-    }
-
-    // Da hierarquia (refs aninhadas)
-    if (dadosLicao.hierarquia) {
-        function extrairRefs(nos) {
-            nos.forEach(no => {
-                if (no.refs) {
-                    no.refs.forEach(r => {
-                        if (r.referencia) refsLicao.push(r.referencia);
-                    });
-                }
-                if (no.filhos) extrairRefs(no.filhos);
-            });
-        }
-        extrairRefs(dadosLicao.hierarquia);
-    }
-
-    // Remover duplicatas
-    const refsUnicas = [...new Set(refsLicao)];
-    console.log(`📖 ${refsUnicas.length} referências únicas encontradas no capítulo`);
-
-    // 2. Buscar locais correspondentes
-    const locaisEncontrados = [];
-    const locaisData = window.locaisBiblicos;
-
-    refsUnicas.forEach(ref => {
-        const refNorm = ref.trim();
-
-        Object.values(locaisData).forEach(local => {
-            if (!local.referencias || !Array.isArray(local.referencias)) return;
-
-            const match = local.referencias.some(r => {
-                const rNorm = r.trim();
-                return rNorm === refNorm ||
-                       rNorm.includes(refNorm) ||
-                       refNorm.includes(rNorm);
-            });
-
-            if (match) {
-                const id = local.id || local.nomeOriginal || local.nome;
-                if (!locaisEncontrados.some(l => (l.id || l.nomeOriginal || l.nome) === id)) {
-                    locaisEncontrados.push({
-                        ...local,
-                        referenciaMatch: ref
-                    });
-                }
-            }
-        });
-    });
-
-    console.log(`📍 ${locaisEncontrados.length} locais encontrados para o capítulo`);
-    return locaisEncontrados;
-}
-
-// ============================================
-// FUNÇÃO: ADICIONAR MARCADORES NO MAPA
-// ============================================
-function adicionarMarcadoresNoMapa(map, locais) {
-    if (!map || !locais || locais.length === 0) return;
-
-    const markers = L.markerClusterGroup({
-        maxClusterRadius: 50,
-        spiderfyOnMaxZoom: true,
-        showCoverageOnHover: false,
-        zoomToBoundsOnClick: true,
-        iconCreateFunction: function(cluster) {
-            const count = cluster.getChildCount();
-            const size = count < 10 ? 'small' : count < 50 ? 'medium' : 'large';
-            return L.divIcon({
-                html: `<div><span>${count}</span></div>`,
-                className: `marker-cluster marker-cluster-${size}`,
-                iconSize: [40, 40]
-            });
-        }
-    });
-
-    locais.forEach(local => {
-        const lat = parseFloat(local.latitude);
-        const lng = parseFloat(local.longitude);
-
-        if (isNaN(lat) || isNaN(lng)) return;
-        if (lat === 0 && lng === 0) return;
-        if (lat === 0 && lng === 14) return;
-
-        const tipo = local.tipo || 'local';
-        const cor = window.getCorLocal ? window.getCorLocal(tipo) : '#FFD700';
-        const corTexto = window.getCorTextoLocal ? window.getCorTextoLocal(tipo) : '#FFFFFF';
-        const emoji = window.getEmojiLocal ? window.getEmojiLocal(tipo) : '📍';
-
-        const icon = L.divIcon({
-            className: 'custom-icon',
-            html: `<div style="
-                width: 14px;
-                height: 14px;
-                background: ${cor};
-                border-radius: 50%;
-                border: 3px solid white;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-            "></div>`,
-            iconSize: [14, 14],
-            iconAnchor: [7, 7],
-            popupAnchor: [0, -7]
-        });
-
-        const nome = local.nome || local.nomeOriginal || local.id || 'Local';
-        const refs = local.referencias ? local.referencias.join(' ') : '';
-        const refMatch = local.referenciaMatch || '';
-        const id = local.id || local.nomeOriginal || local.nome;
-
-        let popupContent = `
-            <div style="font-weight:700;font-size:15px;color:#1a1a2e;">
-                ${emoji} ${nome}
-            </div>
-            <div style="color:#555;font-size:12px;margin:4px 0;">
-                ${local.nomeOriginal || ''} ${local.nomeAntigo ? '| ' + local.nomeAntigo : ''}
-            </div>
-        `;
-
-        if (local.descricao) {
-            popupContent += `
-                <div style="font-size:12px;color:#555;max-height:80px;overflow-y:auto;margin:4px 0;">
-                    ${local.descricao.substring(0, 120)}${local.descricao.length > 120 ? '...' : ''}
-                </div>
-            `;
-        }
-
-        popupContent += `
-            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;">
-                <span style="background:${cor};color:${corTexto};padding:1px 10px;border-radius:12px;font-size:11px;font-weight:600;">
-                    ${tipo}
-                </span>
-                ${refs ? `<span style="background:#f0f0f0;padding:1px 8px;border-radius:4px;font-size:11px;font-family:monospace;">📖 ${refs}</span>` : ''}
-                ${refMatch ? `<span style="background:#FFD700;padding:1px 8px;border-radius:4px;font-size:10px;font-weight:600;color:#1a1a2e;">🎯 Destaque do Capítulo</span>` : ''}
-            </div>
-        `;
-
-        const marker = L.marker([lat, lng], { icon });
-        marker.bindPopup(popupContent, {
-            maxWidth: 320,
-            maxHeight: 300,
-            className: 'custom-popup'
-        });
-        marker._id = id;
-        marker._localData = local;
-
-        markers.addLayer(marker);
-        marcadoresMapa[id] = marker;
-    });
-
-    map.addLayer(markers);
-}
-
-// ============================================
-// FUNÇÃO: CRIAR MAPA COM LOCAIS DO CAPÍTULO
-// ============================================
-function criarMapaComLocaisDaLicao(dadosLicao) {
-    const el = document.getElementById('mapaInterativo');
-    if (!el) {
-        console.warn('Elemento #mapaInterativo não encontrado');
-        return null;
-    }
-
-    if (typeof L === 'undefined') {
-        console.warn('Leaflet não carregado');
-        return null;
-    }
-
-    if (mapaAtual) {
-        mapaAtual.remove();
-        mapaAtual = null;
-    }
-
-    const centro = dadosLicao?.mapaConfig?.centro || [32.6, 35.3];
-    const zoom = dadosLicao?.mapaConfig?.zoom || 8;
-
-    const map = L.map(el).setView(centro, zoom);
-
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, © CartoDB',
-        subdomains: 'abcd',
-        maxZoom: 19
-    }).addTo(map);
-
-    mapaAtual = map;
-
-    const locaisDaLicao = extrairLocaisDaLicao(dadosLicao);
-    locaisDaLicaoAtual = locaisDaLicao;
-
-    if (locaisDaLicao.length > 0) {
-        adicionarMarcadoresNoMapa(map, locaisDaLicao);
-
-        try {
-            const group = L.featureGroup();
-            locaisDaLicao.forEach(local => {
-                const lat = parseFloat(local.latitude);
-                const lng = parseFloat(local.longitude);
-                if (!isNaN(lat) && !isNaN(lng)) {
-                    group.addLayer(L.marker([lat, lng]));
-                }
-            });
-            map.fitBounds(group.getBounds(), { padding: [50, 50] });
-        } catch(e) {
-            console.warn('Não foi possível ajustar o zoom:', e);
-        }
-    }
-
-    const contador = document.getElementById('contador-locais');
-    if (contador) {
-        contador.textContent = locaisDaLicao.length;
-    }
-
-    // Renderizar índice de locais
-    renderizarIndiceLocais(locaisDaLicao);
-
-    console.log(`✅ Mapa carregado com ${locaisDaLicao.length} locais do capítulo`);
-    return map;
-}
-
-// ============================================
-// RENDERIZAR ÍNDICE DE LOCAIS DO CAPÍTULO
-// ============================================
-function renderizarIndiceLocais(locais) {
-    const container = document.getElementById('lista-locais-licao');
-    const itensContainer = document.getElementById('itens-indice-locais');
-    const contador = document.getElementById('contador-indice');
-
-    if (!container || !itensContainer || !contador) return;
-
-    contador.textContent = locais.length;
-
-    if (locais.length === 0) {
-        container.style.display = 'none';
-        return;
-    }
-
-    container.style.display = 'block';
-
-    let html = '';
-    locais.forEach(local => {
-        const cor = window.getCorLocal ? window.getCorLocal(local.tipo || 'local') : '#808080';
-        const emoji = window.getEmojiLocal ? window.getEmojiLocal(local.tipo || 'local') : '📍';
-        const nome = local.nome || local.nomeOriginal || local.id || 'Local';
-        const refs = local.referencias ? local.referencias.join(' ') : '';
-        const id = local.id || local.nomeOriginal || local.nome;
-        const refMatch = local.referenciaMatch || '';
-        const refExibicao = refMatch || refs;
-
-        html += `
-            <div class="item-indice-local" onclick="irParaLocalNoMapa('${id}')" style="border-left-color: ${cor}; background: ${cor}22;">
-                <span class="emoji-indice">${emoji}</span>
-                <span class="nome-indice">${nome}</span>
-                <span class="tipo-indice">${local.tipo || 'local'}</span>
-                ${refExibicao ? `<span class="ref-indice">📖 ${refExibicao}</span>` : ''}
-            </div>
-        `;
-    });
-
-    itensContainer.innerHTML = html;
-}
-
-// ============================================
-// IR PARA LOCAL NO MAPA (PELA LISTA)
-// ============================================
-function irParaLocalNoMapa(id) {
-    const local = locaisDaLicaoAtual.find(l => (l.id || l.nomeOriginal || l.nome) === id);
-    if (!local) return;
-
-    if (mapaAtual) {
-        const lat = parseFloat(local.latitude);
-        const lng = parseFloat(local.longitude);
-        if (!isNaN(lat) && !isNaN(lng)) {
-            mapaAtual.setView([lat, lng], 12, { animate: true, duration: 0.6 });
-
-            setTimeout(() => {
-                const marker = marcadoresMapa[id];
-                if (marker) {
-                    marker.openPopup();
-                }
-            }, 400);
-        }
-    }
-}
-
-// ============================================
-// TOGGLE LISTA DE LOCAIS
-// ============================================
-function toggleListaLocais() {
-    const container = document.getElementById('lista-locais-licao');
-    if (container) {
-        container.style.display = container.style.display === 'none' ? 'block' : 'none';
-    }
-}
-
-function fecharListaLocais() {
-    const container = document.getElementById('lista-locais-licao');
-    if (container) container.style.display = 'none';
-}
-
-// ============================================
-// SALVAR LOCAIS DO CAPÍTULO NO LOCALSTORAGE
-// ============================================
-function salvarLocaisDaLicao(dadosLicao) {
-    if (!dadosLicao) return;
-
-    try {
-        const locais = extrairLocaisDaLicao(dadosLicao);
-
-        const dadosParaSalvar = {
-            titulo: dadosLicao.titulo || 'Capítulo',
-            trimestre: dadosLicao.trimestre || '',
-            locais: locais.map(local => ({
-                id: local.id || local.nomeOriginal || local.nome,
-                nome: local.nome || local.nomeOriginal,
-                tipo: local.tipo,
-                latitude: local.latitude,
-                longitude: local.longitude,
-                referencias: local.referencias
-            }))
-        };
-
-        localStorage.setItem('licaoAtual', JSON.stringify(dadosParaSalvar));
-        console.log(`💾 ${locais.length} locais do capítulo salvos no localStorage`);
-    } catch (e) {
-        console.warn('Erro ao salvar locais do capítulo:', e);
-    }
-}
-
-// ============================================
-// FUNÇÃO PARA RENDERIZAR IMAGEM NO CONTEXTO
-// ============================================
-function renderizarImagemDoContexto(referenciaId) {
-    // IMAGENS_BIBLICAS é um objeto {id: {...}}, não um array — por isso
-    // usamos buscarImagensPorReferencias, que já sabe iterar sobre ele
-    // corretamente em vez de chamar .forEach diretamente no objeto.
-    let imagemEncontrada = null;
-
-    if (typeof window.buscarImagensPorReferencias === 'function') {
-        const imagens = window.buscarImagensPorReferencias([referenciaId]);
-        imagemEncontrada = imagens && imagens.length > 0 ? imagens[0] : null;
-    }
-
-    if (imagemEncontrada) {
-        return `
-            <div style="margin-top: 10px; padding: 8px 12px; background: rgba(255, 215, 0, 0.1); border-radius: 6px; border-left: 3px solid #ffd700;">
-                <div style="font-size: 11px; font-weight: 600; color: #5c4a1e; margin-bottom: 4px;">🖼️ Imagem Relacionada:</div>
-                <div style="display: flex; align-items: center; gap: 12px; cursor: pointer;" onclick="window.open('${imagemEncontrada.imagem}', '_blank')" title="Clique para ampliar">
-                    <img src="${imagemEncontrada.imagem}" alt="${imagemEncontrada.titulo}" style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px; border: 1px solid #ddd;" onerror="this.style.display='none'">
-                    <div>
-                        <div style="font-size: 13px; font-weight: 600; color: #2d2d2d;">${imagemEncontrada.titulo}</div>
-                        <div style="font-size: 10px; color: #888;">📖 ${imagemEncontrada.refs ? imagemEncontrada.refs.join('; ') : ''}</div>
-                        <div style="font-size: 10px; color: #4a3b6e;">🖼️ Clique para ampliar</div>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
-
-    return '';
-}
-
-// ============================================
-// FUNÇÃO PARA RENDERIZAR FILMES NO CONTEXTO
-// ============================================
-function renderizarFilmesDoContexto(referenciaId) {
-    if (typeof window.buscarFilmesPorReferencia !== 'function') return '';
-
-    const filmes = window.buscarFilmesPorReferencia(referenciaId);
-    if (!filmes || filmes.length === 0) return '';
-
-    let html = `
-        <div class="filmes-card">
-            <div class="label">🎬 Filmes Relacionados:</div>
-    `;
-
-    filmes.forEach(filme => {
-        html += `
-            <div class="filme-item">
-                <span class="titulo">${filme.titulo}</span>
-                ${filme.ano ? `<span class="ano">(${filme.ano})</span>` : ''}
-                ${filme.diretor ? `<span class="diretor">- Dir. ${filme.diretor}</span>` : ''}
-                ${filme.descricao ? `<div class="descricao">${filme.descricao}</div>` : ''}
-                ${filme.observacao ? `<div class="observacao">📌 ${filme.observacao}</div>` : ''}
-                ${filme.links && filme.links.length > 0 ? `
-                    <div class="links">
-                        ${filme.links.map(link => `
-                            <a href="${link.url}" target="_blank" class="filme-link">
-                                🎬 ${link.plataforma}${link.idioma ? ` (${link.idioma})` : ''}
-                            </a>
-                        `).join('')}
-                    </div>
-                ` : ''}
-            </div>
-        `;
-    });
-
-    html += `</div>`;
-    return html;
-}
-
-function atualizarStatusAPI() {
-  // Atualiza os badges de status na UI
-  document.querySelectorAll('.api-status-badge').forEach(el => {
-    const api = el.dataset.api;
-    if (apiStatus[api] === 'ativa') {
-      el.textContent = '✅ Ativa';
-      el.className = 'api-status-badge ativa';
-    } else if (apiStatus[api] === 'aguardando') {
-      el.textContent = '⏳ Aguardando...';
-      el.className = 'api-status-badge aguardando';
-    } else {
-      el.textContent = '⛔ Inativa';
-      el.className = 'api-status-badge inativa';
-    }
-  });
-}
-
-async function renderizarConteudo(dados) {
-  dadosLicaoAtual = dados;
-
-  // Salvar locais do capítulo para o mapa completo
-  salvarLocaisDaLicao(dados);
-
-  const tituloHeader = document.getElementById('tituloDinamico');
-  tituloHeader.innerHTML = dados.titulo || '';
-  if (dados.subtitulo) tituloHeader.innerHTML += ' | ' + dados.subtitulo;
-  if (dados.paginas)   tituloHeader.innerHTML += ' | Páginas ' + dados.paginas;
-
-  // Contextos agora são resolvidos por obterContexto() (motor automático), não precisa mais pré-carregar nada aqui.
-  const livro    = document.getElementById('seletorLivro').value;
-  const capitulo = document.getElementById('seletorCapitulo').value;
-  const chaveLib = `${livro}-${capitulo}`;
-
-  const container = document.getElementById('conteudo-principal');
-
-  let html = `
-  <section id="api-config" class="oculto">
-    <h2>🔑 Configuração das APIs</h2>
-    <div class="api-config">
-      <div style="font-size:12px;color:#4a3b6e;margin-bottom:10px;">
-        📚 <strong>Bíblia local</strong> (arquivo salvo no projeto, domínio público) é a fonte principal — instantânea, sem rede, sem limite de requisições.
-        <br>📖 Se algo não for encontrado localmente, tenta a <strong>Bíblia (bible-api.com)</strong> online, também gratuita e sem chave.
-        <br>🆘 Se as duas falharem, a IA (Groq/Mistral) fica disponível <strong>só sob demanda</strong>, por um botão em cada versículo — não é usada automaticamente.
-      </div>
-
-      <!-- Bíblia (bible-api.com) -->
-      <div class="api-linha">
-        <label>📖 Bíblia (bible-api.com):</label>
-        <span style="font-size:12px;color:#666;">Tradução Almeida · sem necessidade de chave</span>
-        <button onclick="alternarBiblia()">${apiStatus.biblia === 'ativa' ? '‖ Desativar' : '▶️ Ativar'}</button>
-        <span class="api-status-badge ${apiStatus.biblia === 'ativa' ? 'ativa' : 'inativa'}" data-api="biblia">${apiStatus.biblia === 'ativa' ? '✅ Ativa' : '⛔ Inativa'}</span>
-      </div>
-
-      <!-- Groq -->
-      <div class="api-linha">
-        <label>⚡ Groq <span style="font-weight:400;color:#666;">(IA · botão manual)</span>:</label>
-        <input type="password" id="keyGroq" placeholder="Chave da Groq" value="${apiKeys.groq}">
-        <button onclick="salvarChave('groq')">💾 Salvar</button>
-        <span class="api-status-badge ${apiStatus.groq === 'ativa' ? 'ativa' : 'inativa'}" data-api="groq">${apiStatus.groq === 'ativa' ? '✅ Ativa' : '⛔ Inativa'}</span>
-      </div>
-
-      <!-- Mistral -->
-      <div class="api-linha">
-        <label>🌀 Mistral <span style="font-weight:400;color:#666;">(IA · botão manual)</span>:</label>
-        <input type="password" id="keyMistral" placeholder="Chave da Mistral" value="${apiKeys.mistral}">
-        <button onclick="salvarChave('mistral')">💾 Salvar</button>
-        <span class="api-status-badge ${apiStatus.mistral === 'ativa' ? 'ativa' : 'inativa'}" data-api="mistral">${apiStatus.mistral === 'ativa' ? '✅ Ativa' : '⛔ Inativa'}</span>
-      </div>
-
-      <!-- Delay -->
-      <div class="api-linha" style="margin-top:12px;padding-top:12px;border-top:1px solid #e0e0e0;">
-        <label>🐌 Delay entre tentativas:</label>
-        <input type="number" id="delayInput" value="${config.delay}" min="500" max="10000" step="100" style="width:100px;">
-        <span style="font-size:12px;color:#666;">ms (atual: <span id="delayDisplay">${config.delay}</span>ms)</span>
-        <button onclick="salvarDelay()">💾 Salvar Delay</button>
-        <span style="font-size:11px;color:#999;">(usado entre pedidos à bible-api.com e no botão de IA — o site limita a 15 pedidos a cada 30s)</span>
-      </div>
-
-      <!-- Buscar novamente -->
-      <div class="api-linha" style="margin-top:12px;padding-top:12px;border-top:1px solid #e0e0e0;">
-        <button onclick="buscarVersiculosNovamente()">↻ Buscar versículos que falharam</button>
-        <span style="font-size:12px;color:#666;">Tenta de novo na Bíblia local/bible-api.com. Para IA, use o botão 🆘 em cada versículo.</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="hierarquia"><h2>📋 Hierarquia de Tópicos</h2>
-    ${dados.hierarquia?.length ? renderizarHierarquia(dados.hierarquia, 1) : '<p style="color:#999;font-style:italic;">Hierarquia não disponível neste modelo.</p>'}
-  </section>
-
-  <section id="mapa-mental"><h2>Ψ Mapa Mental</h2>${renderizarMermaid(chaveLib)}</section>
-  <section id="perguntas"><h2>❓ Perguntas Sugeridas</h2>${renderizarPerguntas(chaveLib)}</section>`;
-
-  // Lista Alfabética (Lista de Aparição removida — já coberta pela Hierarquia)
-  if (dados.listaAlfabetica?.length) {
-    const listaAlf = [...dados.listaAlfabetica];
-    html += `<section id="alfabetica"><h2>🔤 Lista Alfabética de Referências</h2>
-      <p style="font-size:12px;color:#666;margin-bottom:10px;">📌 ${listaAlf.length} referências únicas</p>
-      <table><thead><tr>
-        <th class="col-num">1️⃣</th><th class="col-ref">📖</th><th>#️⃣ Tags</th><th class="col-pag">📄</th>
-      </tr></thead><tbody>`;
-    listaAlf.forEach((item, idx) => {
-      const refLink = item.id
-        ? `<a href="#${item.id}-contexto" style="color:#4a3b6e;font-weight:bold;">${item.referencia}</a>`
-        : (item.referencia || '');
-      html += `<tr><td class="col-num">${idx+1}</td><td class="col-ref">${refLink}</td><td>${item.tags||''}</td><td class="col-pag">${item.pagina||''}</td></tr>`;
-    });
-    html += `</tbody></table><div class="footer-links"><a href="#hierarquia">📋 Hierarquia de tópicos ↑</a></div></section>`;
-  }
-
-  html += `
-  <section id="mapas">
-    <h2>🌏⛺ Mapa dos Locais Bíblicos</h2>
-
-    <div class="mapa-container">
-      <div class="mapa-titulo">
-        <h3>🗺️ Mapa Interativo</h3>
-        <div class="info-locais">
-          🏛️ <span id="contador-locais">0</span> locais carregados
-          <span style="margin-left:12px;color:#666;">|</span>
-          <span style="color:#888;font-size:13px;">Clique nos marcadores para ver detalhes</span>
-        </div>
-        <button class="btn-toggle-indice" onclick="toggleListaLocais()">📋 Mostrar Locais</button>
-      </div>
-
-      <div id="mapaInterativo"></div>
-
-      <!-- LISTA DE LOCAIS DO CAPÍTULO -->
-      <div id="lista-locais-licao">
-        <div class="header-indice">
-          <h4>📍 Locais do Capítulo <span class="count" id="contador-indice">0</span></h4>
-          <button class="btn-fechar-indice" onclick="fecharListaLocais()">✕</button>
-        </div>
-        <div id="itens-indice-locais">
-          <span style="color:#888;font-size:13px;font-style:italic;">Nenhum local encontrado</span>
-        </div>
-      </div>
-
-      <div class="mapa-botoes">
-        <a href="biblioteca/mapa-com-indice.html" target="_blank" class="btn-abrir-mapa-completo">
-          🗺️ Abrir Mapa Completo com Índice
-        </a>
-        <span style="font-size:12px;color:#888;align-self:center;">
-          🔍 Busque, filtre, veja em PT/EN e clique para ir ao local
-        </span>
-      </div>
-    </div>
-
-    <div class="netlify-section">
-      <h3>🔗 Link do Projeto (Netlify)</h3>
-      <input type="text" id="netlifyInput" placeholder="Cole o link do projeto">
-      <button id="salvarLink">Salvar Link</button>
-      <div id="linkSalvo"></div>
-    </div>
-  </section>
-
-  <section id="contextos"><h2>💬 Contextos das Passagens</h2>
-    <p style="font-size:12px;color:#666;margin-bottom:15px;">
-      📚 Os versículos vêm primeiro da <strong>Bíblia local</strong> (domínio público, instantânea), depois da <strong>bible-api.com</strong>${apiStatus.biblia === 'ativa' ? '' : ' <strong style="color:#c62828;">— desativada agora</strong>'} online.
-      <br>🆘 Se ambas falharem, aparece um botão pra tentar com <strong>IA (Groq/Mistral)</strong> só quando você quiser.
-      <br>Contexto histórico vem da biblioteca local.
-    </p>
-    <div id="containerContextos"></div>
-  </section>`;
-
-  container.innerHTML = html;
-
-  // A seção de API sempre nasce oculta a cada capítulo carregado — reseta o texto do botão
-  const btnToggleApi = document.getElementById('btnToggleApiConfig');
-  if (btnToggleApi) btnToggleApi.textContent = '🔑 Mostrar Configuração das APIs';
-
-  // Mermaid
-  if (typeof mermaid !== 'undefined') {
-    mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
-    mermaid.run({ nodes: document.querySelectorAll('.mermaid') });
-  }
-
-  // Mapa dos locais do capítulo (igual dominical v4)
-  setTimeout(() => {
-    if (dadosLicaoAtual) {
-      criarMapaComLocaisDaLicao(dadosLicaoAtual);
-    }
-    const netlifyInput = document.getElementById('netlifyInput');
-    const salvarBtn    = document.getElementById('salvarLink');
-    const linkSalvoDiv = document.getElementById('linkSalvo');
-    if (netlifyInput && salvarBtn) {
-      const salvo = localStorage.getItem('netlifyLinkTeologia');
-      if (salvo) { netlifyInput.value = salvo; linkSalvoDiv.innerHTML = `✅ <a href="${salvo}" target="_blank">${salvo}</a>`; }
-      salvarBtn.onclick = () => {
-        const link = netlifyInput.value.trim();
-        if (link) { localStorage.setItem('netlifyLinkTeologia', link); linkSalvoDiv.innerHTML = `✅ <a href="${link}" target="_blank">${link}</a>`; }
-      };
-    }
-  }, 200);
-
-  // Cards de contexto
-  const containerCtx = document.getElementById('containerContextos');
-  const listaRef = dados.listaAparicao || [];
-  const idsVistos = new Set();
-  const idsParaRenderizar = [];
-  const referenciaPorId = new Map(listaRef.filter(i => i.id).map(i => [i.id, i.referencia]));
-  listaRef.forEach(item => {
-    if (!item.id || idsVistos.has(item.id)) return;
-    idsVistos.add(item.id);
-    idsParaRenderizar.push(item.id);
-  });
-
-  if (!idsParaRenderizar.length) { containerCtx.innerHTML = '<p>Nenhum contexto disponível.</p>'; return; }
-
-  idsParaRenderizar.forEach(id => {
-    const ctx = obterContexto(id, dados, referenciaPorId.get(id) || id);
-    const card = document.createElement('div');
-    card.className = 'contexto-card';
-    card.id = `${id}-contexto`;
-
-    // Buscar locais mencionados nesta referência - PRIORIZA O CAMPO locais DO DADO
-    let locaisMencionados = [];
-
-    // 1. Primeiro, tenta pegar do campo 'locais' do próprio item da listaAparicao
-    const itemLicao = dados.listaAparicao?.find(item => item.id === id);
-    if (itemLicao && itemLicao.locais && itemLicao.locais.length > 0) {
-        locaisMencionados = itemLicao.locais.map(local => ({
-            nome: local.nome,
-            tipo: local.tipo,
-            // Tenta encontrar o local correspondente em locaisDaLicaoAtual para ter mais dados
-            ...locaisDaLicaoAtual.find(l => (l.nome || l.nomeOriginal) === local.nome)
-        }));
-    }
-    // 2. Fallback: busca nos locais encontrados
-    else if (locaisDaLicaoAtual.length > 0) {
-        locaisMencionados = locaisDaLicaoAtual.filter(local => {
-            return local.referencias && local.referencias.some(r => {
-                const refNorm = r.trim();
-                const refId = id;
-                return refNorm.includes(refId) || refId.includes(refNorm);
-            });
-        });
-    }
-
-    if (ctx) {
-      const cabecalho = formatarCabecalhoContexto(ctx);
-      const assuntosHtml = (ctx.assuntos || []).map(a => `<span class="assunto-tag">#${a}</span>`).join('');
-
-      const panorama = ctx.panorama || {};
-      const pTag = (item) => (item?.personagens?.length ? ` 👤🔗 ${item.personagens.join(', ')}` : '');
-      const linhaPanorama = (panorama.antes || panorama.durante || panorama.depois) ? `
-        <div class="contexto-campo">🌟
-          ${panorama.antes   ? `⏪ ${panorama.antes.titulo} (${panorama.antes.referencia})${pTag(panorama.antes)}`   : ''}
-          ${panorama.durante ? `⏺️ ${panorama.durante.titulo} (${panorama.durante.referencia})${pTag(panorama.durante)}` : ''}
-          ${panorama.depois  ? `⏩ ${panorama.depois.titulo} (${panorama.depois.referencia})${pTag(panorama.depois)}`      : ''}
-        </div>` : '';
-
-      const secao = ctx.secaoEspecifica || {};
-      const linhaSecao = (secao.antes || secao.durante || secao.depois) ? `
-        <div class="contexto-campo" style="font-size:11px;color:#777;">📑
-          ${secao.antes   ? `⏪ ${secao.antes.titulo} (${secao.antes.referencia})`   : ''}
-          ${secao.durante ? `⏺️ ${secao.durante.titulo} (${secao.durante.referencia})` : ''}
-          ${secao.depois  ? `⏩ ${secao.depois.titulo} (${secao.depois.referencia})` : ''}
-        </div>` : '';
-
-      let locaisHtml = '';
-      if (locaisMencionados.length > 0) {
-        locaisHtml = `
-          <div class="locais-contexto-box">
-            <div class="label">📍 Locais Mencionados:</div>
-            ${locaisMencionados.map(local => {
-              const cor = window.getCorLocal ? window.getCorLocal(local.tipo || 'local') : '#808080';
-              const nome = local.nome || local.nomeOriginal || local.id || 'Local';
-              const idLocal = local.id || local.nomeOriginal || local.nome || nome;
-              return `<span class="locais-contexto-tag" style="background:${cor};" onclick="irParaLocalNoMapa('${idLocal}')" title="Clique para ir ao local no mapa">📍 ${nome} (${local.tipo || 'local'})</span>`;
-            }).join('')}
-            <br>
-            <button class="btn-ver-mapa-contexto" onclick="document.getElementById('mapas').scrollIntoView({behavior:'smooth'})">🗺️ Ver todos no Mapa</button>
-          </div>
-        `;
-      }
-
-      const imagemHtml = renderizarImagemDoContexto(id);
-      const filmesHtml = renderizarFilmesDoContexto(id);
-
-      card.innerHTML = `
-        <div class="contexto-titulo">${cabecalho}</div>
-        ${linhaPanorama}
-        <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo (Bíblia local → bible-api.com)...</div>
-        ${linhaSecao}
-        <div class="contexto-tags-linha">
-          ${assuntosHtml ? `<span class="assuntos">${assuntosHtml}</span>` : ''}
-        </div>
-        ${locaisHtml}
-        ${imagemHtml}
-        ${filmesHtml}
-        <div class="link-volta">
-          <a href="#perguntas" title="Perguntas Sugeridas">❓</a><a href="#alfabetica" title="Lista Alfabética">🔤</a><a href="#hierarquia" title="Hierarquia">📋</a>
-        </div>`;
-    } else {
-      const referenciaLimpa = referenciaPorId.get(id) || id;
-
-      let locaisHtml = '';
-      if (locaisMencionados.length > 0) {
-        locaisHtml = `
-          <div class="locais-contexto-box">
-            <div class="label">📍 Locais Mencionados:</div>
-            ${locaisMencionados.map(local => {
-              const cor = window.getCorLocal ? window.getCorLocal(local.tipo || 'local') : '#808080';
-              const nome = local.nome || local.nomeOriginal || local.id || 'Local';
-              const idLocal = local.id || local.nomeOriginal || local.nome || nome;
-              return `<span class="locais-contexto-tag" style="background:${cor};" onclick="irParaLocalNoMapa('${idLocal}')" title="Clique para ir ao local no mapa">📍 ${nome} (${local.tipo || 'local'})</span>`;
-            }).join('')}
-            <br>
-            <button class="btn-ver-mapa-contexto" onclick="document.getElementById('mapas').scrollIntoView({behavior:'smooth'})">🗺️ Ver todos no Mapa</button>
-          </div>
-        `;
-      }
-
-      const imagemHtml = renderizarImagemDoContexto(id);
-      const filmesHtml = renderizarFilmesDoContexto(id);
-
-      card.innerHTML = `
-        <div class="contexto-titulo">📖 ${referenciaLimpa}</div>
-        <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo (Bíblia local → bible-api.com)...</div>
-        ${locaisHtml}
-        ${imagemHtml}
-        ${filmesHtml}
-        <p style="font-size:12px;color:#999;">Contexto não pôde ser inferido automaticamente (livro/capítulo não reconhecido). Pode cadastrar manualmente em contextosReferencias no dados-lvN-cpN-v4.js.</p>
-        <div class="link-volta">
-          <a href="#perguntas" title="Perguntas Sugeridas">❓</a><a href="#alfabetica" title="Lista Alfabética">🔤</a><a href="#hierarquia" title="Hierarquia">📋</a>
-        </div>`;
-    }
-    containerCtx.appendChild(card);
-  });
-
-  const refsUnicas = [...new Map(listaRef.filter(i => i.id && idsParaRenderizar.includes(i.id)).map(r => [r.id, r])).values()];
-
-  // Guarda a lista atual para permitir "Buscar novamente" depois de salvar uma chave
-  window._refsUnicasAtual = refsUnicas;
-
-  await buscarTodosVersiculos(refsUnicas);
-}
-
-// ============================================
-// BUSCA (E RE-BUSCA) DOS VERSÍCULOS — sem IA (Bíblia local + bible-api.com)
-// ============================================
-async function buscarTodosVersiculos(refsUnicas, somenteFalhas = false) {
-  if (!refsUnicas || refsUnicas.length === 0) return;
-
-  const itensParaBuscar = refsUnicas.filter(item => {
-    if (!somenteFalhas) return true;
-    const el = document.getElementById(`versiculo-${item.id}`);
-    return el && !el.classList.contains('ok');
-  });
-
-  await Promise.all(itensParaBuscar.map(async (item, index) => {
-    const el = document.getElementById(`versiculo-${item.id}`);
-    if (!el) return;
-
-    el.classList.add('loading');
-    el.classList.remove('ok');
-    el.innerHTML = '⏳ Buscando versículo (Bíblia local → bible-api.com)...';
-
-    // Delay entre requisições para não sobrecarregar
-    if (index > 0) {
-      await esperar(config.delay);
-    }
-
-    const texto = await buscarVersiculoSemIA(item.referencia);
-    el.classList.remove('loading');
-    if (texto) {
-      el.classList.add('ok');
-      el.innerHTML = `<strong>✝️ ${item.referencia}:</strong><br>"${texto}"`;
-    } else {
-      el.innerHTML = `<em style="color:#c62828;">Não encontrado na Bíblia local nem na bible-api.com.</em>
-        <br><button onclick="tentarComIA('${item.id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#4a3b6e;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar com IA (Groq/Mistral)</button>`;
-    }
-  }));
-}
-
-// Busca manual de emergência para UM versículo específico, acionada pelo botão 🆘
-async function tentarComIA(id) {
-  const item = (window._refsUnicasAtual || []).find(i => i.id === id);
-  const el = document.getElementById(`versiculo-${id}`);
-  if (!item || !el) return;
-
-  const algumConfigurado = apiKeys.groq || apiKeys.mistral;
-  if (!algumConfigurado) {
-    alert('⚠️ Configure a chave da Groq ou da Mistral na seção "Configuração das APIs" antes de usar esse botão.');
-    return;
-  }
-
-  el.classList.add('loading');
-  el.innerHTML = '⏳ Consultando IA (Groq/Mistral)...';
-
-  const texto = await buscarVersiculoComIA(item.referencia);
-  el.classList.remove('loading');
-  if (texto) {
-    el.classList.add('ok');
-    el.innerHTML = `<strong>✝️ ${item.referencia} <span style="font-size:11px;color:#999;font-weight:400;">(via IA)</span>:</strong><br>"${texto}"`;
-  } else {
-    el.innerHTML = `<em style="color:#c62828;">A IA também não conseguiu buscar. Verifique as chaves configuradas.</em>
-      <br><button onclick="tentarComIA('${id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#4a3b6e;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar novamente com IA</button>`;
-  }
-}
-
-function buscarVersiculosNovamente() {
-  buscarTodosVersiculos(window._refsUnicasAtual, true);
-}
-
-// ============================================
-// CAPÍTULOS DISPONÍVEIS NA V4
-// Só entram aqui os capítulos que já têm arquivo
-// dados-{livro}-{capitulo}-v4.js próprio.
-// ============================================
-// ============================================
-// CAPÍTULOS DISPONÍVEIS NA V4
-// O curso completo tem 12 livros, cada um com 7 capítulos.
-// O seletor mostra todas as combinações; se o arquivo
-// dados-{livro}-{capitulo}-v4.js ainda não existir, aparece
-// uma mensagem amigável (tratada em carregarCapitulo/onerror)
-// em vez de quebrar a página. Basta criar o arquivo depois
-// que já aparece disponível, sem precisar mexer aqui.
-// ============================================
-const capitulosDisponiveisV4 = {
-  "lv1": [1, 2, 3, 4, 5, 6, 7],
-  "lv2": [1, 2, 3, 4, 5, 6, 7],
-  "lv3": [1, 2, 3, 4, 5, 6, 7],
-  "lv4": [1, 2, 3, 4, 5, 6, 7],
-  "lv5": [1, 2, 3, 4, 5, 6, 7],
-  "lv6": [1, 2, 3, 4, 5, 6, 7],
-  "lv7": [1, 2, 3, 4, 5, 6, 7],
-  "lv8": [1, 2, 3, 4, 5, 6, 7],
-  "lv9": [1, 2, 3, 4, 5, 6, 7],
-  "lv10": [1, 2, 3, 4, 5, 6, 7],
-  "lv11": [1, 2, 3, 4, 5, 6, 7],
-  "lv12": [1, 2, 3, 4, 5, 6, 7]
+const licoesDisponiveisV4 = {
+  "3T2026": [7]
 };
 
 function popularSeletoresV4() {
-  const selLivro = document.getElementById('seletorLivro');
-  const selCapitulo = document.getElementById('seletorCapitulo');
-  const nomesLivro = {
-    "lv1": "Livro 1", "lv2": "Livro 2", "lv3": "Livro 3", "lv4": "Livro 4",
-    "lv5": "Livro 5", "lv6": "Livro 6", "lv7": "Livro 7", "lv8": "Livro 8",
-    "lv9": "Livro 9", "lv10": "Livro 10", "lv11": "Livro 11", "lv12": "Livro 12"
-  };
+  const selTrimestre = document.getElementById('seletorTrimestre');
+  const selLicao = document.getElementById('seletorLicao');
+  const nomesTrimestre = { "3T2026": "3º Trimestre 2026", "2T2026": "2º Trimestre 2026" };
 
-  selLivro.innerHTML = Object.keys(capitulosDisponiveisV4)
-    .map(l => `<option value="${l}">${nomesLivro[l] || l}</option>`).join('');
-  selLivro.value = "lv6";
+  selTrimestre.innerHTML = Object.keys(licoesDisponiveisV4)
+    .map(t => `<option value="${t}">${nomesTrimestre[t] || t}</option>`).join('');
 
-  function popularCapitulos() {
-    const caps = capitulosDisponiveisV4[selLivro.value] || [];
-    selCapitulo.innerHTML = caps.map(n => `<option value="cp${n}">Capítulo ${n}</option>`).join('');
+  function popularLicoes() {
+    const licoes = licoesDisponiveisV4[selTrimestre.value] || [];
+    selLicao.innerHTML = licoes.map(n => `<option value="${n}">Lição ${n}</option>`).join('');
   }
-  selLivro.addEventListener('change', () => { popularCapitulos(); carregarCapitulo(); });
-  popularCapitulos();
+  selTrimestre.addEventListener('change', () => { popularLicoes(); carregarLicao(); });
+  popularLicoes();
 }
 popularSeletoresV4();
 
-// ── CARREGAR ──
+// ============================================
+// CARREGAR LIÇÃO
+// ============================================
 function removerScriptAnterior() {
   if (scriptCarregado?.parentNode) { scriptCarregado.parentNode.removeChild(scriptCarregado); scriptCarregado = null; }
   delete window.dadosLicaoV4;
   delete window.dadosLicao;
 }
 
-function carregarCapitulo() {
-  const livro    = document.getElementById('seletorLivro').value;
-  const capitulo = document.getElementById('seletorCapitulo').value;
-  if (!capitulo) {
-    document.getElementById('conteudo-principal').innerHTML = `<div class="loading">❌ Nenhum capítulo v4 disponível para ${livro}.</div>`;
+function carregarLicao() {
+  const trimestre = document.getElementById('seletorTrimestre').value;
+  const licao     = document.getElementById('seletorLicao').value;
+  if (!licao) {
+    document.getElementById('conteudo-principal').innerHTML = `<div class="loading">❌ Nenhuma lição v4 disponível para ${trimestre}.</div>`;
     return;
   }
   removerScriptAnterior();
   if (mapaAtual) { mapaAtual.remove(); mapaAtual = null; }
-  document.getElementById('conteudo-principal').innerHTML = `<div class="loading">📚 Carregando ${livro} ${capitulo} (v4)...</div>`;
-  document.getElementById('tituloDinamico').innerHTML = `⏳ Carregando...`;
+  document.getElementById('conteudo-principal').innerHTML = `<div class="loading">📖 Carregando lição ${licao} (v5)...</div>`;
+  document.getElementById('tituloDinamico').innerHTML = `⏳ Carregando lição ${licao}...`;
 
   const script = document.createElement('script');
-  script.src = `dados/teologia/dados-${livro}-${capitulo}-v4.js?v=${Date.now()}`;
+  script.src = `dados/dominical/dados-${trimestre}-licao${licao}-v5.js?v=${Date.now()}`;
   scriptCarregado = script;
 
   script.onload = () => setTimeout(() => {
     const dados = window.dadosLicaoV4 || window.dadosLicao;
-    if (dados) renderizarConteudo(dados);
-    else document.getElementById('conteudo-principal').innerHTML = `<div class="loading">❌ Dados não encontrados.</div>`;
+    if (dados) {
+      renderizarConteudo(dados);
+    } else {
+      document.getElementById('conteudo-principal').innerHTML = `<div class="loading">❌ Dados da lição ${licao} não encontrados.</div>`;
+    }
   }, 100);
 
   script.onerror = () => {
-    document.getElementById('conteudo-principal').innerHTML = `<div class="loading">❌ Arquivo não encontrado: dados-${livro}-${capitulo}-v4.js</div>`;
+    document.getElementById('conteudo-principal').innerHTML = `<div class="loading">❌ Arquivo não encontrado: dados-${trimestre}-licao${licao}-v5.js</div>`;
   };
 
   document.body.appendChild(script);
 }
 
-document.getElementById('carregarBtn').addEventListener('click', carregarCapitulo);
-
-// Toggle mostrar/ocultar seção de Configuração das APIs (começa oculta)
-document.getElementById('btnToggleApiConfig').addEventListener('click', () => {
-  const secao = document.getElementById('api-config');
-  const btn = document.getElementById('btnToggleApiConfig');
-  if (!secao) return;
-  const estaOculta = secao.classList.toggle('oculto');
-  btn.textContent = estaOculta ? '🔑 Mostrar Configuração das APIs' : '🔑 Ocultar Configuração das APIs';
-});
-document.addEventListener('DOMContentLoaded', carregarCapitulo);
+document.getElementById('carregarBtn').addEventListener('click', carregarLicao);
+document.addEventListener('DOMContentLoaded', carregarLicao);
 
 // ============================================
 // MODAL LEGENDA DE EMOJIS
@@ -1811,16 +1992,101 @@ document.getElementById('fecharModalLegenda').addEventListener('click', () => {
 document.getElementById('modalLegenda').addEventListener('click', (e) => {
   if (e.target.id === 'modalLegenda') document.getElementById('modalLegenda').classList.remove('aberto');
 });
-</script>
-<script>
-  // Registra o Service Worker para permitir uso offline após a 1ª visita
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('✅ Service Worker registrado — site disponível offline.'))
-        .catch(err => console.warn('⚠️ Falha ao registrar Service Worker:', err));
+
+// ============================================
+// EXPORTA FUNÇÕES PARA USO GLOBAL
+// ============================================
+window.toggleListaLocais = toggleListaLocais;
+// ============================================
+// FUNÇÃO PARA RENDERIZAR IMAGEM NO CONTEXTO
+// ============================================
+
+function renderizarImagemDoContexto(referenciaId) {
+    // Busca a imagem que tem esta referência, usando a função da biblioteca
+    // (IMAGENS_BIBLICAS é um objeto {id: {...}}, não um array — por isso
+    // usamos buscarImagensPorReferencias, que já sabe iterar sobre ele
+    // corretamente em vez de chamar .forEach diretamente no objeto).
+    let imagemEncontrada = null;
+
+    console.log('🔍 Buscando imagem para:', referenciaId);
+
+    if (typeof window.buscarImagensPorReferencias === 'function') {
+        const imagens = window.buscarImagensPorReferencias([referenciaId]);
+        imagemEncontrada = imagens && imagens.length > 0 ? imagens[0] : null;
+    } else {
+        console.warn('⚠️ window.buscarImagensPorReferencias não está definida!');
+    }
+
+    console.log('📦 imagemEncontrada:', imagemEncontrada);
+    
+    if (imagemEncontrada) {
+        return `
+            <div style="margin-top: 10px; padding: 8px 12px; background: rgba(255, 215, 0, 0.1); border-radius: 6px; border-left: 3px solid #ffd700;">
+                <div style="font-size: 11px; font-weight: 600; color: #5c4a1e; margin-bottom: 4px;">🖼️ Imagem Relacionada:</div>
+                <div style="display: flex; align-items: center; gap: 12px; cursor: pointer;" onclick="window.open('${imagemEncontrada.imagem}', '_blank')" title="Clique para ampliar">
+                    <img src="${imagemEncontrada.imagem}" alt="${imagemEncontrada.titulo}" style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px; border: 1px solid #ddd;" onerror="this.style.display='none'">
+                    <div>
+                        <div style="font-size: 13px; font-weight: 600; color: #2d2d2d;">${imagemEncontrada.titulo}</div>
+                        <div style="font-size: 10px; color: #888;">📖 ${imagemEncontrada.refs ? imagemEncontrada.refs.join('; ') : ''}</div>
+                        <div style="font-size: 10px; color: #3b5e3b;">🖼️ Clique para ampliar</div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    
+    return '';
+}
+
+// ============================================
+// FUNÇÃO PARA RENDERIZAR FILMES NO CONTEXTO
+// ============================================
+
+function renderizarFilmesDoContexto(referenciaId) {
+    if (typeof window.buscarFilmesPorReferencia !== 'function') {
+        console.warn('⚠️ buscarFilmesPorReferencia não é uma função');
+        return '';
+    }
+    
+    console.log('🎬 Buscando filmes para:', referenciaId);
+    const filmes = window.buscarFilmesPorReferencia(referenciaId);
+    console.log('🎬 Filmes encontrados:', filmes);
+    
+    if (!filmes || filmes.length === 0) return '';
+    
+    let html = `
+        <div class="filmes-card">
+            <div class="label">🎬 Filmes Relacionados:</div>
+    `;
+    
+    filmes.forEach(filme => {
+        html += `
+            <div class="filme-item">
+                <span class="titulo">${filme.titulo}</span>
+                ${filme.ano ? `<span class="ano">(${filme.ano})</span>` : ''}
+                ${filme.diretor ? `<span class="diretor">- Dir. ${filme.diretor}</span>` : ''}
+                ${filme.descricao ? `<div class="descricao">${filme.descricao}</div>` : ''}
+                ${filme.observacao ? `<div class="observacao">📌 ${filme.observacao}</div>` : ''}
+                ${filme.links && filme.links.length > 0 ? `
+                    <div class="links">
+                        ${filme.links.map(link => `
+                            <a href="${link.url}" target="_blank" class="filme-link">
+                                🎬 ${link.plataforma}${link.idioma ? ` (${link.idioma})` : ''}
+                            </a>
+                        `).join('')}
+                    </div>
+                ` : ''}
+            </div>
+        `;
     });
-  }
+    
+    html += `</div>`;
+    return html;
+}
+
+window.fecharListaLocais = fecharListaLocais;
+window.irParaLocalNoMapa = irParaLocalNoMapa;
 </script>
+<script src="biblioteca/preencher-pais-atual.js"></script>
 </body>
 </html>

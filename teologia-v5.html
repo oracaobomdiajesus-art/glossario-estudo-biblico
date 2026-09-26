@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teologia Descomplicada v4</title>
+  <title>Teologia Descomplicada v5</title>
   <!-- ==========================================
        LEAFLET (Biblioteca de mapas)
        ========================================== -->
@@ -267,7 +267,7 @@
 <body>
 <div class="container">
   <header>
-    <h1>📚 Teologia Descomplicada <span style="font-size:0.7em;opacity:0.8;">v4</span></h1>
+    <h1>📚 Teologia Descomplicada <span style="font-size:0.7em;opacity:0.8;">v5</span></h1>
     <div style="display:flex;gap:10px;">
       <button id="btnLegendaEmojis" style="color:white;background-color:#4a3b6e;padding:8px 16px;border-radius:6px;border:none;font-size:14px;cursor:pointer;">📋 Legenda de Emojis</button>
       <a href="index.html">🏠 Cursos</a>
@@ -1480,11 +1480,20 @@ async function renderizarConteudo(dados) {
   const containerCtx = document.getElementById('containerContextos');
   const listaRef = dados.listaAparicao || [];
   const idsVistos = new Set();
+  const refsVistas = new Set();
   const idsParaRenderizar = [];
   const referenciaPorId = new Map(listaRef.filter(i => i.id).map(i => [i.id, i.referencia]));
   listaRef.forEach(item => {
     if (!item.id || idsVistos.has(item.id)) return;
     idsVistos.add(item.id);
+    // Mostra só 1 card por referência bíblica única — o conteúdo do contexto
+    // (versículo, panorama, locais) é o mesmo independente de quantas vezes
+    // a referência aparece no capítulo.
+    const refNorm = (item.referencia || '').trim().toLowerCase();
+    if (refNorm) {
+      if (refsVistas.has(refNorm)) return;
+      refsVistas.add(refNorm);
+    }
     idsParaRenderizar.push(item.id);
   });
 
@@ -1511,11 +1520,11 @@ async function renderizarConteudo(dados) {
     }
     // 2. Fallback: busca nos locais encontrados
     else if (locaisDaLicaoAtual.length > 0) {
+        const referenciaDoItem = (referenciaPorId.get(id) || '').trim().toLowerCase();
         locaisMencionados = locaisDaLicaoAtual.filter(local => {
-            return local.referencias && local.referencias.some(r => {
-                const refNorm = r.trim();
-                const refId = id;
-                return refNorm.includes(refId) || refId.includes(refNorm);
+            return referenciaDoItem && local.referencias && local.referencias.some(r => {
+                const refNorm = r.trim().toLowerCase();
+                return refNorm === referenciaDoItem || refNorm.includes(referenciaDoItem) || referenciaDoItem.includes(refNorm);
             });
         });
     }
@@ -1702,18 +1711,7 @@ function buscarVersiculosNovamente() {
 // que já aparece disponível, sem precisar mexer aqui.
 // ============================================
 const capitulosDisponiveisV4 = {
-  "lv1": [1, 2, 3, 4, 5, 6, 7],
-  "lv2": [1, 2, 3, 4, 5, 6, 7],
-  "lv3": [1, 2, 3, 4, 5, 6, 7],
-  "lv4": [1, 2, 3, 4, 5, 6, 7],
-  "lv5": [1, 2, 3, 4, 5, 6, 7],
-  "lv6": [1, 2, 3, 4, 5, 6, 7],
-  "lv7": [1, 2, 3, 4, 5, 6, 7],
-  "lv8": [1, 2, 3, 4, 5, 6, 7],
-  "lv9": [1, 2, 3, 4, 5, 6, 7],
-  "lv10": [1, 2, 3, 4, 5, 6, 7],
-  "lv11": [1, 2, 3, 4, 5, 6, 7],
-  "lv12": [1, 2, 3, 4, 5, 6, 7]
+  "lv6": [1]
 };
 
 function popularSeletoresV4() {
@@ -1754,11 +1752,11 @@ function carregarCapitulo() {
   }
   removerScriptAnterior();
   if (mapaAtual) { mapaAtual.remove(); mapaAtual = null; }
-  document.getElementById('conteudo-principal').innerHTML = `<div class="loading">📚 Carregando ${livro} ${capitulo} (v4)...</div>`;
+  document.getElementById('conteudo-principal').innerHTML = `<div class="loading">📚 Carregando ${livro} ${capitulo} (v5)...</div>`;
   document.getElementById('tituloDinamico').innerHTML = `⏳ Carregando...`;
 
   const script = document.createElement('script');
-  script.src = `dados/teologia/dados-${livro}-${capitulo}-v4.js?v=${Date.now()}`;
+  script.src = `dados/teologia/dados-${livro}-${capitulo}-v5.js?v=${Date.now()}`;
   scriptCarregado = script;
 
   script.onload = () => setTimeout(() => {
@@ -1768,7 +1766,7 @@ function carregarCapitulo() {
   }, 100);
 
   script.onerror = () => {
-    document.getElementById('conteudo-principal').innerHTML = `<div class="loading">❌ Arquivo não encontrado: dados-${livro}-${capitulo}-v4.js</div>`;
+    document.getElementById('conteudo-principal').innerHTML = `<div class="loading">❌ Arquivo não encontrado: dados-${livro}-${capitulo}-v5.js</div>`;
   };
 
   document.body.appendChild(script);
@@ -1811,16 +1809,6 @@ document.getElementById('fecharModalLegenda').addEventListener('click', () => {
 document.getElementById('modalLegenda').addEventListener('click', (e) => {
   if (e.target.id === 'modalLegenda') document.getElementById('modalLegenda').classList.remove('aberto');
 });
-</script>
-<script>
-  // Registra o Service Worker para permitir uso offline após a 1ª visita
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('✅ Service Worker registrado — site disponível offline.'))
-        .catch(err => console.warn('⚠️ Falha ao registrar Service Worker:', err));
-    });
-  }
 </script>
 </body>
 </html>
