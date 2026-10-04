@@ -432,3 +432,85 @@ window.bibliotecaMermaid["lv7-cp3"] = `mindmap
         Gn 25.29-34
         Hb 12.16-17
 `;
+
+window.bibliotecaMermaid["lv7-cp4"] = `mindmap
+  root((Livro 7\\nCapítulo 4))
+    Seção 1
+      Jo 3.3
+      1.a
+        Jo 3.3-6
+        Ef 2.4-5
+        1 Pe 1.23
+      1.b
+        Jo 3.5-8
+        Tt 3.5
+      1.c
+        Ez 36.26-27
+        Jr 31.33
+        2 Co 5.17
+      1.d
+        Jo 3.3,5
+        Jo 1.12-13
+        Tt 3.5
+      Você Sabia
+        Jo 3.1-10
+    Seção 2
+      Gl 4.4-5
+      2.a
+        Jo 1.12-13
+        Gl 4.4-5
+        Ef 1.5
+      2.b
+        Rm 8.15-16
+        Gl 4.6-7
+        Mt 6.9
+      2.c
+        1 Jo 3.1-2
+        Ef 2.19
+      2.d
+        Rm 8.17
+        Gl 4.7
+        1 Pe 1.3-4
+      Você Sabia
+        Mc 14.36
+        Rm 8.15
+        Gl 4.6
+      Tarefa Simples para o Coração
+        Rm 8.15-17
+    Seção 3
+      Rm 5.1
+      3.a
+        Rm 3.23-24
+        Rm 5.1
+        Rm 8.33-34
+      3.b
+        Rm 3.24-26
+        2 Co 5.21
+        1 Pe 2.24
+      3.c
+        Rm 3.28
+        Gl 2.16
+        Ef 2.8-10
+      3.d
+        Rm 5.1
+        Rm 8.1
+        Rm 8.33-34
+    Seção 4
+      Ef 1.7
+      4.a
+        Jo 8.34-36
+        Rm 6.17-18
+      4.b
+        1 Pe 1.18-19
+        Ef 1.7
+        Mc 10.45
+      4.c
+        1 Co 6.19-20
+        Tt 2.14
+      4.d
+        Rm 8.23
+        Ef 1.13-14
+        Ef 4.30
+      Você Sabia
+        1 Pe 1.18-19
+`;

@@ -608,3 +608,35 @@ window.bibliotecaPerguntas["lv7-cp3"] = [
   { pergunta: "Segundo Hebreus 11.24-25, o que Moisés escolheu em vez do gozo do pecado?", topicoOrigem: "4.c", pagina: 63, tags: "ser maltratado com o povo de Deus / recusou ser chamado filho da filha de Faraó", refs: ["hb11.24-25"] },
   { pergunta: "Segundo Gênesis 25.29-34 e Hebreus 12.16-17, pelo que Esaú vendeu sua primogenitura?", topicoOrigem: "4 · Você Sabia?", pagina: 64, tags: "por uma simples refeição: pão, guisado e lentilhas / depois buscou a bênção com lágrimas", refs: ["gn25.29-34", "hb12.16-17"] }
 ];
+
+window.bibliotecaPerguntas["lv7-cp4"] = [
+  // perguntas só sobre os versículos (resposta = texto bíblico, Almeida)
+  { pergunta: "Segundo João 3.3, o que acontece com quem não nasce de novo?", topicoOrigem: "1", pagina: 68, tags: "não pode ver o reino de Deus", refs: ["jo3.3"] },
+  { pergunta: "Que pergunta Nicodemos fez a Jesus em João 3.4?", topicoOrigem: "1.a", pagina: 68, tags: "como pode um homem nascer, sendo velho? / pode tornar a entrar no ventre de sua mãe?", refs: ["jo3.3-6"] },
+  { pergunta: "Segundo 1 Pedro 1.23, de que semente o crente renasceu, e por meio de quê?", topicoOrigem: "1.a", pagina: 68, tags: "de semente incorruptível / pela palavra de Deus, que vive e permanece", refs: ["1pe1.23"] },
+  { pergunta: "Com que figura Jesus compara quem é nascido do Espírito em João 3.8?", topicoOrigem: "1.b", pagina: 69, tags: "o vento: sopra onde quer, ouves a sua voz, mas não sabes donde vem nem para onde vai", refs: ["jo3.5-8"] },
+  { pergunta: "Segundo Tito 3.5, Deus nos salvou por causa de obras de justiça? Como nos salvou?", topicoOrigem: "1.b", pagina: 69, tags: "não; segundo a sua misericórdia / mediante o lavar da regeneração e renovação pelo Espírito Santo", refs: ["tt3.5a"] },
+  { pergunta: "O que Deus promete tirar e o que promete dar em Ezequiel 36.26?", topicoOrigem: "1.c", pagina: 69, tags: "tirar o coração de pedra / dar um coração novo, um espírito novo e um coração de carne", refs: ["ez36.26-27"] },
+  { pergunta: "Em Jeremias 31.33, onde Deus diz que escreverá a sua lei?", topicoOrigem: "1.c", pagina: 69, tags: "no interior / no coração do seu povo", refs: ["jr31.33"] },
+  { pergunta: "Segundo João 1.12-13, a quem Deus deu o poder de se tornarem filhos de Deus?", topicoOrigem: "1.d", pagina: 69, tags: "a todos quantos o receberam, aos que creem no seu nome / nasceram de Deus", refs: ["jo1.12-13a"] },
+  { pergunta: "Quem era Nicodemos, segundo João 3.1 e 3.10?", topicoOrigem: "1 · Você Sabia?", pagina: 70, tags: "um fariseu, dos principais dos judeus / mestre em Israel", refs: ["jo3.1-10"] },
+  { pergunta: "Segundo Gálatas 4.4-5, quando e para que Deus enviou seu Filho?", topicoOrigem: "2", pagina: 73, tags: "vindo a plenitude dos tempos / para resgatar os que estavam debaixo da lei, a fim de recebermos a adoção de filhos", refs: ["gl4.4-5a"] },
+  { pergunta: "Segundo Efésios 1.5, por meio de quem fomos predestinados para ser filhos de adoção?", topicoOrigem: "2.a", pagina: 73, tags: "por Jesus Cristo, segundo o beneplácito de sua vontade", refs: ["ef1.5"] },
+  { pergunta: "Segundo Romanos 8.15-16, que espírito recebemos, e o que clamamos por ele?", topicoOrigem: "2.b", pagina: 74, tags: "não o espírito de escravidão, mas o espírito de adoção / Aba, Pai", refs: ["rm8.15-16"] },
+  { pergunta: "Como Jesus ensinou a começar a oração em Mateus 6.9?", topicoOrigem: "2.b", pagina: 74, tags: "Pai nosso que estás nos céus, santificado seja o teu nome", refs: ["mt6.9"] },
+  { pergunta: "Segundo 1 João 3.1, que grande amor o Pai nos concedeu?", topicoOrigem: "2.c", pagina: 74, tags: "que fôssemos chamados filhos de Deus, e nós o somos", refs: ["1jo3.1-2"] },
+  { pergunta: "Segundo Efésios 2.19, o que os crentes já não são, e o que passaram a ser?", topicoOrigem: "2.c", pagina: 74, tags: "não mais estrangeiros nem forasteiros / concidadãos dos santos e membros da família de Deus", refs: ["ef2.19"] },
+  { pergunta: "Segundo Romanos 8.17, o que os filhos de Deus também são?", topicoOrigem: "2.d", pagina: 74, tags: "herdeiros de Deus e co-herdeiros de Cristo", refs: ["rm8.17"] },
+  { pergunta: "Como 1 Pedro 1.4 descreve a herança reservada aos filhos de Deus?", topicoOrigem: "2.d", pagina: 74, tags: "incorruptível, incontaminável e imarcescível / reservada nos céus", refs: ["1pe1.3-4"] },
+  { pergunta: "Em Marcos 14.36, como Jesus chamou o Pai ao orar, e o que pediu?", topicoOrigem: "2 · Você Sabia?", pagina: 75, tags: "Aba, Pai / afasta de mim este cálice, todavia não o que eu quero, mas o que tu queres", refs: ["mc14.36"] },
+  { pergunta: "Segundo Romanos 5.1, o que temos ao sermos justificados pela fé?", topicoOrigem: "3", pagina: 78, tags: "paz com Deus, por nosso Senhor Jesus Cristo", refs: ["rm5.1a"] },
+  { pergunta: "Segundo Romanos 8.33-34, quem justifica os escolhidos, e o que Cristo faz por eles?", topicoOrigem: "3.a", pagina: 78, tags: "é Deus quem os justifica / Cristo morreu, ressurgiu, está à direita de Deus e intercede por nós", refs: ["rm8.33-34a"] },
+  { pergunta: "Segundo Romanos 3.26, Deus é justo e o quê?", topicoOrigem: "3.b", pagina: 79, tags: "justificador daquele que tem fé em Jesus", refs: ["rm3.24-26"] },
+  { pergunta: "Segundo Gálatas 2.16, o homem é justificado por obras da lei?", topicoOrigem: "3.c", pagina: 79, tags: "não; é justificado pela fé em Cristo Jesus / por obras da lei nenhuma carne será justificada", refs: ["gl2.16"] },
+  { pergunta: "Segundo Efésios 2.9-10, por que a salvação não vem das obras, e para que fomos criados?", topicoOrigem: "3.c", pagina: 79, tags: "para que ninguém se glorie / criados em Cristo Jesus para boas obras", refs: ["ef2.8-10"] },
+  { pergunta: "Segundo Efésios 1.7, o que temos em Cristo pelo seu sangue?", topicoOrigem: "4", pagina: 83, tags: "a redenção, a redenção dos nossos delitos, segundo as riquezas da sua graça", refs: ["ef1.7a"] },
+  { pergunta: "Segundo 1 Pedro 1.18-19, com que fomos resgatados?", topicoOrigem: "4.b", pagina: 84, tags: "não com prata ou ouro / com o precioso sangue de Cristo, cordeiro sem defeito e sem mancha", refs: ["1pe1.18-19a"] },
+  { pergunta: "Segundo Marcos 10.45, para que veio o Filho do homem?", topicoOrigem: "4.b", pagina: 84, tags: "não para ser servido, mas para servir e dar a sua vida em resgate de muitos", refs: ["mc10.45"] },
+  { pergunta: "Segundo 1 Coríntios 6.19-20, por que não somos de nós mesmos?", topicoOrigem: "4.c", pagina: 84, tags: "fomos comprados por preço / o corpo é santuário do Espírito Santo; glorificai a Deus", refs: ["1co6.19-20"] },
+  { pergunta: "Segundo Efésios 4.30, para que dia fomos selados com o Espírito Santo?", topicoOrigem: "4.d", pagina: 84, tags: "para o dia da redenção", refs: ["ef4.30"] }
+];
