@@ -525,3 +525,86 @@ window.bibliotecaPerguntas["lv6-cp3"] = [
     refs: ["mt13.41-42", "mt25.32"]
   }
 ];
+
+window.bibliotecaPerguntas["lv7-cp1"] = [
+  // perguntas só sobre os versículos (resposta = texto bíblico, Almeida)
+  { pergunta: "Segundo Romanos 3.23, quantos pecaram, e em que condição ficaram?", topicoOrigem: "1", pagina: 3, tags: "todos pecaram / destituídos da glória de Deus", refs: ["rm3.23a"] },
+  { pergunta: "Em 1 Pedro 1.15-16, por que somos chamados a ser santos?", topicoOrigem: "1.a", pagina: 3, tags: "porque aquele que nos chamou é santo / sede santos em todo o procedimento", refs: ["1pe1.15-16"] },
+  { pergunta: "Como 1 João 3.4 define o pecado?", topicoOrigem: "1.c", pagina: 4, tags: "o pecado é rebeldia", refs: ["1jo3.4a"] },
+  { pergunta: "Em Gênesis 3.8-10, o que Adão e Eva fizeram ao ouvir a voz do Senhor, e por quê?", topicoOrigem: "1.d", pagina: 4, tags: "esconderam-se entre as árvores / tiveram medo, porque estavam nus", refs: ["gn3.8-10"] },
+  { pergunta: "Segundo Isaías 59.2, o que as iniquidades produzem entre nós e Deus?", topicoOrigem: "1.d", pagina: 4, tags: "fazem separação / os pecados escondem o rosto de Deus, de modo que não ouça", refs: ["is59.2"] },
+  { pergunta: "Segundo Romanos 6.23, qual é o salário do pecado e qual é o dom gratuito de Deus?", topicoOrigem: "2", pagina: 8, tags: "a morte / a vida eterna em Cristo Jesus nosso Senhor", refs: ["rm6.23a"] },
+  { pergunta: "Em João 8.34-36, quem é escravo do pecado, e quem pode libertar?", topicoOrigem: "2.b", pagina: 9, tags: "todo aquele que comete pecado / o Filho: se ele libertar, seremos verdadeiramente livres", refs: ["jo8.34-36"] },
+  { pergunta: "Como Efésios 2.1-5 descreve a condição de quem está sem Cristo?", topicoOrigem: "2.c", pagina: 9, tags: "mortos nos delitos e pecados / por natureza filhos da ira", refs: ["ef2.1-5"] },
+  { pergunta: "O que Jesus disse a Nicodemos ser necessário para ver o reino de Deus (João 3.3)?", topicoOrigem: "2.c", pagina: 9, tags: "nascer de novo", refs: ["jo3.3-5"] },
+  { pergunta: "Segundo Apocalipse 20.14, o que é a segunda morte?", topicoOrigem: "2.d", pagina: 9, tags: "o lago de fogo", refs: ["ap20.14"] },
+  { pergunta: "Segundo Efésios 2.8, como somos salvos?", topicoOrigem: "3", pagina: 13, tags: "pela graça, por meio da fé / não vem de nós, é dom de Deus", refs: ["ef2.8"] },
+  { pergunta: "Segundo Lucas 19.10, para que veio o Filho do homem?", topicoOrigem: "3.a", pagina: 13, tags: "buscar e salvar o que se havia perdido", refs: ["lc19.10"] },
+  { pergunta: "Em Romanos 5.1, o que temos quando somos justificados pela fé?", topicoOrigem: "3.b", pagina: 14, tags: "paz com Deus, por nosso Senhor Jesus Cristo", refs: ["rm5.1-10-11"] },
+  { pergunta: "Segundo 2 Coríntios 5.17, o que acontece com quem está em Cristo?", topicoOrigem: "3.c", pagina: 14, tags: "é nova criatura / as coisas velhas passaram, tudo se fez novo", refs: ["2co5.17"] },
+  { pergunta: "Em João 5.24, o que tem quem ouve a palavra de Jesus e crê?", topicoOrigem: "3.d", pagina: 14, tags: "a vida eterna / não entra em juízo / passou da morte para a vida", refs: ["jo5.24"] },
+  { pergunta: "Segundo Atos 4.12, existe salvação em algum outro nome?", topicoOrigem: "4", pagina: 18, tags: "não / debaixo do céu nenhum outro nome há em que devamos ser salvos", refs: ["at4.12a"] },
+  { pergunta: "Segundo Hebreus 4.15, Jesus foi tentado? Ele pecou?", topicoOrigem: "4.a", pagina: 18, tags: "foi tentado em tudo, como nós, mas sem pecado", refs: ["hb4.15"] },
+  { pergunta: "Segundo 1 Pedro 2.24, o que Jesus levou em seu corpo sobre o madeiro, e para quê?", topicoOrigem: "4.b", pagina: 18, tags: "os nossos pecados / para que, mortos para os pecados, vivêssemos para a justiça", refs: ["1pe2.24"] },
+  { pergunta: "Em Apocalipse 1.18, o que Jesus diz ter?", topicoOrigem: "4.c", pagina: 19, tags: "está vivo pelos séculos dos séculos / tem as chaves da morte e do hades", refs: ["ap1.18"] },
+  { pergunta: "Segundo 1 Timóteo 2.5, quantos mediadores existem entre Deus e os homens?", topicoOrigem: "4.d", pagina: 19, tags: "um só Mediador, Cristo Jesus homem", refs: ["1tm2.5-6"] },
+  { pergunta: "Em João 14.6, o que Jesus diz ser?", topicoOrigem: "4.d", pagina: 19, tags: "o caminho, a verdade e a vida / ninguém vem ao Pai senão por ele", refs: ["jo14.6a"] },
+  { pergunta: "Segundo Mateus 1.21, por que o menino seria chamado Jesus?", topicoOrigem: "4 · Você Sabia?", pagina: 20, tags: "porque ele salvaria o seu povo dos seus pecados", refs: ["mt1.21"] }
+];
+
+window.bibliotecaPerguntas["lv7-cp2"] = [
+  // perguntas só sobre os versículos (resposta = texto bíblico, Almeida)
+  { pergunta: "Segundo Romanos 5.12, por quem o pecado entrou no mundo, e o que veio com ele?", topicoOrigem: "1", pagina: 24, tags: "por um só homem / a morte, que passou a todos os homens", refs: ["rm5.12"] },
+  { pergunta: "Em Gênesis 2.16-17, qual foi a única proibição de Deus e qual consequência Ele anunciou?", topicoOrigem: "1.a", pagina: 24, tags: "não comer da árvore do conhecimento do bem e do mal / certamente morrerás", refs: ["gn2.16-17a"] },
+  { pergunta: "Segundo Eclesiastes 7.29, como Deus fez o homem, e o que os homens buscaram?", topicoOrigem: "1.b", pagina: 25, tags: "Deus fez o homem reto / os homens buscaram muitos artifícios", refs: ["ec7.29"] },
+  { pergunta: "Que nomes Apocalipse 12.9 dá à antiga serpente, e o que ela faz?", topicoOrigem: "1.c", pagina: 25, tags: "Diabo e Satanás / engana todo o mundo", refs: ["ap12.9"] },
+  { pergunta: "Em Gênesis 3.4-5, o que a serpente afirmou contra a palavra de Deus?", topicoOrigem: "1.d", pagina: 25, tags: "certamente não morrereis / sereis como Deus", refs: ["gn3.4-6"] },
+  { pergunta: "Como Jesus descreve o Diabo em João 8.44?", topicoOrigem: "1.d", pagina: 25, tags: "homicida desde o princípio / nele não há verdade / mentiroso e pai da mentira", refs: ["jo8.44"] },
+  { pergunta: "Como Jeremias 17.9 descreve o coração humano?", topicoOrigem: "2", pagina: 29, tags: "enganoso mais do que todas as coisas, e perverso / quem o poderá conhecer?", refs: ["jr17.9a"] },
+  { pergunta: "Segundo Marcos 7.21-23, de onde procedem os maus pensamentos?", topicoOrigem: "2.a", pagina: 29, tags: "do interior, do coração dos homens / procedem de dentro e contaminam o homem", refs: ["mc7.21-23"] },
+  { pergunta: "Segundo Romanos 12.2, como somos transformados?", topicoOrigem: "2.b", pagina: 30, tags: "pela renovação da nossa mente / não nos conformando a este mundo", refs: ["rm12.2"] },
+  { pergunta: "Que conflito Paulo descreve em Romanos 7.18-19?", topicoOrigem: "2.c", pagina: 30, tags: "o querer o bem está nele, mas não o efetuá-lo / não faz o bem que quer, mas o mal que não quer", refs: ["rm7.18-19"] },
+  { pergunta: "O que Gênesis 3.19 diz sobre o destino do corpo?", topicoOrigem: "2.d", pagina: 30, tags: "és pó e ao pó tornarás", refs: ["gn3.19"] },
+  { pergunta: "Segundo 1 Coríntios 15.42-44, como o corpo é ressuscitado?", topicoOrigem: "2.d", pagina: 30, tags: "em incorrupção, em glória e em poder / corpo espiritual", refs: ["1co15.42-44"] },
+  { pergunta: "Em João 19.11, o que Jesus disse a Pilatos sobre quem o entregou?", topicoOrigem: "3", pagina: 34, tags: "aquele que me entregou a ti, maior pecado tem", refs: ["jo19.11a"] },
+  { pergunta: "Segundo Tiago 2.10, o que acontece com quem tropeça em um só ponto da lei?", topicoOrigem: "3.a", pagina: 34, tags: "tem-se tornado culpado de todos", refs: ["tg2.10-11"] },
+  { pergunta: "Segundo Lucas 12.47-48, o que se pede daquele a quem muito é dado?", topicoOrigem: "3.b", pagina: 35, tags: "muito se lhe requererá / o servo que soube a vontade e não a fez será castigado com muitos açoites", refs: ["lc12.47-48a"] },
+  { pergunta: "Em Números 15.27-31, qual a diferença entre pecar sem querer e pecar temerariamente?", topicoOrigem: "3.c", pagina: 35, tags: "quem pecava sem querer oferecia expiação e era perdoado / quem agia temerariamente desprezava a palavra do Senhor e era extirpado", refs: ["nm15.27-31a"] },
+  { pergunta: "Segundo Tiago 3.1, por que não devem ser muitos os mestres?", topicoOrigem: "3.c", pagina: 35, tags: "porque receberemos um juízo mais severo", refs: ["tg3.1"] },
+  { pergunta: "Em 1 Samuel 16.7, para onde o Senhor olha?", topicoOrigem: "3.d", pagina: 36, tags: "o homem vê o que está diante dos olhos / o Senhor olha para o coração", refs: ["1sm16.7"] },
+  { pergunta: "Segundo Isaías 53.5, por que o Servo foi ferido, e o que recebemos?", topicoOrigem: "4.a", pagina: 40, tags: "pelas nossas transgressões e iniquidades / pelas suas pisaduras fomos sarados", refs: ["is53.4-6"] },
+  { pergunta: "Segundo Colossenses 2.14, o que foi feito com o escrito de dívida que era contra nós?", topicoOrigem: "4.b", pagina: 41, tags: "foi riscado e removido / cravado na cruz", refs: ["cl2.13-14"] },
+  { pergunta: "Segundo Romanos 8.1, há condenação para os que estão em Cristo Jesus?", topicoOrigem: "4.b", pagina: 41, tags: "nenhuma condenação", refs: ["rm8.1"] },
+  { pergunta: "Segundo Hebreus 2.14, quem Jesus derrotou por meio da morte?", topicoOrigem: "4.c", pagina: 41, tags: "aquele que tinha o poder da morte, isto é, o Diabo", refs: ["hb2.14"] },
+  { pergunta: "Segundo Romanos 6.14, por que o pecado não terá domínio sobre nós?", topicoOrigem: "4.d", pagina: 41, tags: "porque não estamos debaixo da lei, mas debaixo da graça", refs: ["rm6.6-7-11-14"] },
+  { pergunta: "Segundo Hebreus 10.12-14, quantas vezes Cristo ofereceu sacrifício pelos pecados?", topicoOrigem: "4 · Você Sabia?", pagina: 42, tags: "um único sacrifício / com uma só oferta aperfeiçoou para sempre os santificados", refs: ["hb10.11-14"] }
+];
+
+window.bibliotecaPerguntas["lv7-cp3"] = [
+  // perguntas só sobre os versículos (resposta = texto bíblico, Almeida)
+  { pergunta: "Segundo 1 Coríntios 5.6, o que faz um pouco de fermento?", topicoOrigem: "1", pagina: 46, tags: "leveda a massa toda", refs: ["1co5.6a"] },
+  { pergunta: "Em Josué 7, o que Acã fez, e contra quem se acendeu a ira do Senhor?", topicoOrigem: "1.a", pagina: 47, tags: "cobiçou e tomou do anátema, escondendo-o na tenda / contra os filhos de Israel", refs: ["js7.1-20-26"] },
+  { pergunta: "Em Gênesis 4.7-8, o que Deus advertiu a Caim, e o que ele fez depois?", topicoOrigem: "1.b", pagina: 47, tags: "o pecado jaz à porta, mas sobre ele deves dominar / matou seu irmão Abel", refs: ["gn4.3-8"] },
+  { pergunta: "Segundo Tiago 4.1, de onde vêm as guerras e contendas?", topicoOrigem: "1.b", pagina: 47, tags: "dos deleites que guerreiam nos nossos membros", refs: ["tg4.1-2"] },
+  { pergunta: "Que tipo de sociedade Miqueias 2.1-2 descreve?", topicoOrigem: "1.c", pagina: 47, tags: "maquinam a iniquidade nas camas / cobiçam campos e casas e fazem violência", refs: ["mq2.1-2"] },
+  { pergunta: "O que Jesus diz em Mateus 18.6 sobre quem faz tropeçar um destes pequeninos?", topicoOrigem: "1.d", pagina: 47, tags: "melhor lhe fora pendurar ao pescoço uma pedra de moinho e submergir no mar", refs: ["mt18.6-7"] },
+  { pergunta: "Segundo Romanos 14.13, qual deve ser nosso propósito em relação ao irmão?", topicoOrigem: "1.d", pagina: 47, tags: "não pôr tropeço ou escândalo ao irmão", refs: ["rm14.13"] },
+  { pergunta: "Segundo Hebreus 3.13, o que pode endurecer o coração, e o que devemos fazer?", topicoOrigem: "2", pagina: 52, tags: "o engano do pecado / exortar-nos uns aos outros todos os dias", refs: ["hb3.13a"] },
+  { pergunta: "Segundo Tiago 1.14-15, como acontece a tentação, e aonde ela leva?", topicoOrigem: "2.a", pagina: 53, tags: "atraído e engodado pela própria concupiscência / gera o pecado, e o pecado gera a morte", refs: ["tg1.14-15a"] },
+  { pergunta: "Segundo Gálatas 6.7, o que o homem colhe?", topicoOrigem: "2.b", pagina: 53, tags: "tudo o que semear, isso também ceifará / Deus não se deixa escarnecer", refs: ["gl6.7-8"] },
+  { pergunta: "Segundo Provérbios 28.13, quem alcança misericórdia?", topicoOrigem: "2.c", pagina: 53, tags: "o que confessa e deixa as transgressões / quem as encobre nunca prosperará", refs: ["pv28.13"] },
+  { pergunta: "Segundo 1 João 1.8, o que acontece se dissermos que não temos pecado?", topicoOrigem: "2.c", pagina: 53, tags: "enganamo-nos a nós mesmos, e a verdade não está em nós", refs: ["1jo1.8-9"] },
+  { pergunta: "Em Gênesis 3.1, qual foi a primeira pergunta da serpente à mulher?", topicoOrigem: "2 · Você Sabia?", pagina: 54, tags: "é assim que Deus disse: Não comereis de toda árvore do jardim?", refs: ["gn3.1"] },
+  { pergunta: "Segundo Isaías 5.20, o que fazem aqueles sobre quem é pronunciado o 'ai'?", topicoOrigem: "3", pagina: 57, tags: "ao mal chamam bem e ao bem mal / põem as trevas por luz e a luz por trevas", refs: ["is5.20a"] },
+  { pergunta: "O que Êxodo 23.2 ordena em relação à multidão?", topicoOrigem: "3.a", pagina: 57, tags: "não seguir a multidão para fazer o mal / não perverter a justiça acompanhando a maioria", refs: ["ex23.2"] },
+  { pergunta: "Segundo Provérbios 14.12, aonde pode levar um caminho que parece direito ao homem?", topicoOrigem: "3.b", pagina: 58, tags: "o fim dele conduz à morte", refs: ["pv14.12a"] },
+  { pergunta: "Segundo 1 Timóteo 4.2, como fica a consciência dos que falam mentiras?", topicoOrigem: "3.c", pagina: 58, tags: "cauterizada", refs: ["1tm4.2"] },
+  { pergunta: "O que o salmista pede a Deus em Salmos 139.23-24?", topicoOrigem: "3.c", pagina: 58, tags: "sonda-me e conhece o meu coração / vê se há em mim caminho perverso / guia-me pelo caminho eterno", refs: ["sl139.23-24"] },
+  { pergunta: "Segundo 1 Tessalonicenses 5.21-22, o que devemos fazer com todas as coisas?", topicoOrigem: "3.d", pagina: 58, tags: "pôr tudo à prova / reter o que é bom / abster-se de toda espécie de mal", refs: ["1ts5.21-22"] },
+  { pergunta: "Em Mateus 27.20-26, quem a multidão pediu que fosse solto, e o que pediu para Jesus?", topicoOrigem: "3 · Você Sabia?", pagina: 59, tags: "Barrabás / seja crucificado", refs: ["mt27.20-26"] },
+  { pergunta: "Segundo Gálatas 5.17, o que acontece entre a carne e o Espírito?", topicoOrigem: "4", pagina: 62, tags: "a carne luta contra o Espírito e o Espírito contra a carne / opõem-se um ao outro", refs: ["gl5.17a"] },
+  { pergunta: "Como Davi descreve sua origem em Salmos 51.5?", topicoOrigem: "4.a", pagina: 62, tags: "nasci em iniquidade / em pecado me concebeu minha mãe", refs: ["sl51.5"] },
+  { pergunta: "Que duas leis Paulo percebe em si, segundo Romanos 7.21-23?", topicoOrigem: "4.d", pagina: 63, tags: "prazer na lei de Deus no homem interior / outra lei nos membros que o leva cativo à lei do pecado", refs: ["rm7.21-23"] },
+  { pergunta: "Segundo Hebreus 11.24-25, o que Moisés escolheu em vez do gozo do pecado?", topicoOrigem: "4.c", pagina: 63, tags: "ser maltratado com o povo de Deus / recusou ser chamado filho da filha de Faraó", refs: ["hb11.24-25"] },
+  { pergunta: "Segundo Gênesis 25.29-34 e Hebreus 12.16-17, pelo que Esaú vendeu sua primogenitura?", topicoOrigem: "4 · Você Sabia?", pagina: 64, tags: "por uma simples refeição: pão, guisado e lentilhas / depois buscou a bênção com lágrimas", refs: ["gn25.29-34", "hb12.16-17"] }
+];

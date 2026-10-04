@@ -185,3 +185,250 @@ window.bibliotecaMermaid["lv6-cp3"] = `mindmap
       Separarão justos e ímpios
         Julgamento final
 `;
+
+window.bibliotecaMermaid["lv7-cp1"] = `mindmap
+  root((Livro 7\\nCapítulo 1))
+    Seção 1
+      Rm 3.23
+      1.a
+        Rm 3.23
+        1 Pe 1.15-16
+      1.b
+        Gn 3.1-6
+        Is 53.6
+      1.c
+        1 Jo 3.4
+        Rm 3.20
+        Rm 7.7
+      1.d
+        Gn 3.8-10
+        Is 59.2
+        2 Co 5.18-19
+      Perguntas Rápidas
+        1 Jo 3.4
+    Seção 2
+      Rm 6.23
+      2.a
+        Rm 3.19,23-24
+        1 Jo 1.9
+      2.b
+        Jo 8.34-36
+        Rm 6.16-18
+      2.c
+        Ef 2.1-5
+        Jo 3.3-5
+        Rm 6.23
+      2.d
+        Jo 3.18
+        Ap 20.14
+      Você Sabia
+        Rm 6.23
+      Palavra Pastoral
+        Jo 10.10
+    Seção 3
+      Ef 2.8
+      3.a
+        Jo 3.16-17
+        Lc 19.10
+        Ef 2.4-5
+      3.b
+        Rm 5.1,10-11
+        2 Co 5.18-19
+      3.c
+        2 Co 5.17
+        Ef 2.4-5
+        Cl 3.1-3
+      3.d
+        Jo 3.16
+        Jo 5.24
+        1 Jo 5.11-12
+      Exemplo Atual
+        Rm 3.23
+    Seção 4
+      At 4.12
+      4.a
+        Hb 4.15
+        1 Pe 2.22
+        2 Co 5.21
+      4.b
+        Is 53.5-6
+        1 Pe 2.24
+        1 Co 15.3
+      4.c
+        1 Co 15.20-22
+        Rm 6.9
+        Ap 1.18
+      4.d
+        Jo 14.6
+        1 Tm 2.5-6
+        At 4.12
+      Exemplo Atual
+        Jo 14.6
+      Você Sabia
+        Mt 1.21
+      História Ilustrativa
+        Jo 14.6
+`;
+
+window.bibliotecaMermaid["lv7-cp2"] = `mindmap
+  root((Livro 7\\nCapítulo 2))
+    Seção 1
+      Rm 5.12
+      1.a
+        Gn 2.16-17
+        Gn 3.6
+        Rm 5.19
+      1.b
+        Gn 2.16-17
+        Ec 7.29
+      1.c
+        Gn 3.1-6
+        2 Co 11.3
+        Ap 12.9
+      1.d
+        Gn 2.17
+        Gn 3.4-6
+        Jo 8.44
+      Você Sabia
+        Gn 2.17
+        Gn 3.6
+    Seção 2
+      Jr 17.9
+      2.a
+        Jr 17.9
+        Mc 7.21-23
+        Gl 5.16-17
+      2.b
+        Rm 1.21-22
+        Ef 4.17-18
+        Rm 12.2
+      2.c
+        Rm 7.18-19
+        Tg 1.14-15
+        Gl 5.16
+      2.d
+        Gn 3.19
+        Rm 8.22-23
+        1 Co 15.42-44
+    Seção 3
+      Jo 19.11
+      3.a
+        Tg 2.10-11
+        Rm 3.23
+      3.b
+        Jo 19.11
+        Mt 11.21-24
+        Lc 12.47-48
+      3.c
+        Nm 15.27-31
+        Lc 12.47-48
+        Am 2.6-8
+        Mc 9.42
+        Tg 3.1
+        Hb 3.12-13
+        Rm 2.4-5
+      3.d
+        1 Sm 16.7
+        Rm 2.6
+        Hb 4.13
+      Você Sabia
+        Nm 15.27-31
+    Seção 4
+      1 Pe 2.24
+      4.a
+        Is 53.4-6
+        1 Pe 2.24
+        2 Co 5.21
+      4.b
+        Cl 2.13-14
+        Rm 8.1
+      4.c
+        Cl 2.15
+        Hb 2.14
+        Jo 12.31
+      4.d
+        Rm 6.6-7,11-14
+        1 Pe 2.24
+      Você Sabia
+        Hb 10.11-14
+`;
+
+window.bibliotecaMermaid["lv7-cp3"] = `mindmap
+  root((Livro 7\\nCapítulo 3))
+    Seção 1
+      1 Co 5.6
+      1.a
+        Js 7.1,20-26
+      1.b
+        Gn 3.12-13
+        Gn 4.3-8
+        Tg 4.1-2
+      1.c
+        Is 5.20-23
+        Am 5.11-12
+        Mq 2.1-2
+      1.d
+        Mt 18.6-7
+        Rm 14.13
+        1 Co 8.9
+      Você Sabia
+        1 Co 5.6
+    Seção 2
+      Hb 3.13
+      2.a
+        Gn 3.6
+        Tg 1.14-15
+      2.b
+        Gn 2.17
+        Gn 3.4
+        Gl 6.7-8
+      2.c
+        Gn 3.12-13
+        Pv 28.13
+        1 Jo 1.8-9
+      2.d
+        Hb 3.12-13
+        Ef 4.18-19
+      Você Sabia
+        Gn 3.1
+      História Ilustrativa
+        Hb 3.13
+    Seção 3
+      Is 5.20
+      3.a
+        Is 5.20
+        Êx 23.2
+        Rm 12.2
+      3.b
+        Is 5.20
+        Pv 14.12
+        Rm 1.25
+      3.c
+        1 Tm 4.2
+        Sl 139.23-24
+        Hb 4.12
+      3.d
+        Rm 12.2
+        1 Ts 5.21-22
+        Fp 1.9-10
+      Você Sabia
+        Mt 27.20-26
+    Seção 4
+      Gl 5.17
+      4.a
+        Sl 51.5
+        Rm 5.12
+        Ef 2.3
+      4.b
+        Tg 1.14-15
+        Mc 7.21-23
+      4.c
+        Hb 11.24-25
+        Pv 14.12
+      4.d
+        Gl 5.17
+        Rm 7.21-23
+      Você Sabia
+        Gn 25.29-34
+        Hb 12.16-17
+`;

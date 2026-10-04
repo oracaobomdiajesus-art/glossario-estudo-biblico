@@ -870,11 +870,11 @@ function renderizarCardPergunta(p, numero) {
   const refsHtml = (p.refs || []).map(r =>
     `<span class="pergunta-ref-badge" onclick="event.stopPropagation();document.getElementById('${r}-contexto')?.scrollIntoView({behavior:'smooth'})">${r}</span>`
   ).join('');
-  const textoLimpo = p.pergunta.replace(/^Hora da Revisão\s*—\s*\d+\.\s*/, '');
+  const textoLimpo = p.pergunta.replace(/^(Hora da Revisão|Perguntas Rápidas)\s*—\s*\d+\.\s*/, '');
   return `<div class="pergunta-card">
     <div class="pergunta-texto">${numero}. ${textoLimpo} <span class="icone-gabarito" id="icone-${id}" onclick="const box=document.getElementById('${id}');box.classList.toggle('aberto');document.getElementById('icone-${id}').textContent=box.classList.contains('aberto')?'🙈':'🔑'" title="Ver/ocultar gabarito">🔑</span></div>
     <div class="gabarito-box" id="${id}">
-      <div class="gabarito-linha"><strong>📋 Tópico:</strong> ${p.topicoOrigem || '—'}</div>
+      <div class="gabarito-linha"><strong>📋 Onde:</strong> ${p.topicoOrigem || '—'}</div>
       <div class="gabarito-linha"><strong>📄 Página:</strong> ${p.pagina}</div>
       <div class="gabarito-linha"><strong>#️⃣ Tags:</strong> ${p.tags}</div>
       ${refsHtml ? `<div class="gabarito-linha"><strong>📖 Refs:</strong> <div class="pergunta-refs" style="display:inline-flex;">${refsHtml}</div></div>` : ''}
@@ -886,8 +886,10 @@ function renderizarPerguntas(chave) {
   const todas = (window.bibliotecaPerguntas || {})[chave];
   if (!todas?.length) return `<div class="sem-perguntas">⚠️ Perguntas não disponíveis para este capítulo.</div>`;
 
-  const extras  = embaralhar(todas.filter(p => !p.pergunta.startsWith('Hora da Revisão')));
+  const ehRapida = p => p.pergunta.startsWith('Perguntas Rápidas');
+  const extras  = embaralhar(todas.filter(p => !p.pergunta.startsWith('Hora da Revisão') && !ehRapida(p)));
   const revisao = embaralhar(todas.filter(p =>  p.pergunta.startsWith('Hora da Revisão')));
+  const rapidas = todas.filter(ehRapida);
 
   let html = '';
   if (extras.length > 0) {
@@ -897,6 +899,10 @@ function renderizarPerguntas(chave) {
   if (revisao.length > 0) {
     html += `<h3 class="pergunta-subtitulo">📝 Hora da Revisão (Apostila)</h3>`;
     html += revisao.map((p, i) => renderizarCardPergunta(p, i + 1)).join('');
+  }
+  if (rapidas.length > 0) {
+    html += `<h3 class="pergunta-subtitulo">⚡ Perguntas Rápidas (Apostila)</h3>`;
+    html += rapidas.map((p, i) => renderizarCardPergunta(p, i + 1)).join('');
   }
   return html;
 }
@@ -1421,16 +1427,18 @@ async function renderizarConteudo(dados) {
   // Lista Alfabética (Lista de Aparição removida — já coberta pela Hierarquia)
   if (dados.listaAlfabetica?.length) {
     const listaAlf = [...dados.listaAlfabetica];
+    // Capítulos no modo só Bíblia trazem "onde" (seção/letra/bloco da apostila)
+    const temOnde = listaAlf.some(i => i.onde);
     html += `<section id="alfabetica"><h2>🔤 Lista Alfabética de Referências</h2>
       <p style="font-size:12px;color:#666;margin-bottom:10px;">📌 ${listaAlf.length} referências únicas</p>
       <table><thead><tr>
-        <th class="col-num">1️⃣</th><th class="col-ref">📖</th><th>#️⃣ Tags</th><th class="col-pag">📄</th>
+        <th class="col-num">1️⃣</th><th class="col-ref">📖</th>${temOnde ? '<th>📍 Onde</th>' : ''}<th>#️⃣ Tags</th><th class="col-pag">📄</th>
       </tr></thead><tbody>`;
     listaAlf.forEach((item, idx) => {
       const refLink = item.id
         ? `<a href="#${item.id}-contexto" style="color:#4a3b6e;font-weight:bold;">${item.referencia}</a>`
         : (item.referencia || '');
-      html += `<tr><td class="col-num">${idx+1}</td><td class="col-ref">${refLink}</td><td>${item.tags||''}</td><td class="col-pag">${item.pagina||''}</td></tr>`;
+      html += `<tr><td class="col-num">${idx+1}</td><td class="col-ref">${refLink}</td>${temOnde ? `<td style="white-space:nowrap;">${item.onde||''}</td>` : ''}<td>${item.tags||''}</td><td class="col-pag">${item.pagina||''}</td></tr>`;
     });
     html += `</tbody></table><div class="footer-links"><a href="#hierarquia">📋 Hierarquia de tópicos ↑</a></div></section>`;
   }
@@ -1755,7 +1763,8 @@ function buscarVersiculosNovamente() {
 // que já aparece disponível, sem precisar mexer aqui.
 // ============================================
 const capitulosDisponiveisV4 = {
-  "lv6": [1]
+  "lv6": [1],
+  "lv7": [1, 2, 3, 4, 5, 6, 7]
 };
 
 function popularSeletoresV4() {
@@ -1769,7 +1778,7 @@ function popularSeletoresV4() {
 
   selLivro.innerHTML = Object.keys(capitulosDisponiveisV4)
     .map(l => `<option value="${l}">${nomesLivro[l] || l}</option>`).join('');
-  selLivro.value = "lv6";
+  selLivro.value = "lv7";
 
   function popularCapitulos() {
     const caps = capitulosDisponiveisV4[selLivro.value] || [];
