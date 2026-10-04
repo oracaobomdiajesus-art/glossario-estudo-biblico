@@ -640,3 +640,35 @@ window.bibliotecaPerguntas["lv7-cp4"] = [
   { pergunta: "Segundo 1 Coríntios 6.19-20, por que não somos de nós mesmos?", topicoOrigem: "4.c", pagina: 84, tags: "fomos comprados por preço / o corpo é santuário do Espírito Santo; glorificai a Deus", refs: ["1co6.19-20"] },
   { pergunta: "Segundo Efésios 4.30, para que dia fomos selados com o Espírito Santo?", topicoOrigem: "4.d", pagina: 84, tags: "para o dia da redenção", refs: ["ef4.30"] }
 ];
+
+window.bibliotecaPerguntas["lv7-cp5"] = [
+  // perguntas só sobre os versículos (resposta = texto bíblico, Almeida)
+  { pergunta: "Segundo Mateus 3.8, o que devemos produzir?", topicoOrigem: "1", pagina: 89, tags: "frutos dignos de arrependimento", refs: ["mt3.8a"] },
+  { pergunta: "O que Davi disse a Natã em 2 Samuel 12.13, e qual foi a resposta?", topicoOrigem: "1.a", pagina: 89, tags: "pequei contra o Senhor / o Senhor perdoou o teu pecado; não morrerás", refs: ["2sm12.13"] },
+  { pergunta: "Em Salmos 51.3-4, contra quem Davi diz ter pecado?", topicoOrigem: "1.a", pagina: 89, tags: "contra ti, contra ti somente, pequei / meu pecado está sempre diante de mim", refs: ["sl51.3-4a"] },
+  { pergunta: "O que Ezequiel 18.31 manda criar em nós?", topicoOrigem: "1.b", pagina: 90, tags: "um coração novo e um espírito novo", refs: ["ez18.30-31"] },
+  { pergunta: "Segundo 2 Coríntios 7.10, qual a diferença entre a tristeza segundo Deus e a tristeza do mundo?", topicoOrigem: "1.c", pagina: 90, tags: "a tristeza segundo Deus opera arrependimento para a salvação / a tristeza do mundo opera a morte", refs: ["2co7.9-10"] },
+  { pergunta: "Segundo Salmos 51.17, qual é o sacrifício aceitável a Deus?", topicoOrigem: "1.c", pagina: 90, tags: "o espírito quebrantado / o coração quebrantado e contrito", refs: ["sl51.17"] },
+  { pergunta: "Em Lucas 3.11-14, o que João Batista mandou fazer a quem perguntava 'que faremos?'", topicoOrigem: "1.d", pagina: 90, tags: "repartir a túnica e o alimento / não cobrar além do prescrito / não extorquir e contentar-se com o soldo", refs: ["lc3.8-14"] },
+  { pergunta: "O que Davi pede a Deus em Salmos 51.10?", topicoOrigem: "1 · Você Sabia?", pagina: 91, tags: "cria em mim um coração puro / renova em mim um espírito estável", refs: ["sl51.10"] },
+  { pergunta: "Segundo Mateus 5.23-24, o que fazer antes de apresentar a oferta, se o irmão tem algo contra nós?", topicoOrigem: "1 · História Ilustrativa", pagina: 92, tags: "deixar a oferta e ir conciliar-se primeiro com o irmão", refs: ["mt5.23-24"] },
+  { pergunta: "Segundo 1 Tessalonicenses 1.9, de que e para que os tessalonicenses se converteram?", topicoOrigem: "2", pagina: 94, tags: "dos ídolos a Deus / para servirem ao Deus vivo e verdadeiro", refs: ["1ts1.9a"] },
+  { pergunta: "Em Atos 14.15, a que Paulo e Barnabé chamavam o povo a se converter?", topicoOrigem: "2.a", pagina: 94, tags: "ao Deus vivo, que fez o céu, a terra, o mar e tudo quanto há neles", refs: ["at14.15"] },
+  { pergunta: "Segundo Marcos 1.15, o que Jesus anunciou?", topicoOrigem: "2.b", pagina: 95, tags: "o tempo está cumprido, é chegado o reino de Deus / arrependei-vos e crede no evangelho", refs: ["mc1.15a"] },
+  { pergunta: "Segundo Atos 20.21, o que Paulo testificava a judeus e gregos?", topicoOrigem: "2.b", pagina: 95, tags: "o arrependimento para com Deus e a fé em nosso Senhor Jesus", refs: ["at20.21"] },
+  { pergunta: "O que acontece, segundo 2 Coríntios 3.16, quando alguém se converte ao Senhor?", topicoOrigem: "2.c", pagina: 95, tags: "é-lhe tirado o véu", refs: ["2co3.16"] },
+  { pergunta: "Segundo Romanos 6.22, que fruto têm os libertos do pecado, e qual o fim?", topicoOrigem: "3", pagina: 99, tags: "fruto para santificação / por fim a vida eterna", refs: ["rm6.22"] },
+  { pergunta: "Segundo 1 Coríntios 6.11, o que aconteceu com os que antes viviam no pecado?", topicoOrigem: "3.a", pagina: 99, tags: "foram lavados, santificados e justificados em nome do Senhor Jesus", refs: ["1co6.11"] },
+  { pergunta: "Segundo 2 Coríntios 3.18, como somos transformados?", topicoOrigem: "3.a", pagina: 99, tags: "de glória em glória, na mesma imagem, pelo Espírito do Senhor", refs: ["2co3.18"] },
+  { pergunta: "Quais as qualidades do fruto do Espírito em Gálatas 5.22-23?", topicoOrigem: "3.b", pagina: 100, tags: "amor, gozo, paz, longanimidade, benignidade, bondade, fidelidade, mansidão, domínio próprio", refs: ["gl5.16-22-25"] },
+  { pergunta: "Segundo Filipenses 2.13, quem opera em nós o querer e o efetuar?", topicoOrigem: "3.c", pagina: 100, tags: "Deus, segundo a sua boa vontade", refs: ["fp2.12-13"] },
+  { pergunta: "Segundo Hebreus 12.14, o que devemos seguir, e por quê?", topicoOrigem: "3.c", pagina: 100, tags: "a paz com todos e a santificação / sem a qual ninguém verá o Senhor", refs: ["hb12.14"] },
+  { pergunta: "Segundo Efésios 4.22-24, do que devemos nos despojar e do que nos revestir?", topicoOrigem: "3.d", pagina: 100, tags: "do velho homem / do novo homem, criado em verdadeira justiça e santidade", refs: ["ef4.22-24"] },
+  { pergunta: "Segundo Efésios 1.5, para que Deus nos predestinou?", topicoOrigem: "4", pagina: 104, tags: "para sermos filhos de adoção por Jesus Cristo", refs: ["ef1.5"] },
+  { pergunta: "Segundo Romanos 8.29, os que Deus dantes conheceu foram predestinados para quê?", topicoOrigem: "4.a", pagina: 104, tags: "para serem conformes à imagem de seu Filho", refs: ["rm8.29b"] },
+  { pergunta: "Segundo João 6.44, quem pode vir a Jesus?", topicoOrigem: "4.b", pagina: 105, tags: "ninguém, se o Pai que o enviou não o trouxer", refs: ["jo6.44"] },
+  { pergunta: "Segundo Tito 2.11, o que a graça de Deus trouxe, e a quem?", topicoOrigem: "4.b", pagina: 105, tags: "salvação a todos os homens", refs: ["tt2.11"] },
+  { pergunta: "O que Paulo e Silas responderam ao carcereiro em Atos 16.31?", topicoOrigem: "4.c", pagina: 105, tags: "crê no Senhor Jesus e serás salvo, tu e tua casa", refs: ["at16.31"] },
+  { pergunta: "Segundo Efésios 1.4, quando Deus nos elegeu, e para quê?", topicoOrigem: "4.d", pagina: 105, tags: "antes da fundação do mundo / para sermos santos e irrepreensíveis diante dele em amor", refs: ["ef1.4-5-13"] },
+  { pergunta: "Em Efésios 1.11, segundo o que fomos predestinados?", topicoOrigem: "4 · Você Sabia?", pagina: 106, tags: "conforme o propósito daquele que faz todas as coisas segundo o conselho da sua vontade", refs: ["ef1.3-5-11"] }
+];

@@ -514,3 +514,81 @@ window.bibliotecaMermaid["lv7-cp4"] = `mindmap
       Você Sabia
         1 Pe 1.18-19
 `;
+
+window.bibliotecaMermaid["lv7-cp5"] = `mindmap
+  root((Livro 7\\nCapítulo 5))
+    Seção 1
+      Mt 3.8
+      1.a
+        2 Sm 12.13
+        Sl 51.3-4
+        1 Jo 1.9
+      1.b
+        Sl 51.3-4
+        Pv 28.13
+        Ez 18.30-31
+      1.c
+        2 Co 7.9-10
+        Sl 51.17
+      1.d
+        Mt 3.8
+        Lc 3.8-14
+        At 26.20
+      Você Sabia
+        Sl 51.10
+      História Ilustrativa
+        Mt 5.23-24
+    Seção 2
+      1 Ts 1.9
+      2.a
+        1 Ts 1.9
+        At 14.15
+        At 26.20
+      2.b
+        Mc 1.15
+        At 20.21
+      2.c
+        At 11.21
+        2 Co 3.16
+      2.d
+        At 11.21
+        1 Ts 1.9
+      Tarefa Simples para o Coração
+        1 Ts 1.9
+    Seção 3
+      Rm 6.22
+      3.a
+        1 Co 1.2
+        1 Co 6.11
+        2 Co 3.18
+      3.b
+        Gl 5.16,22-25
+        2 Ts 2.13
+      3.c
+        Fp 2.12-13
+        Cl 3.5-10
+        Hb 12.14
+      3.d
+        Rm 8.29
+        Ef 4.22-24
+        Cl 3.12-14
+    Seção 4
+      Ef 1.5
+      4.a
+        Rm 8.29
+        1 Pe 1.2
+      4.b
+        Jo 6.44
+        Tt 2.11
+        Ef 2.8
+      4.c
+        Mc 1.15
+        Ef 1.13
+        At 16.31
+      4.d
+        Ef 1.4-5,13
+        Jo 1.12
+        Rm 8.29
+      Você Sabia
+        Ef 1.3-5,11
+`;
