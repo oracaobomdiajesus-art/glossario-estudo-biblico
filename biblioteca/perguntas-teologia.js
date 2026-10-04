@@ -705,3 +705,8 @@ window.bibliotecaPerguntas["lv7-cp6"] = [
   { pergunta: "Segundo Apocalipse 21.4, o que não haverá mais?", topicoOrigem: "4.d", pagina: 126, tags: "nem morte, nem pranto, nem lamento, nem dor / Deus enxugará toda lágrima", refs: ["ap21.3-4"] },
   { pergunta: "Que quatro dimensões Paulo cita em Efésios 3.18?", topicoOrigem: "4 · Você Sabia?", pagina: 127, tags: "largura, comprimento, altura e profundidade", refs: ["ef3.18"] }
 ];
+
+window.bibliotecaPerguntas["lv7-cp7"] = [
+  // perguntas só sobre os versículos (resposta = texto bíblico, Almeida)
+  { pergunta: "Segundo João 8.36, o que acontece com quem o Filho liberta?", topicoOrigem: "Final da Temporada", pagina: 134, tags: "verdadeiramente será livre", refs: ["jo8.36"] }
+];

@@ -1,6 +1,6 @@
 // ============================================
 // TEOLOGIA DESCOMPLICADA PARA JOVENS — LIVRO 7, CAPÍTULO 6 (v5)
-// Páginas 109-128 da apostila.
+// Páginas 109-129 da apostila.
 //
 // MODO SÓ BÍBLIA: a apostila tem direitos autorais, então este arquivo
 // NÃO reproduz nenhum texto dela (títulos, explicações, exemplos,
@@ -12,7 +12,7 @@
 window.dadosLicaoV4 = {
   titulo: "📚 Livro 7 – Capítulo 6",
   subtitulo: "Teologia Descomplicada para Jovens",
-  paginas: "109-128",
+  paginas: "109-129",
 
   mapaConfig: {
     centro: [31.7683, 35.2137],

@@ -674,3 +674,9 @@ window.bibliotecaMermaid["lv7-cp6"] = `mindmap
       História Ilustrativa
         Rm 8.35-39
 `;
+
+window.bibliotecaMermaid["lv7-cp7"] = `mindmap
+  root((Livro 7\\nCapítulo 7))
+    Final da Temporada
+      Jo 8.36
+`;
