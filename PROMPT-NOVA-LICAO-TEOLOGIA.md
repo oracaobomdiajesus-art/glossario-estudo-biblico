@@ -133,33 +133,33 @@ window.dadosLicaoV4 = {
 
 ---
 
-## 🔹 Diagrama (mapa mental: referência + 1 palavra-chave curta)
+## 🔹 Diagrama (mapa mental resumido: 1 versículo por ramo)
 
-Mapa mental que mostra a lógica do capítulo pelos versículos:
-Seção → letra/bloco → **"Ref · palavra-chave curta"** (2 a 4 palavras do
-próprio versículo, a mais marcante). Ex.: `Jo 14.6 · eu sou o caminho`,
-`Rm 3.23 · todos pecaram`, `Gn 3.1-6 · serpente astuta`.
+O mapa é o **resumo do raciocínio do capítulo**, não a lista completa (a lista
+completa fica na hierarquia e na tabela de referências). Cerca de 20 caixas:
+
+- **Seção** → só o **versículo-chave**, no próprio nó da seção;
+- **cada letra** → **1 versículo** (o que melhor resume a letra; de preferência
+  de um livro+capítulo ainda não usado no mapa);
+- **sem** blocos extras (Você Sabia?, História…), a não ser que a seção não
+  tenha letras (ex.: "Final da Temporada");
+- **sem repetir** versículo;
+- cada nó: `Ref · palavra-chave curta` (2 a 4 palavras marcantes do versículo).
 
 ```js
-window.bibliotecaMermaid["lv7-cp4"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+window.bibliotecaMermaid["lv7-cp2"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
 mindmap
-  root((Livro 7 · Cap. 4))
-    Seção 1
-      Jo 3.3 · nascer de novo
-      1.a
-        Jo 3.3-6 · nascer de novo
-        Ef 2.4-5 · rico em misericórdia
-      1.b
-        Jo 3.5-8 · o vento sopra onde quer
-      Você Sabia
-        Jo 3.1-10 · Nicodemos
-    Seção 2
+  root((Livro 7 · Cap. 2))
+    Seção 1 · Rm 5.12 · por um só homem entrou o pecado
+      1.a · Gn 2.16-17 · não comerás
+      1.b · Ec 7.29 · buscaram muitos artifícios
+      1.c · Gn 3.1-6 · serpente astuta
+      1.d · Jo 8.44 · pai da mentira
+    Seção 2 · Jr 17.9 · enganoso é o coração
       ...
 `;
 ```
 
-- O versículo-chave fica direto embaixo da "Seção N"; depois as letras e os
-  blocos que têm referência.
 - `useMaxWidth: false` deixa o mapa no tamanho real (no celular, arrasta para o lado).
 - Sem parênteses, colchetes, aspas, `?`, `:`, `#` ou `;` nos nós.
 - O mesmo versículo usa sempre a mesma palavra-chave curta em todos os capítulos.
