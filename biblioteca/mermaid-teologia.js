@@ -592,3 +592,85 @@ window.bibliotecaMermaid["lv7-cp5"] = `mindmap
       Você Sabia
         Ef 1.3-5,11
 `;
+
+window.bibliotecaMermaid["lv7-cp6"] = `mindmap
+  root((Livro 7\\nCapítulo 6))
+    Seção 1
+      1 Jo 1.5
+      1.a
+        Gn 1.31
+        Tg 1.13
+        1 Jo 1.5
+      1.b
+        Hc 1.13
+        Sl 5.4-5
+        Rm 1.24-25
+      1.c
+        Gn 50.20
+        At 2.23
+        Rm 8.28
+      1.d
+        Jo 3.16
+        Rm 5.8,20-21
+        1 Pe 2.24
+      Você Sabia
+        Is 45.7
+    Seção 2
+      Sl 32.3
+      2.a
+        Gn 3.8-10
+        Hb 4.13
+      2.b
+        Sl 32.3-4
+        Sl 38.4
+      2.c
+        2 Sm 11.4-17
+      2.d
+        Sl 32.5
+        Pv 28.13
+        1 Jo 1.9
+      Você Sabia
+        Sl 32.3-5
+    Seção 3
+      Fp 3.12
+      3.a
+        Jo 3.3
+        1 Pe 2.2
+        2 Pe 3.18
+      3.b
+        Gl 2.11-14
+        Tg 3.2
+      3.c
+        Jo 15.5
+        2 Co 12.9
+      3.d
+        Rm 6.1-2
+        Fp 3.13-14
+        Tt 2.11-12
+      Você Sabia
+        1 Jo 3.9
+      Tarefa Simples para o Coração
+        Fp 3.12-14
+    Seção 4
+      1 Jo 3.1
+      4.a
+        At 10.34-35
+        Rm 10.12-13
+        Ap 7.9
+      4.b
+        Jo 13.34-35
+        1 Jo 4.11,19-21
+      4.c
+        Rm 8.35-39
+        2 Co 4.8-9
+      4.d
+        Jo 14.2-3
+        1 Jo 3.1-2
+        Ap 21.3-4
+      Exemplo Atual
+        Rm 8.38-39
+      Você Sabia
+        Ef 3.18
+      História Ilustrativa
+        Rm 8.35-39
+`;

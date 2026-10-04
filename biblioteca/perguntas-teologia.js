@@ -672,3 +672,36 @@ window.bibliotecaPerguntas["lv7-cp5"] = [
   { pergunta: "Segundo Efésios 1.4, quando Deus nos elegeu, e para quê?", topicoOrigem: "4.d", pagina: 105, tags: "antes da fundação do mundo / para sermos santos e irrepreensíveis diante dele em amor", refs: ["ef1.4-5-13"] },
   { pergunta: "Em Efésios 1.11, segundo o que fomos predestinados?", topicoOrigem: "4 · Você Sabia?", pagina: 106, tags: "conforme o propósito daquele que faz todas as coisas segundo o conselho da sua vontade", refs: ["ef1.3-5-11"] }
 ];
+
+window.bibliotecaPerguntas["lv7-cp6"] = [
+  // perguntas só sobre os versículos (resposta = texto bíblico, Almeida)
+  { pergunta: "Segundo 1 João 1.5, qual é a mensagem que ouvimos sobre Deus?", topicoOrigem: "1", pagina: 110, tags: "Deus é luz, e nele não há trevas nenhumas", refs: ["1jo1.5a"] },
+  { pergunta: "Como Deus avaliou tudo o que fizera, segundo Gênesis 1.31?", topicoOrigem: "1.a", pagina: 110, tags: "era muito bom", refs: ["gn1.31"] },
+  { pergunta: "Segundo Tiago 1.13, alguém pode dizer que é tentado por Deus? Por quê?", topicoOrigem: "1.a", pagina: 110, tags: "não; Deus não pode ser tentado pelo mal, e a ninguém tenta", refs: ["tg1.13"] },
+  { pergunta: "Segundo Salmos 5.4, Deus tem prazer na iniquidade?", topicoOrigem: "1.b", pagina: 111, tags: "não; com ele não habitará o mal", refs: ["sl5.4-5"] },
+  { pergunta: "O que José disse a seus irmãos em Gênesis 50.20?", topicoOrigem: "1.c", pagina: 111, tags: "vós intentastes o mal contra mim; Deus o intentou para o bem, para conservar muita gente com vida", refs: ["gn50.20"] },
+  { pergunta: "Segundo Romanos 8.28, para quem todas as coisas concorrem para o bem?", topicoOrigem: "1.c", pagina: 111, tags: "para os que amam a Deus, chamados segundo o seu propósito", refs: ["rm8.28"] },
+  { pergunta: "Segundo Romanos 5.8, como Deus dá prova do seu amor?", topicoOrigem: "1.d", pagina: 111, tags: "Cristo morreu por nós quando ainda éramos pecadores", refs: ["rm5.8-20-21"] },
+  { pergunta: "O que Deus diz que forma e cria em Isaías 45.7?", topicoOrigem: "1 · Você Sabia?", pagina: 112, tags: "formo a luz e crio as trevas; faço a paz e crio o mal; eu sou o Senhor", refs: ["is45.7"] },
+  { pergunta: "O que aconteceu com Davi enquanto guardou silêncio, segundo Salmos 32.3?", topicoOrigem: "2", pagina: 115, tags: "consumiram-se os seus ossos pelo seu bramido durante o dia todo", refs: ["sl32.3"] },
+  { pergunta: "Segundo Hebreus 4.13, existe criatura encoberta diante de Deus?", topicoOrigem: "2.a", pagina: 115, tags: "não; todas as coisas estão nuas e patentes aos seus olhos", refs: ["hb4.13"] },
+  { pergunta: "Como Salmos 38.4 descreve o peso das iniquidades?", topicoOrigem: "2.b", pagina: 116, tags: "submergem a cabeça / como carga pesada, excedem as forças", refs: ["sl38.4"] },
+  { pergunta: "Em 2 Samuel 11.15, o que Davi escreveu a Joabe para encobrir seu pecado?", topicoOrigem: "2.c", pagina: 116, tags: "pôr Urias na frente onde a peleja fosse mais renhida, para que fosse ferido e morresse", refs: ["2sm11.4-17"] },
+  { pergunta: "O que aconteceu quando Davi confessou seu pecado, segundo Salmos 32.5?", topicoOrigem: "2.d", pagina: 116, tags: "não encobriu a iniquidade, e o Senhor perdoou a culpa do seu pecado", refs: ["sl32.5"] },
+  { pergunta: "Em Filipenses 3.12, Paulo diz que já é perfeito?", topicoOrigem: "3", pagina: 120, tags: "não; ainda não alcançou, mas vai prosseguindo", refs: ["fp3.12"] },
+  { pergunta: "Segundo 1 Pedro 2.2, o que devemos desejar para crescer?", topicoOrigem: "3.a", pagina: 120, tags: "como meninos recém-nascidos, o puro leite espiritual", refs: ["1pe2.2"] },
+  { pergunta: "Segundo 2 Pedro 3.18, em que devemos crescer?", topicoOrigem: "3.a", pagina: 120, tags: "na graça e no conhecimento de nosso Senhor e Salvador Jesus Cristo", refs: ["2pe3.18"] },
+  { pergunta: "Em Gálatas 2.11-12, por que Paulo resistiu a Cefas (Pedro) em Antioquia?", topicoOrigem: "3.b", pagina: 121, tags: "porque se apartava dos gentios, temendo os da circuncisão / não andava retamente conforme o evangelho", refs: ["gl2.11-14"] },
+  { pergunta: "Segundo Tiago 3.2, quem tropeça?", topicoOrigem: "3.b", pagina: 121, tags: "todos tropeçamos em muitas coisas", refs: ["tg3.2"] },
+  { pergunta: "Segundo João 15.5, o que podemos fazer sem Jesus?", topicoOrigem: "3.c", pagina: 121, tags: "nada; quem permanece nele dá muito fruto", refs: ["jo15.5"] },
+  { pergunta: "O que o Senhor disse a Paulo em 2 Coríntios 12.9?", topicoOrigem: "3.c", pagina: 121, tags: "a minha graça te basta; o meu poder se aperfeiçoa na fraqueza", refs: ["2co12.9"] },
+  { pergunta: "Segundo Romanos 6.1-2, devemos permanecer no pecado para que a graça abunde?", topicoOrigem: "3.d", pagina: 121, tags: "de modo nenhum; morremos para o pecado", refs: ["rm6.1-2"] },
+  { pergunta: "Segundo 1 João 3.9, por que o nascido de Deus não vive habitualmente no pecado?", topicoOrigem: "3 · Você Sabia?", pagina: 122, tags: "porque a semente de Deus permanece nele", refs: ["1jo3.9"] },
+  { pergunta: "O que Pedro reconheceu em Atos 10.34-35?", topicoOrigem: "4.a", pagina: 125, tags: "Deus não faz acepção de pessoas / em qualquer nação lhe é aceitável quem o teme e pratica o que é justo", refs: ["at10.34-35"] },
+  { pergunta: "Segundo Apocalipse 7.9, de onde vinha a grande multidão diante do trono?", topicoOrigem: "4.a", pagina: 125, tags: "de todas as nações, tribos, povos e línguas", refs: ["ap7.9"] },
+  { pergunta: "Segundo João 13.35, como todos conhecerão que somos discípulos de Jesus?", topicoOrigem: "4.b", pagina: 126, tags: "se tivermos amor uns aos outros", refs: ["jo13.34-35"] },
+  { pergunta: "Segundo 1 João 4.19, por que amamos?", topicoOrigem: "4.b", pagina: 126, tags: "porque ele nos amou primeiro", refs: ["1jo4.11-19-21"] },
+  { pergunta: "Segundo Romanos 8.38-39, o que pode nos separar do amor de Deus?", topicoOrigem: "4.c", pagina: 126, tags: "nada: nem a morte, nem a vida, nem anjos, nem qualquer outra criatura", refs: ["rm8.35-39a"] },
+  { pergunta: "Segundo Apocalipse 21.4, o que não haverá mais?", topicoOrigem: "4.d", pagina: 126, tags: "nem morte, nem pranto, nem lamento, nem dor / Deus enxugará toda lágrima", refs: ["ap21.3-4"] },
+  { pergunta: "Que quatro dimensões Paulo cita em Efésios 3.18?", topicoOrigem: "4 · Você Sabia?", pagina: 127, tags: "largura, comprimento, altura e profundidade", refs: ["ef3.18"] }
+];
