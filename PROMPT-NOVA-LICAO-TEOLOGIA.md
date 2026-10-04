@@ -133,24 +133,34 @@ window.dadosLicaoV4 = {
 
 ---
 
-## 🔹 Diagrama (só estrutura)
+## 🔹 Diagrama (referências + palavras-chave)
+
+O diagrama mostra a **lógica do capítulo pelas tags dos versículos**: Seção →
+letra/bloco → cada referência com suas palavras-chave. É gerado a partir da
+`hierarquia` do arquivo de dados (um nó por letra/bloco com todas as
+referências dele). Formato `flowchart LR`:
 
 ```js
-window.bibliotecaMermaid["lv7-cp2"] = `mindmap
-  root((Livro 7\\nCapítulo 2))
-    Seção 1
-      Rm 5.12
-      1.a
-        Gn 2.16-17
-        Gn 3.6
-      Você Sabia
-        Gn 2.17
-    Seção 2
-      ...
+window.bibliotecaMermaid["lv7-cp2"] = `%%{init: {"flowchart": {"wrappingWidth": 520, "nodeSpacing": 18, "rankSpacing": 40}}}%%
+flowchart LR
+  R(["Livro 7 · Capítulo 2"])
+  R --> S0(["Seção 1"])
+  class S0 sec
+  S0 --> r0["<b>versículo-chave</b><br/><b>Rm 5.12</b> — por um só homem entrou o pecado · pelo pecado a morte · passou a todos os homens"]
+  class r0 ref
+  S0 --> r1["<b>1.a</b><br/><b>Gn 2.16-17</b> — de toda árvore comerás livremente · ...<br/><b>Gn 3.6</b> — árvore boa para comer · ..."]
+  class r1 ref
+  ...
+  classDef sec fill:#4a3b6e,color:#fff,stroke:#4a3b6e
+  classDef sub fill:#e8e2f0,color:#4a3b6e,stroke:#c9c0d4
+  classDef ref fill:#fffdf7,color:#333,stroke:#d8cfa0,text-align:left
 `;
 ```
 
-Sem textos da apostila; sem `?` nem parênteses nos nós.
+- Só entram letras/blocos que têm referência.
+- As tags são as mesmas da `hierarquia` (" / " vira " · ").
+- Sem aspas duplas, crase, `#` ou `;` dentro dos rótulos.
+- Nenhum texto da apostila (títulos de seção ou subtópico) no diagrama.
 
 ---
 
@@ -193,7 +203,7 @@ window.bibliotecaPerguntas["lv7-cp2"] = [
 
 1. Validar os `.js` com Node (`window` simulado) e conferir que todos os `refs`
    das perguntas existem na `listaAparicao`.
-2. Abrir `teologia-v5.html` localmente e checar título, hierarquia, diagrama,
+2. Abrir `teologia-v5.html` localmente e checar título, hierarquia, diagrama (renderiza sem erro),
    perguntas e a coluna 📍 Onde.
 3. `git add` + `git commit` + `git push origin main`.
 4. Publicação pelo **GitHub Pages** (o Netlify da equipe ficou sem créditos em
