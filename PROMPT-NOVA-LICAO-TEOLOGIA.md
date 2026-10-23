@@ -185,16 +185,21 @@ versículo diz**, e a resposta vem do texto bíblico (Almeida).
 window.bibliotecaPerguntas["lv7-cp2"] = [
   { pergunta: "Segundo Romanos 5.12, por quem o pecado entrou no mundo, e o que veio com ele?",
     topicoOrigem: "1", pagina: 24,
-    tags: "por um só homem / a morte, que passou a todos os homens",
+    tags: "por um só homem entrou o pecado / pelo pecado a morte / passou a todos os homens",
     refs: ["rm5.12"] },
   ...
 ];
 ```
 
-- Uns 5 ou 6 por seção (cerca de 20 a 25 por capítulo).
+- **1 pergunta para cada tópico** do 📍 Onde: cada seção (`"1"`), cada letra
+  (`"1.a"`) e cada bloco com versículo (`"1 · Você Sabia?"`, `"2 · Tarefa Simples
+  para o Coração"`…). Quantidade = número de tópicos diferentes da `listaAparicao`.
+- A pergunta usa um versículo **do próprio tópico** (evitar repetir o mesmo
+  versículo em dois tópicos quando o tópico tiver outra opção).
 - Na pergunta, o livro bíblico vai por extenso ("Romanos 5.12").
-- `topicoOrigem` = mesmo valor do `onde` (`"1"`, `"1.a"`, `"2 · Você Sabia?"`).
-- `tags` = gabarito (aparece no 🔑), tirado do versículo.
+- `topicoOrigem` = mesmo valor do `onde`; `pagina` e `refs` = os da linha usada.
+- `tags` = **as mesmas palavras-chave do versículo** que estão na `listaAparicao`
+  (não é a resposta da pergunta, nem explicação).
 - Todo id em `refs` precisa existir na `listaAparicao`.
 - **Não** copiar as Perguntas Rápidas da apostila.
 
