@@ -22,7 +22,7 @@ O que entra:
   palavras dele. Ex.: Sl 23.1 → `Senhor / pastor / nada me faltará`.
 
 O curso tem 12 livros, cada um com 7 capítulos. Modelo atual:
-`dados/teologia/dados-lv7-cp2-v5.js`.
+`dados/teologia/dados-lv8-cp1-v5.js` (mapa mental em 2 níveis: `biblioteca/mermaid-teologia.js`, entrada `lv8-cp1`).
 
 ---
 
@@ -144,18 +144,26 @@ completa fica na hierarquia e na tabela de referências). Cerca de 20 caixas:
 - **sem** blocos extras (Você Sabia?, História…), a não ser que a seção não
   tenha letras (ex.: "Final da Temporada");
 - **sem repetir** versículo;
-- cada nó: `Ref · palavra-chave curta` (2 a 4 palavras marcantes do versículo).
+- cada item tem **2 níveis**: o ramo com `número · Ref` e, logo abaixo, um
+  sub-ramo só com a palavra-chave curta do versículo (2 a 4 palavras), para o
+  texto não ficar cortado na caixa.
 
 ```js
 window.bibliotecaMermaid["lv7-cp2"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
 mindmap
   root((Livro 7 · Cap. 2))
-    Seção 1 · Rm 5.12 · por um só homem entrou o pecado
-      1.a · Gn 2.16-17 · não comerás
-      1.b · Ec 7.29 · buscaram muitos artifícios
-      1.c · Gn 3.1-6 · serpente astuta
-      1.d · Jo 8.44 · pai da mentira
-    Seção 2 · Jr 17.9 · enganoso é o coração
+    Seção 1 · Rm 5.12
+      por um só homem entrou o pecado
+      1.a · Gn 2.16-17
+        não comerás
+      1.b · Ec 7.29
+        buscaram muitos artifícios
+      1.c · Gn 3.1-6
+        serpente astuta
+      1.d · Jo 8.44
+        pai da mentira
+    Seção 2 · Jr 17.9
+      enganoso é o coração
       ...
 `;
 ```
