@@ -746,3 +746,15 @@ window.bibliotecaPerguntas["lv8-cp3"] = [
   { pergunta: "Segundo Daniel 2.21, o que Deus faz com os tempos e com os reis?", topicoOrigem: "4", pagina: 61, tags: "ele muda os tempos e as estações / remove os reis e estabelece os reis / dá a sabedoria aos sábios", refs: ["dn2.21b"] },
   { pergunta: "Segundo Gálatas 4.4-5, quando Deus enviou seu Filho, e para quê?", topicoOrigem: "4.c", pagina: 62, tags: "plenitude dos tempos / Deus enviou seu Filho / nascido de mulher / debaixo de lei / adoção de filhos", refs: ["gl4.4-5"] }
 ];
+
+window.bibliotecaPerguntas["lv8-cp4"] = [
+  // 2 perguntas por título (seções 1-4); tags = palavras-chave do versículo
+  { pergunta: "Segundo Mateus 28.19, em nome de quem os discípulos devem ser batizados?", topicoOrigem: "1", pagina: 67, tags: "fazei discípulos de todas as nações / batizando-os em nome do Pai, e do Filho, e do Espírito Santo", refs: ["mt28.19a"] },
+  { pergunta: "Segundo Deuteronômio 6.4, quantos Senhores Israel deveria reconhecer?", topicoOrigem: "1.a", pagina: 67, tags: "ouve, ó Israel / o Senhor nosso Deus é o único Senhor", refs: ["dt6.4a"] },
+  { pergunta: "Segundo 2 Coríntios 13.13, o que Paulo deseja que esteja com todos?", topicoOrigem: "2", pagina: 72, tags: "a graça do Senhor Jesus Cristo / o amor de Deus / a comunhão do Espírito Santo", refs: ["2co13.13b"] },
+  { pergunta: "Em João 20.28, o que Tomé disse a Jesus?", topicoOrigem: "2.b", pagina: 73, tags: "Tomé / Senhor meu, e Deus meu", refs: ["jo20.28a"] },
+  { pergunta: "Segundo 1 João 4.1, o que devemos fazer com os espíritos?", topicoOrigem: "3", pagina: 77, tags: "amados, não creiais a todo espírito / provai se os espíritos vêm de Deus / muitos falsos profetas", refs: ["1jo4.1"] },
+  { pergunta: "Segundo Atos 5.3-4, a quem Ananias mentiu?", topicoOrigem: "3.c", pagina: 78, tags: "Ananias / mentisses ao Espírito Santo / não mentiste aos homens, mas a Deus", refs: ["at5.3-4d"] },
+  { pergunta: "Segundo Efésios 2.18, como temos acesso ao Pai?", topicoOrigem: "4", pagina: 82, tags: "por ele ambos temos acesso ao Pai / em um mesmo Espírito", refs: ["ef2.18a"] },
+  { pergunta: "Segundo Romanos 8.26, o que o Espírito faz na nossa fraqueza?", topicoOrigem: "4.c", pagina: 83, tags: "o Espírito nos ajuda na fraqueza / não sabemos o que havemos de pedir / intercede por nós com gemidos inexprimíveis", refs: ["rm8.26"] }
+];

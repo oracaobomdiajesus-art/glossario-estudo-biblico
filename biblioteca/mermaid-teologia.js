@@ -476,3 +476,48 @@ mindmap
       4.d · At 8.1,4
         anunciando a palavra
 `;
+
+window.bibliotecaMermaid["lv8-cp4"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+mindmap
+  root((Livro 8 · Cap. 4))
+    Seção 1 · Mt 28.19
+      em nome do Pai, do Filho e do Espírito Santo
+      1.a · Dt 6.4
+        o único Senhor
+      1.b · Jo 1.1
+        o Verbo era Deus
+      1.c · Gn 1.26
+        façamos o homem
+      1.d · Mt 3.16-17
+        este é o meu Filho amado
+    Seção 2 · 2 Co 13.13
+      graça, amor e comunhão
+      2.a · 1 Co 8.6
+        um só Deus, o Pai
+      2.b · Jo 20.28
+        Senhor meu, e Deus meu
+      2.c · Jo 14.26
+        o Ajudador, o Espírito Santo
+      2.d · Fp 2.6-8
+        forma de servo
+    Seção 3 · 1 Jo 4.1
+      provai os espíritos
+      3.a · Jo 17.1
+        glorifica a teu Filho
+      3.b · Cl 2.9
+        toda a plenitude da divindade
+      3.c · Ef 4.30
+        não entristeçais o Espírito
+      3.d · 1 Co 8.4
+        não há outro Deus
+    Seção 4 · Ef 2.18
+      acesso ao Pai em um Espírito
+      4.a · Tt 3.5-6
+        renovação pelo Espírito Santo
+      4.b · Jo 17.21-23
+        para que todos sejam um
+      4.c · Rm 8.26
+        o Espírito intercede por nós
+      4.d · Rm 11.33-36
+        dele, por ele e para ele
+`;
