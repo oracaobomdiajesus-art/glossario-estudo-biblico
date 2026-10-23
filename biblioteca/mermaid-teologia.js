@@ -386,3 +386,48 @@ mindmap
       4.d · 2 Pe 3.18
         crescei no conhecimento
 `;
+
+window.bibliotecaMermaid["lv8-cp2"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+mindmap
+  root((Livro 8 · Cap. 2))
+    Seção 1 · Sl 83.18
+      só tu és o Altíssimo
+      1.a · Êx 6.2-3
+        eu sou Jeová
+      1.b · Gn 14.18-20
+        Deus Altíssimo
+      1.c · Gn 22.14
+        Jeová-Jiré
+      1.d · Ml 1.6
+        se eu sou pai
+    Seção 2 · Sl 147.5
+      de grande poder
+      2.a · Gn 18.14
+        alguma coisa difícil ao Senhor
+      2.b · Is 46.9-10
+        anuncio o fim desde o princípio
+      2.c · Sl 139.7-10
+        para onde fugirei
+      2.d · Is 40.25-26
+        a quem me comparareis
+    Seção 3 · Sl 145.17
+      justo em todos os seus caminhos
+      3.a · Is 6.3
+        santo, santo, santo
+      3.b · Dt 32.4
+        ele é a Rocha
+      3.c · 1 Jo 4.8-10
+        Deus é amor
+      3.d · Rm 3.25-26
+        justo e justificador
+    Seção 4 · Ml 3.6
+      eu, o Senhor, não mudo
+      4.a · Tg 1.17
+        nem sombra de variação
+      4.b · Nm 23.19
+        Deus não é homem para que minta
+      4.c · Jn 3.10
+        se converteram do mau caminho
+      4.d · 2 Tm 2.13
+        ele permanece fiel
+`;

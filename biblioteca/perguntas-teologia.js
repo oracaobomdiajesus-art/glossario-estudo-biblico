@@ -722,3 +722,15 @@ window.bibliotecaPerguntas["lv8-cp1"] = [
   { pergunta: "Segundo Jeremias 9.23-24, em que deve gloriar-se o que se gloria?", topicoOrigem: "4", pagina: 18, tags: "não se glorie o sábio na sua sabedoria / nem o forte / nem o rico / glorie-se nisto: em me conhecer", refs: ["jr9.23-24a"] },
   { pergunta: "Segundo João 17.3, o que é a vida eterna?", topicoOrigem: "4.a", pagina: 18, tags: "a vida eterna é esta / que te conheçam / o único Deus verdadeiro / Jesus Cristo", refs: ["jo17.3a"] }
 ];
+
+window.bibliotecaPerguntas["lv8-cp2"] = [
+  // 2 perguntas por título (seções 1-4); tags = palavras-chave do versículo
+  { pergunta: "Segundo Salmos 83.18, quem é o Altíssimo sobre toda a terra?", topicoOrigem: "1", pagina: 24, tags: "só tu, cujo nome é o Senhor / és o Altíssimo sobre toda a terra", refs: ["sl83.18"] },
+  { pergunta: "Segundo Gênesis 22.14, que nome Abraão deu àquele lugar?", topicoOrigem: "1.c", pagina: 25, tags: "Abraão chamou àquele lugar Jeová-Jiré / no monte do Senhor se proverá", refs: ["gn22.14"] },
+  { pergunta: "Segundo Salmos 147.5, há limite ao entendimento do Senhor?", topicoOrigem: "2", pagina: 30, tags: "grande é o nosso Senhor / de grande poder / não há limite ao seu entendimento", refs: ["sl147.5"] },
+  { pergunta: "Segundo Salmos 139.7-10, para onde alguém poderia fugir da presença de Deus?", topicoOrigem: "2.c", pagina: 31, tags: "para onde fugirei da tua presença / se subir ao céu, tu aí estás / a tua destra me susterá", refs: ["sl139.7-10"] },
+  { pergunta: "Segundo Salmos 145.17, como é o Senhor em seus caminhos e em suas obras?", topicoOrigem: "3", pagina: 35, tags: "justo é o Senhor em todos os seus caminhos / benigno em todas as suas obras", refs: ["sl145.17"] },
+  { pergunta: "Segundo 1 João 4.8-10, o que Deus é, e como manifestou o seu amor?", topicoOrigem: "3.c", pagina: 36, tags: "Deus é amor / enviou seu Filho unigênito / ele nos amou a nós / propiciação pelos nossos pecados", refs: ["1jo4.8-10"] },
+  { pergunta: "Segundo Malaquias 3.6, o que o Senhor diz sobre si mesmo?", topicoOrigem: "4", pagina: 40, tags: "eu, o Senhor, não mudo / ó filhos de Jacó, não sois consumidos", refs: ["ml3.6a"] },
+  { pergunta: "Segundo Números 23.19, Deus mente ou deixa de cumprir o que disse?", topicoOrigem: "4.b", pagina: 41, tags: "Deus não é homem, para que minta / tendo ele dito, não o fará", refs: ["nm23.19"] }
+];
