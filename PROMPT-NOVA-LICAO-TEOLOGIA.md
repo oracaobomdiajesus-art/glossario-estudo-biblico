@@ -134,8 +134,25 @@ window.dadosLicaoV4 = {
   capítulo.versículo. Nas tags, usar as palavras dos versículos centrais.
 - Na página, trechos com **mais de 3 versículos** mostram os 3 primeiros e o
   botão **"ver mais"** (constante `LIMITE_VERSICULOS` no `teologia-v5.html`).
-- O mesmo versículo tem **sempre as mesmas tags**, em qualquer capítulo
-  (reaproveitar as já usadas nos capítulos anteriores).
+- O mesmo versículo tem **sempre as mesmas tags**, em qualquer capítulo.
+
+### Banco de tags (`biblioteca/tags-versiculos.js`)
+
+Antes de escrever qualquer tag ou palavra do mapa, **procurar a referência no
+banco** (`window.bancoTagsVersiculos`), exatamente como a apostila cita
+(`"Sl 33.6,9"`, `"Jo 8.1-11"`):
+
+- **Já está no banco** → usar a `tags` dele sem mudar nada, e a `mapa` dele no
+  sub-ramo do mapa mental (se tiver).
+- **Não está** → criar as tags (palavras do próprio versículo, Almeida) e,
+  depois de publicar o capítulo, **acrescentar a referência ao banco** com
+  `tags`, `mapa` (se entrou no mapa) e `usos` (`"lv9-cp1"` etc.). Se já
+  existia, só acrescentar o capítulo em `usos`.
+- O banco fica em ordem bíblica (Gênesis → Apocalipse). A página não carrega
+  esse arquivo; ele é só consulta de trabalho.
+- Testamos gerar tags automaticamente (início/fim do versículo e frase com mais
+  palavras) e **não funcionou**: perde a frase central. Por isso a escolha das
+  palavras continua manual, e o banco evita refazer o que já foi escolhido.
 
 ---
 
@@ -221,6 +238,8 @@ window.bibliotecaPerguntas["lv7-cp2"] = [
 ---
 
 ## 🔹 Depois de criar
+
+- Atualizar o banco `biblioteca/tags-versiculos.js` (referências novas e `usos`).
 
 1. Validar os `.js` com Node (`window` simulado) e conferir que todos os `refs`
    das perguntas existem na `listaAparicao`.

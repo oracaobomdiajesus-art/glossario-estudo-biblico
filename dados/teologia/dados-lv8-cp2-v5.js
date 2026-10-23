@@ -51,7 +51,7 @@ window.dadosLicaoV4 = {
       label: "3.",
       refs: [{ id: "sl145.17", referencia: "Sl 145.17", tags: "justo é o Senhor em todos os seus caminhos / benigno em todas as suas obras" }],
       filhos: [
-        { label: "a)", refs: [{ id: "is6.3", referencia: "Is 6.3", tags: "santo, santo, santo é o Senhor dos exércitos / a terra toda está cheia da sua glória" }, { id: "1jo1.5", referencia: "1 Jo 1.5", tags: "Deus é luz / nele não há trevas nenhumas" }, { id: "hc1.13", referencia: "Hc 1.13", tags: "tão puro de olhos que não podes ver o mal / não podes contemplar a perversidade" }], filhos: [] },
+        { label: "a)", refs: [{ id: "is6.3", referencia: "Is 6.3", tags: "santo, santo, santo é o Senhor dos exércitos / a terra toda está cheia da sua glória" }, { id: "1jo1.5", referencia: "1 Jo 1.5", tags: "mensagem que dele ouvimos / Deus é luz / nele não há trevas nenhumas" }, { id: "hc1.13", referencia: "Hc 1.13", tags: "tão puro de olhos / não podes ver o mal / não podes contemplar a perversidade" }], filhos: [] },
         { label: "b)", refs: [{ id: "dt32.4a", referencia: "Dt 32.4", tags: "ele é a Rocha / suas obras são perfeitas / Deus é fiel e sem iniquidade / justo e reto é ele" }, { id: "sl89.14", referencia: "Sl 89.14", tags: "justiça e juízo são a base do teu trono / benignidade e verdade vão adiante de ti" }, { id: "rm2.6-11", referencia: "Rm 2.6-11", tags: "retribuirá a cada um segundo as suas obras / glória, honra e paz a todo aquele que pratica o bem / não há acepção de pessoas" }], filhos: [] },
         { label: "c)", refs: [{ id: "1jo4.8-10", referencia: "1 Jo 4.8-10", tags: "Deus é amor / enviou seu Filho unigênito / ele nos amou a nós / propiciação pelos nossos pecados" }, { id: "jo3.16", referencia: "Jo 3.16", tags: "Deus amou o mundo / Filho unigênito / todo aquele que crê / vida eterna" }, { id: "rm5.8", referencia: "Rm 5.8", tags: "Deus dá prova do seu amor / quando éramos ainda pecadores / Cristo morreu por nós" }], filhos: [] },
         { label: "d)", refs: [{ id: "rm3.25-26", referencia: "Rm 3.25-26", tags: "propiciação, pela fé, no seu sangue / demonstração da sua justiça / justo e também justificador" }, { id: "2co5.21", referencia: "2 Co 5.21", tags: "não conheceu pecado / Deus o fez pecado por nós / justiça de Deus" }, { id: "1pe3.18", referencia: "1 Pe 3.18", tags: "Cristo morreu uma só vez pelos pecados / o justo pelos injustos / para levar-nos a Deus" }], filhos: [] },
@@ -108,8 +108,8 @@ window.dadosLicaoV4 = {
     { numero: 29, onde: "2 · Tarefa Simples para o Coração", referencia: "Mt 10.29-31", tags: "dois passarinhos por um asse / os cabelos da vossa cabeça estão todos contados / não temais / mais valeis vós", pagina: 34, id: "mt10.29-31", locais: [] },
     { numero: 30, onde: "3", referencia: "Sl 145.17", tags: "justo é o Senhor em todos os seus caminhos / benigno em todas as suas obras", pagina: 35, id: "sl145.17", locais: [] },
     { numero: 31, onde: "3.a", referencia: "Is 6.3", tags: "santo, santo, santo é o Senhor dos exércitos / a terra toda está cheia da sua glória", pagina: 35, id: "is6.3", locais: [] },
-    { numero: 32, onde: "3.a", referencia: "1 Jo 1.5", tags: "Deus é luz / nele não há trevas nenhumas", pagina: 35, id: "1jo1.5", locais: [] },
-    { numero: 33, onde: "3.a", referencia: "Hc 1.13", tags: "tão puro de olhos que não podes ver o mal / não podes contemplar a perversidade", pagina: 35, id: "hc1.13", locais: [] },
+    { numero: 32, onde: "3.a", referencia: "1 Jo 1.5", tags: "mensagem que dele ouvimos / Deus é luz / nele não há trevas nenhumas", pagina: 35, id: "1jo1.5", locais: [] },
+    { numero: 33, onde: "3.a", referencia: "Hc 1.13", tags: "tão puro de olhos / não podes ver o mal / não podes contemplar a perversidade", pagina: 35, id: "hc1.13", locais: [] },
     { numero: 34, onde: "3.b", referencia: "Dt 32.4", tags: "ele é a Rocha / suas obras são perfeitas / Deus é fiel e sem iniquidade / justo e reto é ele", pagina: 36, id: "dt32.4a", locais: [] },
     { numero: 35, onde: "3.b", referencia: "Sl 89.14", tags: "justiça e juízo são a base do teu trono / benignidade e verdade vão adiante de ti", pagina: 36, id: "sl89.14", locais: [] },
     { numero: 36, onde: "3.b", referencia: "Rm 2.6-11", tags: "retribuirá a cada um segundo as suas obras / glória, honra e paz a todo aquele que pratica o bem / não há acepção de pessoas", pagina: 36, id: "rm2.6-11", locais: [] },
@@ -142,7 +142,7 @@ window.dadosLicaoV4 = {
   // LISTA ALFABÉTICA
   // ============================================
   listaAlfabetica: [
-    { onde: "3.a", referencia: "1 Jo 1.5", tags: "Deus é luz / nele não há trevas nenhumas", pagina: 35, id: "1jo1.5", locais: [] },
+    { onde: "3.a", referencia: "1 Jo 1.5", tags: "mensagem que dele ouvimos / Deus é luz / nele não há trevas nenhumas", pagina: 35, id: "1jo1.5", locais: [] },
     { onde: "3 · Tarefa Simples para o Coração", referencia: "1 Jo 1.9", tags: "confessarmos os pecados / fiel e justo / perdoar / purificar de toda injustiça", pagina: 39, id: "1jo1.9", locais: [] },
     { onde: "3.c", referencia: "1 Jo 4.8-10", tags: "Deus é amor / enviou seu Filho unigênito / ele nos amou a nós / propiciação pelos nossos pecados", pagina: 36, id: "1jo4.8-10", locais: [] },
     { onde: "3.d", referencia: "1 Pe 3.18", tags: "Cristo morreu uma só vez pelos pecados / o justo pelos injustos / para levar-nos a Deus", pagina: 36, id: "1pe3.18", locais: [] },
@@ -161,7 +161,7 @@ window.dadosLicaoV4 = {
     { onde: "1.c", referencia: "Gn 22.14", tags: "Abraão chamou àquele lugar Jeová-Jiré / no monte do Senhor se proverá", pagina: 25, id: "gn22.14", locais: [] },
     { onde: "2.b", referencia: "Hb 4.13", tags: "nenhuma criatura encoberta / todas as coisas nuas e patentes / a quem havemos de prestar contas", pagina: 31, id: "hb4.13", locais: [] },
     { onde: "4.b", referencia: "Hb 6.17-18", tags: "imutabilidade do seu conselho / juramento / impossível que Deus minta / poderosa consolação", pagina: 41, id: "hb6.17-18", locais: [] },
-    { onde: "3.a", referencia: "Hc 1.13", tags: "tão puro de olhos que não podes ver o mal / não podes contemplar a perversidade", pagina: 35, id: "hc1.13", locais: [] },
+    { onde: "3.a", referencia: "Hc 1.13", tags: "tão puro de olhos / não podes ver o mal / não podes contemplar a perversidade", pagina: 35, id: "hc1.13", locais: [] },
     { onde: "3.a", referencia: "Is 6.3", tags: "santo, santo, santo é o Senhor dos exércitos / a terra toda está cheia da sua glória", pagina: 35, id: "is6.3", locais: [] },
     { onde: "2.d", referencia: "Is 40.25-26", tags: "a quem me comparareis / quem criou estas coisas / chama a todas pelos seus nomes / grande em força", pagina: 31, id: "is40.25-26", locais: [] },
     { onde: "2.b", referencia: "Is 46.9-10", tags: "eu sou Deus, e não há outro / anuncio o fim desde o princípio / o meu conselho subsistirá", pagina: 31, id: "is46.9-10", locais: [] },
