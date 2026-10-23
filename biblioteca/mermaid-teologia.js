@@ -341,3 +341,28 @@ mindmap
   root((Livro 7 · Cap. 7))
     Final da Temporada · Jo 8.36 · verdadeiramente sereis livres
 `;
+
+window.bibliotecaMermaid["lv8-cp1"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+mindmap
+  root((Livro 8 · Cap. 1))
+    Seção 1 · Hb 11.6 · creia que ele existe
+      1.a · Sl 19.1-4 · os céus proclamam
+      1.b · Rm 2.14-16 · lei escrita nos corações
+      1.c · Êx 3.14 · EU SOU O QUE SOU
+      1.d · Jo 14.9 · quem me viu viu o Pai
+    Seção 2 · Jo 4.24 · Deus é Espírito
+      2.a · Jo 1.14 · o Verbo se fez carne
+      2.b · 1 Tm 1.17 · imortal invisível
+      2.c · Is 40.18 · a quem assemelhar a Deus
+      2.d · Jr 10.10 · o Deus vivo
+    Seção 3 · Gn 1.1 · no princípio criou Deus
+      3.a · Cl 1.16 · visíveis e invisíveis
+      3.b · Sl 33.6,9 · ele falou e tudo se fez
+      3.c · Ne 9.6 · tu os conservas
+      3.d · At 17.25,28 · nele vivemos
+    Seção 4 · Jr 9.23-24 · glorie-se em me conhecer
+      4.a · Jo 17.3 · a vida eterna é esta
+      4.b · Rm 11.33 · ó profundidade das riquezas
+      4.c · Fp 3.8-10 · para conhecê-lo
+      4.d · 2 Pe 3.18 · crescei no conhecimento
+`;

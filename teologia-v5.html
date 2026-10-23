@@ -361,8 +361,8 @@
 <script src="biblioteca/titulos-biblicos.js"></script>
 <script src="biblioteca/motor-contextos.js"></script>
 <script src="biblioteca/legendas-emogis.js"></script>
-<script src="biblioteca/perguntas-teologia.js?v=20261004f"></script>
-<script src="biblioteca/mermaid-teologia.js?v=20261004f"></script>
+<script src="biblioteca/perguntas-teologia.js?v=20261023a"></script>
+<script src="biblioteca/mermaid-teologia.js?v=20261023a"></script>
 
 <script>
 // ============================================
@@ -1764,7 +1764,8 @@ function buscarVersiculosNovamente() {
 // ============================================
 const capitulosDisponiveisV4 = {
   "lv6": [1],
-  "lv7": [1, 2, 3, 4, 5, 6, 7]
+  "lv7": [1, 2, 3, 4, 5, 6, 7],
+  "lv8": [1]
 };
 
 function popularSeletoresV4() {
@@ -1778,7 +1779,7 @@ function popularSeletoresV4() {
 
   selLivro.innerHTML = Object.keys(capitulosDisponiveisV4)
     .map(l => `<option value="${l}">${nomesLivro[l] || l}</option>`).join('');
-  selLivro.value = "lv7";
+  selLivro.value = "lv8";
 
   function popularCapitulos() {
     const caps = capitulosDisponiveisV4[selLivro.value] || [];
