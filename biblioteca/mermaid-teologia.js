@@ -431,3 +431,48 @@ mindmap
       4.d · 2 Tm 2.13
         ele permanece fiel
 `;
+
+window.bibliotecaMermaid["lv8-cp3"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+mindmap
+  root((Livro 8 · Cap. 3))
+    Seção 1 · Sl 90.2
+      de eternidade a eternidade
+      1.a · Is 43.10
+        antes de mim Deus nenhum
+      1.b · Ap 1.8
+        o Alfa e o Ômega
+      1.c · 2 Pe 3.8
+        um dia como mil anos
+      1.d · Jo 10.28
+        eu lhes dou a vida eterna
+    Seção 2 · Sl 135.6
+      tudo o que deseja ele o faz
+      2.a · Sl 103.19
+        o seu reino domina sobre tudo
+      2.b · Dn 4.35
+        quem lhe possa deter a mão
+      2.c · Jó 42.2
+        bem sei que tudo podes
+      2.d · Rm 14.12
+        dará conta de si mesmo
+    Seção 3 · Rm 8.22
+      toda a criação geme
+      3.a · Gn 3.16-19
+        maldita é a terra
+      3.b · Tg 4.1-2
+        guerras e contendas
+      3.c · 2 Pe 3.9
+        não retarda a sua promessa
+      3.d · Mq 6.8
+        pratiques a justiça
+    Seção 4 · Dn 2.21
+      muda os tempos e as estações
+      4.a · Ed 1.1-3
+        despertou o espírito de Ciro
+      4.b · 1 Sm 16.11-13
+        ainda falta o menor
+      4.c · Is 7.14
+        uma virgem conceberá
+      4.d · At 8.1,4
+        anunciando a palavra
+`;

@@ -734,3 +734,15 @@ window.bibliotecaPerguntas["lv8-cp2"] = [
   { pergunta: "Segundo Malaquias 3.6, o que o Senhor diz sobre si mesmo?", topicoOrigem: "4", pagina: 40, tags: "eu, o Senhor, não mudo / ó filhos de Jacó, não sois consumidos", refs: ["ml3.6a"] },
   { pergunta: "Segundo Números 23.19, Deus mente ou deixa de cumprir o que disse?", topicoOrigem: "4.b", pagina: 41, tags: "Deus não é homem, para que minta / tendo ele dito, não o fará", refs: ["nm23.19"] }
 ];
+
+window.bibliotecaPerguntas["lv8-cp3"] = [
+  // 2 perguntas por título (seções 1-4); tags = palavras-chave do versículo
+  { pergunta: "Segundo Salmos 90.2, desde quando e até quando o Senhor é Deus?", topicoOrigem: "1", pagina: 46, tags: "antes que nascessem os montes / formado a terra e o mundo / de eternidade a eternidade tu és Deus", refs: ["sl90.2a"] },
+  { pergunta: "Segundo Salmos 90.4, como são mil anos aos olhos de Deus?", topicoOrigem: "1.c", pagina: 47, tags: "mil anos aos teus olhos / como o dia de ontem que passou / como uma vigília da noite", refs: ["sl90.4a"] },
+  { pergunta: "Segundo Salmos 135.6, o que o Senhor faz com tudo o que deseja?", topicoOrigem: "2", pagina: 51, tags: "tudo o que o Senhor deseja ele o faz / no céu e na terra / nos mares e em todos os abismos", refs: ["sl135.6"] },
+  { pergunta: "Segundo Gênesis 50.20, o que Deus fez com o mal que os irmãos intentaram contra José?", topicoOrigem: "2.d", pagina: 52, tags: "intentastes o mal contra mim / Deus o intentou para o bem / conservar muita gente com vida", refs: ["gn50.20a"] },
+  { pergunta: "Segundo Romanos 8.22, como está toda a criação até agora?", topicoOrigem: "3", pagina: 56, tags: "toda a criação geme / está com dores de parto até agora", refs: ["rm8.22"] },
+  { pergunta: "Segundo 2 Pedro 3.9, por que o Senhor é longânimo?", topicoOrigem: "3.c", pagina: 57, tags: "o Senhor não retarda a sua promessa / é longânimo / não querendo que ninguém se perca / todos venham a arrepender-se", refs: ["2pe3.9"] },
+  { pergunta: "Segundo Daniel 2.21, o que Deus faz com os tempos e com os reis?", topicoOrigem: "4", pagina: 61, tags: "ele muda os tempos e as estações / remove os reis e estabelece os reis / dá a sabedoria aos sábios", refs: ["dn2.21b"] },
+  { pergunta: "Segundo Gálatas 4.4-5, quando Deus enviou seu Filho, e para quê?", topicoOrigem: "4.c", pagina: 62, tags: "plenitude dos tempos / Deus enviou seu Filho / nascido de mulher / debaixo de lei / adoção de filhos", refs: ["gl4.4-5"] }
+];
