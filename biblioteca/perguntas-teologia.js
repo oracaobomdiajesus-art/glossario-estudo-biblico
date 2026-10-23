@@ -712,9 +712,13 @@ window.bibliotecaPerguntas["lv7-cp7"] = [
 ];
 
 window.bibliotecaPerguntas["lv8-cp1"] = [
-  // 1 pergunta por título (seções 1-4); tags = palavras-chave do versículo
+  // 2 perguntas por título (seções 1-4); tags = palavras-chave do versículo
   { pergunta: "Segundo Hebreus 11.6, o que é necessário que creia aquele que se aproxima de Deus?", topicoOrigem: "1", pagina: 3, tags: "sem fé é impossível agradar a Deus / creia que ele existe / galardoador dos que o buscam", refs: ["hb11.6"] },
+  { pergunta: "Em Êxodo 3.14, como Deus se apresentou a Moisés?", topicoOrigem: "1.c", pagina: 4, tags: "EU SOU O QUE SOU / EU SOU me enviou a vós", refs: ["ex3.14"] },
   { pergunta: "Segundo João 4.24, o que Deus é, e como devem adorá-lo os que o adoram?", topicoOrigem: "2", pagina: 8, tags: "Deus é Espírito / em espírito e em verdade", refs: ["jo4.24a"] },
+  { pergunta: "Como 1 Timóteo 1.17 descreve o Rei dos séculos?", topicoOrigem: "2.b", pagina: 9, tags: "Rei dos séculos / imortal, invisível / ao único Deus", refs: ["1tm1.17"] },
   { pergunta: "Segundo Gênesis 1.1, o que Deus criou no princípio?", topicoOrigem: "3", pagina: 13, tags: "no princípio / criou Deus / os céus e a terra", refs: ["gn1.1c"] },
-  { pergunta: "Segundo Jeremias 9.23-24, em que deve gloriar-se o que se gloria?", topicoOrigem: "4", pagina: 18, tags: "não se glorie o sábio na sua sabedoria / nem o forte / nem o rico / glorie-se nisto: em me conhecer", refs: ["jr9.23-24a"] }
+  { pergunta: "Segundo Atos 17.28, o que fazemos nele?", topicoOrigem: "3.d", pagina: 14, tags: "ele mesmo é quem dá a todos a vida, a respiração / nele vivemos, e nos movemos, e existimos", refs: ["at17.25-28"] },
+  { pergunta: "Segundo Jeremias 9.23-24, em que deve gloriar-se o que se gloria?", topicoOrigem: "4", pagina: 18, tags: "não se glorie o sábio na sua sabedoria / nem o forte / nem o rico / glorie-se nisto: em me conhecer", refs: ["jr9.23-24a"] },
+  { pergunta: "Segundo João 17.3, o que é a vida eterna?", topicoOrigem: "4.a", pagina: 18, tags: "a vida eterna é esta / que te conheçam / o único Deus verdadeiro / Jesus Cristo", refs: ["jo17.3a"] }
 ];

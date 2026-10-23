@@ -191,10 +191,10 @@ window.bibliotecaPerguntas["lv7-cp2"] = [
 ];
 ```
 
-- **1 pergunta para cada título (seção `1.` a `4.`)**, não importa quantas
-  letras ele tenha: **4 perguntas por capítulo**.
-- A pergunta pode usar **qualquer referência daquele título** (versículo-chave,
-  letras ou blocos). De preferência o versículo-chave.
+- **2 perguntas para cada título (seção `1.` a `4.`)**, não importa quantas
+  letras ele tenha: **8 perguntas por capítulo**.
+- Podem usar **qualquer referência daquele título**, sem repetir versículo.
+  Padrão: 1 sobre o versículo-chave + 1 sobre um versículo de uma das letras.
 - Na pergunta, o livro bíblico vai por extenso ("Romanos 5.12").
 - `topicoOrigem` = mesmo valor do `onde`; `pagina` e `refs` = os da linha usada.
 - `tags` = **as mesmas palavras-chave do versículo** que estão na `listaAparicao`
