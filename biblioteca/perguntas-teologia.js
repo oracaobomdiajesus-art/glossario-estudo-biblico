@@ -758,3 +758,15 @@ window.bibliotecaPerguntas["lv8-cp4"] = [
   { pergunta: "Segundo Efésios 2.18, como temos acesso ao Pai?", topicoOrigem: "4", pagina: 82, tags: "por ele ambos temos acesso ao Pai / em um mesmo Espírito", refs: ["ef2.18a"] },
   { pergunta: "Segundo Romanos 8.26, o que o Espírito faz na nossa fraqueza?", topicoOrigem: "4.c", pagina: 83, tags: "o Espírito nos ajuda na fraqueza / não sabemos o que havemos de pedir / intercede por nós com gemidos inexprimíveis", refs: ["rm8.26"] }
 ];
+
+window.bibliotecaPerguntas["lv8-cp5"] = [
+  // 2 perguntas por título (seções 1-4); tags = palavras-chave do versículo
+  { pergunta: "Segundo Jeremias 31.3, com que amor o Senhor nos amou?", topicoOrigem: "1", pagina: 88, tags: "o Senhor me apareceu / com amor eterno te amei / com benignidade te atraí", refs: ["jr31.3a"] },
+  { pergunta: "Segundo Salmos 119.105, o que a palavra de Deus é para nós?", topicoOrigem: "1.b", pagina: 89, tags: "lâmpada para os meus pés é a tua palavra / luz para o meu caminho", refs: ["sl119.105"] },
+  { pergunta: "Segundo Romanos 8.15, que espírito recebemos, e como clamamos?", topicoOrigem: "2", pagina: 93, tags: "espírito de escravidão / espírito de adoção / clamamos: Aba, Pai", refs: ["rm8.15a"] },
+  { pergunta: "Segundo Lucas 11.2, como Jesus ensinou a começar a oração?", topicoOrigem: "2.b", pagina: 94, tags: "quando orardes, dizei: Pai / santificado seja o teu nome / venha o teu reino", refs: ["lc11.2"] },
+  { pergunta: "Segundo Mateus 6.33, o que devemos buscar primeiro?", topicoOrigem: "3", pagina: 98, tags: "buscai primeiro o seu reino / e a sua justiça / todas estas coisas vos serão acrescentadas", refs: ["mt6.33a"] },
+  { pergunta: "Segundo 1 Coríntios 10.31, para que devemos fazer todas as coisas?", topicoOrigem: "3.c", pagina: 99, tags: "quer comais quer bebais / ou façais qualquer outra coisa / fazei tudo para glória de Deus", refs: ["1co10.31a"] },
+  { pergunta: "Segundo Provérbios 3.5, em quem devemos confiar, e em que não devemos nos apoiar?", topicoOrigem: "4", pagina: 103, tags: "confia no Senhor de todo o teu coração / não te estribes no teu próprio entendimento", refs: ["pv3.5a"] },
+  { pergunta: "Segundo 1 Pedro 5.7, o que devemos lançar sobre Deus, e por quê?", topicoOrigem: "4.d", pagina: 104, tags: "lançando sobre ele toda a vossa ansiedade / ele tem cuidado de vós", refs: ["1pe5.7"] }
+];

@@ -521,3 +521,48 @@ mindmap
       4.d · Rm 11.33-36
         dele, por ele e para ele
 `;
+
+window.bibliotecaMermaid["lv8-cp5"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+mindmap
+  root((Livro 8 · Cap. 5))
+    Seção 1 · Jr 31.3
+      com amor eterno te amei
+      1.a · Gn 3.9
+        onde estás
+      1.b · Sl 119.105
+        lâmpada para os meus pés
+      1.c · 1 Jo 1.3
+        comunhão com o Pai
+      1.d · Gl 5.22-23
+        o fruto do Espírito
+    Seção 2 · Rm 8.15
+      Aba, Pai
+      2.a · Jo 1.12
+        filhos de Deus
+      2.b · Lc 11.2
+        quando orardes, dizei Pai
+      2.c · Rm 8.14-16
+        o Espírito testifica
+      2.d · Ef 5.1-2
+        imitadores de Deus
+    Seção 3 · Mt 6.33
+      buscai primeiro o seu reino
+      3.a · Rm 14.7-8
+        somos do Senhor
+      3.b · Cl 3.17
+        em nome do Senhor Jesus
+      3.c · 1 Co 10.31
+        tudo para glória de Deus
+      3.d · Lc 9.23
+        tome cada dia a sua cruz
+    Seção 4 · Pv 3.5
+      confia no Senhor
+      4.a · Jo 15.5
+        sem mim nada podeis fazer
+      4.b · Pv 16.9
+        o Senhor dirige os passos
+      4.c · Pv 16.3
+        entrega ao Senhor as tuas obras
+      4.d · 1 Pe 5.7
+        ele tem cuidado de vós
+`;
