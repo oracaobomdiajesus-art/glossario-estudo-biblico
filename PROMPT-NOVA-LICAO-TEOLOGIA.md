@@ -128,6 +128,12 @@ window.dadosLicaoV4 = {
   `rm3.23`, `1pe1.15-16`, `rm5.1-10-11`, `job38.7` (Jó), `ex25.18` (Êx).
 - ID repetido no capítulo ganha letra no fim, na ordem: `rm3.23a`, `rm3.23b`…
 - A abreviação precisa existir em `LIVRO_SLUG` no `teologia-v5.html`.
+- **Referência longa:** manter exatamente como o livro cita (`Jo 8.1-11`, sem
+  cortar). Se o livro citar o **capítulo inteiro** sem versículo ("Salmo 23"),
+  registrar o intervalo completo (`Sl 23.1-6`), porque a página só lê
+  capítulo.versículo. Nas tags, usar as palavras dos versículos centrais.
+- Na página, trechos com **mais de 3 versículos** mostram os 3 primeiros e o
+  botão **"ver mais"** (constante `LIMITE_VERSICULOS` no `teologia-v5.html`).
 - O mesmo versículo tem **sempre as mesmas tags**, em qualquer capítulo
   (reaproveitar as já usadas nos capítulos anteriores).
 

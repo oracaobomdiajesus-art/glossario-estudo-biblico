@@ -260,6 +260,7 @@
     .hierarquia-filhos { padding-left: 20px; margin-top: 4px; border-left: 2px solid #c9c0d4; }
     .nivel-1 > .hierarquia-item > .hierarquia-label { font-size: 14px; color: #362b52; }
     /* ── MERMAID ── */
+    .btn-ver-mais { background: none; border: none; color: #6a4fa3; font-size: 12px; font-weight: 600; cursor: pointer; padding: 2px 4px; text-decoration: underline; }
     .mermaid-wrapper { background: #f5f3f0; border: 1px solid #c9c0d4; border-radius: 8px; padding: 20px; overflow-x: auto; }
     .sem-mermaid, .sem-perguntas { color: #999; font-style: italic; font-size: 13px; padding: 20px; text-align: center; }
     /* ── PERGUNTAS ── */
@@ -361,8 +362,8 @@
 <script src="biblioteca/titulos-biblicos.js"></script>
 <script src="biblioteca/motor-contextos.js"></script>
 <script src="biblioteca/legendas-emogis.js"></script>
-<script src="biblioteca/perguntas-teologia.js?v=20261023g"></script>
-<script src="biblioteca/mermaid-teologia.js?v=20261023g"></script>
+<script src="biblioteca/perguntas-teologia.js?v=20261023h"></script>
+<script src="biblioteca/mermaid-teologia.js?v=20261023h"></script>
 
 <script>
 // ============================================
@@ -658,6 +659,26 @@ function buscarVersiculoLocal(referencia) {
 
   // Referência com 2+ versículos: numera cada um para facilitar a leitura.
   return encontrados.map(v => `<strong>${v.numero}</strong> ${v.texto}`).join(' ');
+}
+
+// ── "Ver mais" para trechos longos ──
+// Regra: referência com mais de LIMITE_VERSICULOS versículos mostra só os
+// primeiros e um botão "ver mais" (ex.: Jo 8.1-11, Sl 23.1-6).
+const LIMITE_VERSICULOS = 3;
+function textoComVerMais(texto) {
+  const partes = String(texto).split(/(?=<strong>\d+<\/strong>)/);
+  if (partes.length <= LIMITE_VERSICULOS) return `"${texto}"`;
+  const inicio = partes.slice(0, LIMITE_VERSICULOS).join('');
+  const resto = partes.slice(LIMITE_VERSICULOS).join('');
+  return `"${inicio}<span class="vm-resto" hidden> ${resto}</span>"` +
+    ` <button type="button" class="btn-ver-mais" onclick="alternarVerMais(this)">ver mais (+${partes.length - LIMITE_VERSICULOS}) ▾</button>`;
+}
+function alternarVerMais(btn) {
+  const resto = btn.parentElement.querySelector('.vm-resto');
+  if (!resto) return;
+  if (!btn.dataset.rotulo) btn.dataset.rotulo = btn.textContent;
+  resto.hidden = !resto.hidden;
+  btn.textContent = resto.hidden ? btn.dataset.rotulo : 'ver menos ▴';
 }
 
 // ── Busca automática: Bíblia local (primária) → bible-api.com (secundária) ──
@@ -1710,7 +1731,7 @@ async function buscarTodosVersiculos(refsUnicas, somenteFalhas = false) {
     el.classList.remove('loading');
     if (texto) {
       el.classList.add('ok');
-      el.innerHTML = `<strong>✝️ ${item.referencia}:</strong><br>"${texto}"`;
+      el.innerHTML = `<strong>✝️ ${item.referencia}:</strong><br>${textoComVerMais(texto)}`;
     } else {
       el.innerHTML = `<em style="color:#c62828;">Não encontrado na Bíblia local nem na bible-api.com.</em>
         <br><button onclick="tentarComIA('${item.id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#4a3b6e;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar com IA (Groq/Mistral)</button>`;
@@ -1737,7 +1758,7 @@ async function tentarComIA(id) {
   el.classList.remove('loading');
   if (texto) {
     el.classList.add('ok');
-    el.innerHTML = `<strong>✝️ ${item.referencia} <span style="font-size:11px;color:#999;font-weight:400;">(via IA)</span>:</strong><br>"${texto}"`;
+    el.innerHTML = `<strong>✝️ ${item.referencia} <span style="font-size:11px;color:#999;font-weight:400;">(via IA)</span>:</strong><br>${textoComVerMais(texto)}`;
   } else {
     el.innerHTML = `<em style="color:#c62828;">A IA também não conseguiu buscar. Verifique as chaves configuradas.</em>
       <br><button onclick="tentarComIA('${id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#4a3b6e;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar novamente com IA</button>`;
