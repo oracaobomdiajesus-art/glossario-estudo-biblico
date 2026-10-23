@@ -712,21 +712,9 @@ window.bibliotecaPerguntas["lv7-cp7"] = [
 ];
 
 window.bibliotecaPerguntas["lv8-cp1"] = [
-  // 1 pergunta por subtítulo (a, b, c, d de cada seção); tags = palavras-chave do versículo
-  { pergunta: "Segundo Romanos 1.20, como os atributos invisíveis de Deus são percebidos?", topicoOrigem: "1.a", pagina: 3, tags: "o que de Deus se pode conhecer / atributos invisíveis / eterno poder e divindade / percebidos mediante as coisas criadas", refs: ["rm1.19-20"] },
-  { pergunta: "Segundo Romanos 2.15, o que os gentios mostram escrito em seus corações?", topicoOrigem: "1.b", pagina: 4, tags: "a obra da lei escrita em seus corações / testificando juntamente a sua consciência / Deus há de julgar os segredos dos homens", refs: ["rm2.14-16"] },
-  { pergunta: "Em Êxodo 3.14, como Deus se apresentou a Moisés?", topicoOrigem: "1.c", pagina: 4, tags: "EU SOU O QUE SOU / EU SOU me enviou a vós", refs: ["ex3.14"] },
-  { pergunta: "Segundo João 14.9, quem viu Jesus viu a quem?", topicoOrigem: "1.d", pagina: 4, tags: "quem me viu a mim / viu o Pai", refs: ["jo14.9"] },
-  { pergunta: "Segundo João 1.14, o que o Verbo fez?", topicoOrigem: "2.a", pagina: 8, tags: "o Verbo se fez carne / habitou entre nós / cheio de graça e de verdade", refs: ["jo1.14"] },
-  { pergunta: "Como 1 Timóteo 1.17 descreve o Rei dos séculos?", topicoOrigem: "2.b", pagina: 9, tags: "Rei dos séculos / imortal, invisível / ao único Deus", refs: ["1tm1.17"] },
-  { pergunta: "O que Êxodo 20.4-5 proíbe fazer?", topicoOrigem: "2.c", pagina: 9, tags: "não farás para ti imagem esculpida / não te encurvarás diante delas / Deus zeloso", refs: ["ex20.4-5"] },
-  { pergunta: "Como Jeremias 10.10 descreve o Senhor?", topicoOrigem: "2.d", pagina: 9, tags: "o Senhor é o verdadeiro Deus / o Deus vivo / o Rei eterno", refs: ["jr10.10"] },
-  { pergunta: "Segundo Colossenses 1.16, que coisas foram criadas nele?", topicoOrigem: "3.a", pagina: 13, tags: "nele foram criadas todas as coisas / as visíveis e as invisíveis / tudo foi criado por ele e para ele", refs: ["cl1.16a"] },
-  { pergunta: "Segundo Salmos 33.9, o que aconteceu quando o Senhor falou e mandou?", topicoOrigem: "3.b", pagina: 13, tags: "pela palavra do Senhor foram feitos os céus / ele falou, e tudo se fez / ele mandou, e logo tudo apareceu", refs: ["sl33.6-9"] },
-  { pergunta: "Segundo Neemias 9.6, o que o Senhor faz com tudo o que criou?", topicoOrigem: "3.c", pagina: 14, tags: "só tu és Senhor / tu fizeste o céu e o céu dos céus / tu os conservas a todos", refs: ["ne9.6"] },
-  { pergunta: "Segundo Atos 17.28, o que fazemos nele?", topicoOrigem: "3.d", pagina: 14, tags: "ele mesmo é quem dá a todos a vida, a respiração / nele vivemos, e nos movemos, e existimos", refs: ["at17.25-28"] },
-  { pergunta: "Segundo João 17.3, o que é a vida eterna?", topicoOrigem: "4.a", pagina: 18, tags: "a vida eterna é esta / que te conheçam / o único Deus verdadeiro / Jesus Cristo", refs: ["jo17.3a"] },
-  { pergunta: "Segundo Isaías 55.8-9, como são os pensamentos de Deus comparados aos nossos?", topicoOrigem: "4.b", pagina: 19, tags: "os meus pensamentos não são os vossos pensamentos / assim como o céu é mais alto do que a terra", refs: ["is55.8-9"] },
-  { pergunta: "Segundo Filipenses 3.8-10, o que Paulo deseja acima de todas as coisas?", topicoOrigem: "4.c", pagina: 19, tags: "excelência do conhecimento de Cristo Jesus / para que possa ganhar a Cristo / para conhecê-lo / o poder da sua ressurreição", refs: ["fp3.8-10"] },
-  { pergunta: "Segundo 2 Pedro 3.18, em que devemos crescer?", topicoOrigem: "4.d", pagina: 19, tags: "crescei na graça e no conhecimento / nosso Senhor e Salvador Jesus Cristo / a ele a glória", refs: ["2pe3.18"] }
+  // 1 pergunta por título (seções 1-4); tags = palavras-chave do versículo
+  { pergunta: "Segundo Hebreus 11.6, o que é necessário que creia aquele que se aproxima de Deus?", topicoOrigem: "1", pagina: 3, tags: "sem fé é impossível agradar a Deus / creia que ele existe / galardoador dos que o buscam", refs: ["hb11.6"] },
+  { pergunta: "Segundo João 4.24, o que Deus é, e como devem adorá-lo os que o adoram?", topicoOrigem: "2", pagina: 8, tags: "Deus é Espírito / em espírito e em verdade", refs: ["jo4.24a"] },
+  { pergunta: "Segundo Gênesis 1.1, o que Deus criou no princípio?", topicoOrigem: "3", pagina: 13, tags: "no princípio / criou Deus / os céus e a terra", refs: ["gn1.1c"] },
+  { pergunta: "Segundo Jeremias 9.23-24, em que deve gloriar-se o que se gloria?", topicoOrigem: "4", pagina: 18, tags: "não se glorie o sábio na sua sabedoria / nem o forte / nem o rico / glorie-se nisto: em me conhecer", refs: ["jr9.23-24a"] }
 ];

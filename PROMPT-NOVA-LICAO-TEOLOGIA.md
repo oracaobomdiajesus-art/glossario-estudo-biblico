@@ -184,18 +184,17 @@ versículo diz**, e a resposta vem do texto bíblico (Almeida).
 ```js
 window.bibliotecaPerguntas["lv7-cp2"] = [
   { pergunta: "Segundo Romanos 5.12, por quem o pecado entrou no mundo, e o que veio com ele?",
-    topicoOrigem: "1.a", pagina: 24,
+    topicoOrigem: "1", pagina: 24,
     tags: "por um só homem entrou o pecado / pelo pecado a morte / passou a todos os homens",
     refs: ["rm5.12"] },
   ...
 ];
 ```
 
-- **1 pergunta para cada subtítulo (letra)**: `a)`, `b)`, `c)`, `d)` de cada
-  seção. Com 4 seções de 4 letras = **16 perguntas**. Seções (versículo-chave)
-  e blocos (Você Sabia?, Tarefa…) **não** ganham pergunta.
-- A pergunta usa **qualquer referência daquela letra** (evitar repetir o mesmo
-  versículo em duas letras quando houver outra opção).
+- **1 pergunta para cada título (seção `1.` a `4.`)**, não importa quantas
+  letras ele tenha: **4 perguntas por capítulo**.
+- A pergunta pode usar **qualquer referência daquele título** (versículo-chave,
+  letras ou blocos). De preferência o versículo-chave.
 - Na pergunta, o livro bíblico vai por extenso ("Romanos 5.12").
 - `topicoOrigem` = mesmo valor do `onde`; `pagina` e `refs` = os da linha usada.
 - `tags` = **as mesmas palavras-chave do versículo** que estão na `listaAparicao`
