@@ -611,3 +611,10 @@ mindmap
       4.d · Tg 4.8
         chegai-vos para Deus
 `;
+
+window.bibliotecaMermaid["lv8-cp7"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+mindmap
+  root((Livro 8 · Cap. 7))
+    Final da Temporada · Rm 11.36
+      dele, por ele e para ele
+`;

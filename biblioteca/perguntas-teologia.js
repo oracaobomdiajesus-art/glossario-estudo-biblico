@@ -782,3 +782,8 @@ window.bibliotecaPerguntas["lv8-cp6"] = [
   { pergunta: "Segundo Malaquias 3.7, o que o Senhor promete a quem voltar para ele?", topicoOrigem: "4", pagina: 124, tags: "vos desviastes dos meus estatutos / tornai vós para mim / e eu tornarei para vós", refs: ["ml3.7"] },
   { pergunta: "Segundo Tiago 4.8, o que acontece quando nos chegamos a Deus?", topicoOrigem: "4.d", pagina: 125, tags: "chegai-vos para Deus / e ele se chegará para vós / purificai os corações", refs: ["tg4.8"] }
 ];
+
+window.bibliotecaPerguntas["lv8-cp7"] = [
+  // perguntas só sobre os versículos (resposta = texto bíblico, Almeida)
+  { pergunta: "Segundo Romanos 11.36, de quem, por quem e para quem são todas as coisas?", topicoOrigem: "Final da Temporada", pagina: 133, tags: "dele, por ele e para ele são todas as coisas / glória a ele eternamente / Amém", refs: ["rm11.36"] }
+];
