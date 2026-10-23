@@ -566,3 +566,48 @@ mindmap
       4.d · 1 Pe 5.7
         ele tem cuidado de vós
 `;
+
+window.bibliotecaMermaid["lv8-cp6"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+mindmap
+  root((Livro 8 · Cap. 6))
+    Seção 1 · Jo 14.6
+      eu sou o caminho
+      1.a · At 4.12
+        em nenhum outro há salvação
+      1.b · Ef 2.8-9
+        pela graça sois salvos
+      1.c · Jo 17.17
+        a tua palavra é a verdade
+      1.d · 1 Pe 3.15
+        com mansidão e temor
+    Seção 2 · Sl 22.2-3
+      tu és santo
+      2.a · Is 59.2
+        iniquidades fazem separação
+      2.b · Sl 13.1-5
+        até quando, ó Senhor
+      2.c · Jó 42.5
+        agora te veem os meus olhos
+      2.d · Ef 4.32
+        perdoando-vos uns aos outros
+    Seção 3 · Sl 34.18
+      perto dos quebrantados
+      3.a · Hb 13.5
+        não te deixarei
+      3.b · Sl 56.8
+        as minhas lágrimas no teu odre
+      3.c · 2 Co 12.8-10
+        a minha graça te basta
+      3.d · Gl 6.2
+        levai as cargas uns dos outros
+    Seção 4 · Ml 3.7
+      tornai vós para mim
+      4.a · Sl 51.10
+        cria em mim um coração puro
+      4.b · 1 Ts 5.17
+        orai sem cessar
+      4.c · Tg 1.22
+        cumpridores da palavra
+      4.d · Tg 4.8
+        chegai-vos para Deus
+`;

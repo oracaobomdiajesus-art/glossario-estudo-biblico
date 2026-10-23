@@ -770,3 +770,15 @@ window.bibliotecaPerguntas["lv8-cp5"] = [
   { pergunta: "Segundo Provérbios 3.5, em quem devemos confiar, e em que não devemos nos apoiar?", topicoOrigem: "4", pagina: 103, tags: "confia no Senhor de todo o teu coração / não te estribes no teu próprio entendimento", refs: ["pv3.5a"] },
   { pergunta: "Segundo 1 Pedro 5.7, o que devemos lançar sobre Deus, e por quê?", topicoOrigem: "4.d", pagina: 104, tags: "lançando sobre ele toda a vossa ansiedade / ele tem cuidado de vós", refs: ["1pe5.7"] }
 ];
+
+window.bibliotecaPerguntas["lv8-cp6"] = [
+  // 2 perguntas por título (seções 1-4); tags = palavras-chave do versículo
+  { pergunta: "Segundo João 14.6, quem é o caminho para o Pai?", topicoOrigem: "1", pagina: 109, tags: "eu sou o caminho, a verdade e a vida / ninguém vem ao Pai senão por mim", refs: ["jo14.6a"] },
+  { pergunta: "Segundo Atos 4.12, em que outro nome há salvação?", topicoOrigem: "1.a", pagina: 109, tags: "em nenhum outro há salvação / nenhum outro nome / debaixo do céu", refs: ["at4.12"] },
+  { pergunta: "Segundo Salmos 22.2-3, o que Davi diz de Deus mesmo sem receber resposta?", topicoOrigem: "2", pagina: 114, tags: "Deus meu, eu clamo de dia / tu não me ouves / contudo tu és santo", refs: ["sl22.2-3"] },
+  { pergunta: "Segundo Isaías 59.2, o que faz separação entre nós e Deus?", topicoOrigem: "2.a", pagina: 114, tags: "iniquidades fazem separação / pecados esconderam o rosto de Deus / não vos ouça", refs: ["is59.2"] },
+  { pergunta: "Segundo Salmos 34.18, de quem o Senhor está perto?", topicoOrigem: "3", pagina: 119, tags: "perto está o Senhor / dos que têm o coração quebrantado / salva os contritos de espírito", refs: ["sl34.18a"] },
+  { pergunta: "Segundo 2 Coríntios 12.9, o que o Senhor respondeu a Paulo?", topicoOrigem: "3.c", pagina: 120, tags: "três vezes roguei ao Senhor / a minha graça te basta / o poder se aperfeiçoa na fraqueza / quando estou fraco, então sou forte", refs: ["2co12.8-10"] },
+  { pergunta: "Segundo Malaquias 3.7, o que o Senhor promete a quem voltar para ele?", topicoOrigem: "4", pagina: 124, tags: "vos desviastes dos meus estatutos / tornai vós para mim / e eu tornarei para vós", refs: ["ml3.7"] },
+  { pergunta: "Segundo Tiago 4.8, o que acontece quando nos chegamos a Deus?", topicoOrigem: "4.d", pagina: 125, tags: "chegai-vos para Deus / e ele se chegará para vós / purificai os corações", refs: ["tg4.8"] }
+];
