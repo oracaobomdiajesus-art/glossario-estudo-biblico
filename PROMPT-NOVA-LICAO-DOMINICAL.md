@@ -14,6 +14,10 @@ dias da Leitura Semanal ou as perguntas e respostas da Hora da Revisão.
 A Alana estuda **com a revista em mãos**; o site é um índice das
 **referências bíblicas** da lição, com a localização de cada uma.
 
+A exceção são as **Perguntas Sugeridas**: elas são sobre o que a revista
+explica em cada subtópico, mas escritas com palavras próprias, com resposta
+curta e sem copiar frases da revista (veja a seção Perguntas).
+
 O que entra:
 - o nome genérico do bloco quando ele cita versículo (`Texto Principal`,
   `Leitura Semanal · Segunda`, `Texto Bíblico`, `Introdução`, `Subsídio 1`,
@@ -65,9 +69,9 @@ dados/dominical/dados-4T2026-licao6-v5.js):
 
 Não reproduza nada do texto da revista (tem direitos autorais): só o nome
 do bloco, números da seção e do tópico, página, referência e palavras-chave
-do versículo. Perguntas: 1 sobre o Texto Bíblico e 1 para cada subtópico,
-com a resposta escrita no próprio versículo. Não incluir minhas anotações
-à mão.
+do versículo. Perguntas: 1 para cada subtópico, sobre o que a revista
+explica nele (texto dos prints), com resposta curta em palavras próprias.
+Não incluir minhas anotações à mão.
 Se tiver dúvida, me diga. Teste a página, faça commit e push na main e me
 passe o link.
 ```
@@ -242,58 +246,55 @@ mindmap
 
 ---
 
-## 🔹 Perguntas (1 por subtópico, resposta no versículo)
+## 🔹 Perguntas (1 por subtópico, sobre o texto da revista)
 
-**Estilo:** cada pergunta manda ler um versículo e pergunta algo que está
-**escrito nele** (Almeida do site). A resposta são as palavras do próprio
-versículo; não vem da revista nem de explicação.
+**Estilo:** cada pergunta é sobre o que a **revista explica** naquele
+subtópico (o texto dos prints), como numa revisão da aula. A resposta vem
+desse texto, mas é escrita **com palavras próprias**, curta (1 ou 2 frases),
+sem copiar frases da revista. Citações bíblicas na resposta podem ir entre
+aspas (ex.: "sereis como Deus", Gênesis 3.5).
 
 ```js
 window.bibliotecaPerguntas["4T2026-licao6"] = [
-  { pergunta: "Leia Filipenses 3.1-11: por causa de quê Paulo tem todas as coisas como perda?",
-    resposta: "“pela excelência do conhecimento de Cristo Jesus, meu Senhor” (v. 8)",
-    topicoOrigem: "Texto Bíblico", pagina: 41,
-    tags: "regozijai-vos no Senhor / acautelai-vos dos maus obreiros / ...",
-    refs: ["fp3.1-11"] },
-  { pergunta: "Leia Apocalipse 22.15: quem ficará de fora?",
-    resposta: "“os cães, os feiticeiros, os adúlteros, os homicidas, os idólatras, e todo o que ama e pratica a mentira”",
-    topicoOrigem: "II.1", pagina: 43,
-    tags: "ficarão de fora os cães / ...",
-    refs: ["ap22.15"] },
+  { pergunta: "Segundo a lição, que exemplos do Antigo Testamento mostram maus obreiros dentro da própria liderança espiritual?",
+    resposta: "Nadabe e Abiú, sobrinhos de Moisés, que ofereceram fogo estranho (Levítico 10.1,2); os filhos do sacerdote Eli (1 Samuel 2.12-17,22-25); e os filhos do profeta Samuel (1 Samuel 8.3).",
+    topicoOrigem: "I.1", pagina: 42,
+    tags: "Nadabe e Abiú / filhos de Eli / filhos de Samuel",
+    refs: ["lv10.1-2", "1sm2.12-17-22-25", "1sm8.3"] },
+  { pergunta: "O que os maus obreiros queriam impor aos gentios convertidos, e como a NVI traduz \"guardai-vos dos maus obreiros\"?",
+    resposta: "Queriam obrigar os gentios a seguir a Torá. A NVI traduz como \"cuidado com os que praticam o mal\".",
+    topicoOrigem: "II.2", pagina: 43,
+    tags: "impor a Torá aos gentios / praticantes do mal / NVI",
+    refs: ["fp3.2"] },
   ...
 ];
 ```
 
-- **1 pergunta sobre o Texto Bíblico** + **1 pergunta para cada subtópico**
-  (`I.1`, `I.2`, `I.3`, `II.1`… até `III.3`): normalmente **10 perguntas**.
-  Abertura das seções, Subsídios, Leitura Semanal e Conclusão não ganham
-  pergunta própria.
+- **1 pergunta para cada subtópico** (`I.1`, `I.2`, `I.3`, `II.1`… até
+  `III.3`): normalmente **9 perguntas**. Texto Bíblico, abertura das seções,
+  Subsídios, Leitura Semanal e Conclusão não ganham pergunta própria.
+- Vale também para subtópico sem versículo (na Lição 6, o II.2): a pergunta é
+  sobre o que a revista diz ali.
 - As perguntas ficam **na ordem da lição** no arquivo; a página mostra nessa
   ordem, com o subtópico (`II.1`) no lugar do número.
-- Formato: `"Leia [Livro por extenso] [cap].[vers]: pergunta?"`, com a
-  referência do jeito que a revista cita ("Leia Tito 1.10,11: …").
-- `resposta` = as palavras **exatas** do versículo, entre aspas curvas “…”.
-  Em trecho com mais de um versículo, acrescentar o número: `(v. 8)`.
-  Aparece no gabarito 🔑 como ✅ Resposta.
-- Subtópico com **mais de um versículo**: escolher 1 (de preferência o mesmo
-  do mapa mental). Sem repetir versículo entre as perguntas.
-- Subtópico **sem versículo** (na Lição 6, o II.2): usar o versículo do Texto
-  Bíblico que o subtópico comenta (Fp 3.2, "maus obreiros"). Nesse caso
-  `topicoOrigem` e `pagina` são os do subtópico, e `refs` aponta a linha do
-  versículo usado (`fp3.2`).
-- Nos outros casos, `topicoOrigem` = mesmo valor do `onde`; `pagina` e `refs`
-  = os da linha usada.
-- `tags` = **as mesmas palavras-chave do versículo** que estão na
-  `listaAparicao` (a resposta fica no campo `resposta`, não nas tags).
-- Todo id em `refs` precisa existir na `listaAparicao`.
-- **Não** copiar as perguntas da Hora da Revisão.
+- Quando a pergunta cita a Bíblia, o livro vai por extenso ("Mateus 7.15").
+- `resposta` = gabarito curto em palavras próprias; aparece no gabarito 🔑
+  como ✅ Resposta. É o campo `resposta` que liga o estilo novo na página.
+- `tags` = 2 a 4 palavras-chave da resposta.
+- `topicoOrigem` = o subtópico (`"II.2"`); `pagina` = a página do subtópico.
+- `refs` = ids dos versículos citados naquele subtópico (podem ser vários).
+  No subtópico sem versículo, o id do versículo que ele comenta (`fp3.2`).
+  Todo id em `refs` precisa existir na `listaAparicao`.
+- **Não** copiar nem repetir as perguntas da Hora da Revisão (elas já estão
+  na revista); escolher outro ângulo do mesmo subtópico.
 
 ---
 
 ## 🔹 Coisas que já ficaram combinadas
 
 - Nada do texto da revista no site (direitos autorais); o título da lição
-  também não entra (fica `Lição N – data`).
+  também não entra (fica `Lição N – data`). As perguntas falam do conteúdo
+  da revista, mas com palavras próprias.
 - Não incluir anotações à mão, marcações de caneta, caixinhas marcadas nem
   respostas escritas pela Alana.
 - Não precisa renomear os prints quando o número da página aparece na foto.
@@ -308,8 +309,8 @@ window.bibliotecaPerguntas["4T2026-licao6"] = [
 
 1. Atualizar o banco `biblioteca/tags-versiculos.js` (referências novas e `usos`).
 2. Validar os `.js` com Node (`window` simulado) e conferir que todos os `refs`
-   das perguntas existem na `listaAparicao`, que as tags saem do texto do
-   versículo e que cada `resposta` está escrita no versículo da pergunta.
+   das perguntas existem na `listaAparicao`, que as tags das referências saem
+   do texto do versículo e que há 1 pergunta por subtópico, na ordem da lição.
 3. Trocar o `?v=` dos scripts no `dominical-v5.html`.
 4. Abrir o `dominical-v5.html` localmente e checar: abre na lição nova,
    hierarquia, diagrama (renderiza sem erro), perguntas, coluna 📍 Onde e
