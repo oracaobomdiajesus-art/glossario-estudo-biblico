@@ -65,8 +65,9 @@ dados/dominical/dados-4T2026-licao6-v5.js):
 
 Não reproduza nada do texto da revista (tem direitos autorais): só o nome
 do bloco, números da seção e do tópico, página, referência e palavras-chave
-do versículo. As perguntas são só sobre o que os versículos dizem, com
-resposta tirada da Bíblia. Não incluir minhas anotações à mão.
+do versículo. Perguntas: 1 sobre o Texto Bíblico e 1 para cada subtópico,
+com a resposta escrita no próprio versículo. Não incluir minhas anotações
+à mão.
 Se tiver dúvida, me diga. Teste a página, faça commit e push na main e me
 passe o link.
 ```
@@ -241,29 +242,49 @@ mindmap
 
 ---
 
-## 🔹 Perguntas (só sobre os versículos)
+## 🔹 Perguntas (1 por subtópico, resposta no versículo)
 
-O tema da lição pode guiar quais versículos perguntar, mas **a pergunta é
-sobre o que o versículo diz**, e a resposta vem do texto bíblico (Almeida).
+**Estilo:** cada pergunta manda ler um versículo e pergunta algo que está
+**escrito nele** (Almeida do site). A resposta são as palavras do próprio
+versículo; não vem da revista nem de explicação.
 
 ```js
 window.bibliotecaPerguntas["4T2026-licao6"] = [
-  { pergunta: "Segundo 2 Timóteo 2.20, que vasos há numa grande casa, e para que uso servem?",
-    topicoOrigem: "I", pagina: 41,
-    tags: "numa grande casa / vasos de ouro e de prata / de madeira e de barro / para uso honroso / para uso desonroso",
-    refs: ["2tm2.20"] },
+  { pergunta: "Leia Filipenses 3.1-11: por causa de quê Paulo tem todas as coisas como perda?",
+    resposta: "“pela excelência do conhecimento de Cristo Jesus, meu Senhor” (v. 8)",
+    topicoOrigem: "Texto Bíblico", pagina: 41,
+    tags: "regozijai-vos no Senhor / acautelai-vos dos maus obreiros / ...",
+    refs: ["fp3.1-11"] },
+  { pergunta: "Leia Apocalipse 22.15: quem ficará de fora?",
+    resposta: "“os cães, os feiticeiros, os adúlteros, os homicidas, os idólatras, e todo o que ama e pratica a mentira”",
+    topicoOrigem: "II.1", pagina: 43,
+    tags: "ficarão de fora os cães / ...",
+    refs: ["ap22.15"] },
   ...
 ];
 ```
 
-- **2 perguntas para cada título (I, II e III)**: **6 perguntas por lição**.
-- Podem usar **qualquer referência daquele título** (abertura, tópicos ou
-  Subsídio), sem repetir versículo. Padrão: 1 sobre o versículo da abertura +
-  1 sobre um tópico; se a abertura não tiver versículo, as 2 vêm dos tópicos.
-- Na pergunta, o livro bíblico vai por extenso ("Romanos 1.17").
-- `topicoOrigem` = mesmo valor do `onde`; `pagina` e `refs` = os da linha usada.
+- **1 pergunta sobre o Texto Bíblico** + **1 pergunta para cada subtópico**
+  (`I.1`, `I.2`, `I.3`, `II.1`… até `III.3`): normalmente **10 perguntas**.
+  Abertura das seções, Subsídios, Leitura Semanal e Conclusão não ganham
+  pergunta própria.
+- As perguntas ficam **na ordem da lição** no arquivo; a página mostra nessa
+  ordem, com o subtópico (`II.1`) no lugar do número.
+- Formato: `"Leia [Livro por extenso] [cap].[vers]: pergunta?"`, com a
+  referência do jeito que a revista cita ("Leia Tito 1.10,11: …").
+- `resposta` = as palavras **exatas** do versículo, entre aspas curvas “…”.
+  Em trecho com mais de um versículo, acrescentar o número: `(v. 8)`.
+  Aparece no gabarito 🔑 como ✅ Resposta.
+- Subtópico com **mais de um versículo**: escolher 1 (de preferência o mesmo
+  do mapa mental). Sem repetir versículo entre as perguntas.
+- Subtópico **sem versículo** (na Lição 6, o II.2): usar o versículo do Texto
+  Bíblico que o subtópico comenta (Fp 3.2, "maus obreiros"). Nesse caso
+  `topicoOrigem` e `pagina` são os do subtópico, e `refs` aponta a linha do
+  versículo usado (`fp3.2`).
+- Nos outros casos, `topicoOrigem` = mesmo valor do `onde`; `pagina` e `refs`
+  = os da linha usada.
 - `tags` = **as mesmas palavras-chave do versículo** que estão na
-  `listaAparicao` (não é a resposta da pergunta, nem explicação).
+  `listaAparicao` (a resposta fica no campo `resposta`, não nas tags).
 - Todo id em `refs` precisa existir na `listaAparicao`.
 - **Não** copiar as perguntas da Hora da Revisão.
 
@@ -287,8 +308,8 @@ window.bibliotecaPerguntas["4T2026-licao6"] = [
 
 1. Atualizar o banco `biblioteca/tags-versiculos.js` (referências novas e `usos`).
 2. Validar os `.js` com Node (`window` simulado) e conferir que todos os `refs`
-   das perguntas existem na `listaAparicao` e que as tags saem do texto do
-   versículo.
+   das perguntas existem na `listaAparicao`, que as tags saem do texto do
+   versículo e que cada `resposta` está escrita no versículo da pergunta.
 3. Trocar o `?v=` dos scripts no `dominical-v5.html`.
 4. Abrir o `dominical-v5.html` localmente e checar: abre na lição nova,
    hierarquia, diagrama (renderiza sem erro), perguntas, coluna 📍 Onde e

@@ -262,6 +262,7 @@
     .contexto-titulo { font-weight: bold; font-size: 13px; margin-bottom: 10px; color: #3b5e3b; background-color: #e8e4d4; padding: 8px; border-radius: 6px; }
     .contexto-versiculo { font-style: italic; background: white; padding: 10px; border-radius: 6px; margin: 10px 0; border: 1px solid #d4c9a6; }
     .contexto-versiculo.loading { color: #999; }
+    .pergunta-onde { display: inline-block; background: #3b5e3b; color: white; font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: 10px; margin-right: 4px; white-space: nowrap; vertical-align: 1px; }
     .btn-ver-mais { background: none; border: none; color: #3b5e3b; font-size: 12px; font-weight: 600; cursor: pointer; padding: 2px 4px; text-decoration: underline; font-style: normal; }
     .contexto-campo { margin-bottom: 10px; font-size: 13px; }
     .contexto-campo strong { color: #5c4a1e; }
@@ -629,8 +630,8 @@
 <script src="biblioteca/motor-contextos.js"></script>
 <script src="biblioteca/legendas-emogis.js"></script>
 <!-- ?v= força o navegador a pegar a versão nova (troque a data ao publicar lição nova) -->
-<script src="biblioteca/perguntas-dominical.js?v=20261108a"></script>
-<script src="biblioteca/mermaid-dominical.js?v=20261108a"></script>
+<script src="biblioteca/perguntas-dominical.js?v=20261108b"></script>
+<script src="biblioteca/mermaid-dominical.js?v=20261108b"></script>
 
 <script>
 // ============================================
@@ -1065,9 +1066,15 @@ function renderizarCardPergunta(p, numero) {
     `<span class="pergunta-ref-badge" onclick="event.stopPropagation();document.getElementById('${r}-contexto')?.scrollIntoView({behavior:'smooth'})">${r}</span>`
   ).join('');
   const textoLimpo = p.pergunta.replace(/^Hora da Revisão\s*—\s*\d+\.\s*/, '');
+  // Estilo novo (pergunta com "resposta" tirada do versículo): mostra o
+  // subtópico da lição (ex.: "II.1") no lugar do número.
+  const rotulo = (p.resposta && p.topicoOrigem)
+    ? `<span class="pergunta-onde">${p.topicoOrigem}</span>`
+    : `${numero}.`;
   return `<div class="pergunta-card">
-    <div class="pergunta-texto">${numero}. ${textoLimpo} <span class="icone-gabarito" id="icone-${id}" onclick="const box=document.getElementById('${id}');box.classList.toggle('aberto');document.getElementById('icone-${id}').textContent=box.classList.contains('aberto')?'🙈':'🔑'" title="Ver/ocultar gabarito">🔑</span></div>
+    <div class="pergunta-texto">${rotulo} ${textoLimpo} <span class="icone-gabarito" id="icone-${id}" onclick="const box=document.getElementById('${id}');box.classList.toggle('aberto');document.getElementById('icone-${id}').textContent=box.classList.contains('aberto')?'🙈':'🔑'" title="Ver/ocultar gabarito">🔑</span></div>
     <div class="gabarito-box" id="${id}">
+      ${p.resposta ? `<div class="gabarito-linha"><strong>✅ Resposta:</strong> ${p.resposta}</div>` : ''}
       <div class="gabarito-linha"><strong>📋 Onde:</strong> ${p.topicoOrigem || '—'}</div>
       <div class="gabarito-linha"><strong>📄 Página:</strong> ${p.pagina}</div>
       <div class="gabarito-linha"><strong>#️⃣ Tags:</strong> ${p.tags}</div>
@@ -1081,8 +1088,12 @@ function renderizarPerguntas(chave) {
   if (!todas || todas.length === 0)
     return `<div class="sem-perguntas">⚠️ Perguntas não disponíveis para esta lição.</div>`;
 
-  const extras  = embaralhar(todas.filter(p => !p.pergunta.startsWith('Hora da Revisão')));
-  const revisao = embaralhar(todas.filter(p =>  p.pergunta.startsWith('Hora da Revisão')));
+  // Estilo novo (1 pergunta por subtópico, com resposta do versículo): segue a
+  // ordem da lição. Lições antigas continuam embaralhadas.
+  const naOrdemDaLicao = todas.some(p => p.resposta);
+  const ordenar = lista => naOrdemDaLicao ? lista : embaralhar(lista);
+  const extras  = ordenar(todas.filter(p => !p.pergunta.startsWith('Hora da Revisão')));
+  const revisao = ordenar(todas.filter(p =>  p.pergunta.startsWith('Hora da Revisão')));
 
   let html = '';
 
