@@ -262,6 +262,7 @@
     .contexto-titulo { font-weight: bold; font-size: 13px; margin-bottom: 10px; color: #3b5e3b; background-color: #e8e4d4; padding: 8px; border-radius: 6px; }
     .contexto-versiculo { font-style: italic; background: white; padding: 10px; border-radius: 6px; margin: 10px 0; border: 1px solid #d4c9a6; }
     .contexto-versiculo.loading { color: #999; }
+    .btn-ver-mais { background: none; border: none; color: #3b5e3b; font-size: 12px; font-weight: 600; cursor: pointer; padding: 2px 4px; text-decoration: underline; font-style: normal; }
     .contexto-campo { margin-bottom: 10px; font-size: 13px; }
     .contexto-campo strong { color: #5c4a1e; }
     .contexto-tags-linha { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0; background-color: #e8e4d4; padding: 6px 8px; border-radius: 4px; }
@@ -627,8 +628,9 @@
 <script src="biblioteca/titulos-biblicos.js"></script>
 <script src="biblioteca/motor-contextos.js"></script>
 <script src="biblioteca/legendas-emogis.js"></script>
-<script src="biblioteca/perguntas-dominical.js"></script>
-<script src="biblioteca/mermaid-dominical.js"></script>
+<!-- ?v= força o navegador a pegar a versão nova (troque a data ao publicar lição nova) -->
+<script src="biblioteca/perguntas-dominical.js?v=20261108a"></script>
+<script src="biblioteca/mermaid-dominical.js?v=20261108a"></script>
 
 <script>
 // ============================================
@@ -903,6 +905,26 @@ function buscarVersiculoLocal(referencia) {
   return encontrados.map(v => `<strong>${v.numero}</strong> ${v.texto}`).join(' ');
 }
 
+// ── "Ver mais" para trechos longos (igual à Teologia v5) ──
+// Referência com mais de LIMITE_VERSICULOS versículos mostra só os
+// primeiros e um botão "ver mais" (ex.: Fp 3.1-11, Mt 23.1-39).
+const LIMITE_VERSICULOS = 3;
+function textoComVerMais(texto) {
+  const partes = String(texto).split(/(?=<strong>\d+<\/strong>)/);
+  if (partes.length <= LIMITE_VERSICULOS) return `"${texto}"`;
+  const inicio = partes.slice(0, LIMITE_VERSICULOS).join('');
+  const resto = partes.slice(LIMITE_VERSICULOS).join('');
+  return `"${inicio}<span class="vm-resto" hidden> ${resto}</span>"` +
+    ` <button type="button" class="btn-ver-mais" onclick="alternarVerMais(this)">ver mais (+${partes.length - LIMITE_VERSICULOS}) ▾</button>`;
+}
+function alternarVerMais(btn) {
+  const resto = btn.parentElement.querySelector('.vm-resto');
+  if (!resto) return;
+  if (!btn.dataset.rotulo) btn.dataset.rotulo = btn.textContent;
+  resto.hidden = !resto.hidden;
+  btn.textContent = resto.hidden ? btn.dataset.rotulo : 'ver menos ▴';
+}
+
 async function buscarVersiculoSemIA(referencia) {
   return filaVersiculos(async () => {
     const resultadoLocal = buscarVersiculoLocal(referencia);
@@ -1046,7 +1068,7 @@ function renderizarCardPergunta(p, numero) {
   return `<div class="pergunta-card">
     <div class="pergunta-texto">${numero}. ${textoLimpo} <span class="icone-gabarito" id="icone-${id}" onclick="const box=document.getElementById('${id}');box.classList.toggle('aberto');document.getElementById('icone-${id}').textContent=box.classList.contains('aberto')?'🙈':'🔑'" title="Ver/ocultar gabarito">🔑</span></div>
     <div class="gabarito-box" id="${id}">
-      <div class="gabarito-linha"><strong>📋 Tópico:</strong> ${p.topicoOrigem || '—'}</div>
+      <div class="gabarito-linha"><strong>📋 Onde:</strong> ${p.topicoOrigem || '—'}</div>
       <div class="gabarito-linha"><strong>📄 Página:</strong> ${p.pagina}</div>
       <div class="gabarito-linha"><strong>#️⃣ Tags:</strong> ${p.tags}</div>
       ${refsHtml ? `<div class="gabarito-linha"><strong>📖 Refs:</strong> <div class="pergunta-refs" style="display:inline-flex;">${refsHtml}</div></div>` : ''}
@@ -1538,11 +1560,14 @@ async function renderizarConteudo(dados) {
   // ── LISTA ALFABÉTICA ──
   if (dados.listaAlfabetica && dados.listaAlfabetica.length > 0) {
     const listaAlf = [...dados.listaAlfabetica];
+    // Lições no modo só Bíblia trazem "onde" (bloco/seção/subtópico da revista)
+    const temOnde = listaAlf.some(i => i.onde);
     html += `<section id="alfabetica"><h2>🔤 Lista Alfabética de Referências</h2>
       <p style="font-size:12px;color:#666;margin-bottom:10px;">📌 ${listaAlf.length} referências únicas</p>
       <table><thead><tr>
         <th class="col-num">1️⃣</th>
         <th class="col-ref">📖</th>
+        ${temOnde ? '<th>📍 Onde</th>' : ''}
         <th>#️⃣ Tags</th>
         <th class="col-pag">📄</th>
       </tr></thead><tbody>`;
@@ -1553,6 +1578,7 @@ async function renderizarConteudo(dados) {
       html += `<tr>
         <td class="col-num">${idx + 1}</td>
         <td class="col-ref">${refLink}</td>
+        ${temOnde ? `<td style="font-size:12px;">${item.onde || ''}</td>` : ''}
         <td>${item.tags || ''}</td>
         <td class="col-pag">${item.pagina || ''}</td>
       </tr>`;
@@ -1672,10 +1698,22 @@ async function renderizarConteudo(dados) {
   const idsVistos = new Set();
   const idsParaRenderizar = [];
   const referenciaPorId = new Map(listaRef.filter(i => i.id).map(i => [i.id, i.referencia]));
+  // 1 card por referência bíblica (o versículo é o mesmo); as outras
+  // aparições da mesma referência (ex.: gl5.9b) viram âncoras dentro dele.
+  const cardPorReferencia = new Map();
+  const ancorasExtras = {};
 
   listaRef.forEach(item => {
     if (!item.id || idsVistos.has(item.id)) return;
     idsVistos.add(item.id);
+    const refNorm = (item.referencia || '').trim().toLowerCase();
+    if (refNorm && cardPorReferencia.has(refNorm)) {
+      const idCard = cardPorReferencia.get(refNorm);
+      if (!ancorasExtras[idCard]) ancorasExtras[idCard] = [];
+      ancorasExtras[idCard].push(item.id);
+      return;
+    }
+    if (refNorm) cardPorReferencia.set(refNorm, item.id);
     idsParaRenderizar.push(item.id);
   });
 
@@ -1808,6 +1846,11 @@ else if (locaisDaLicaoAtual.length > 0) {
           <a href="#hierarquia" title="Hierarquia">📋</a>
         </div>`;
     }
+    // Âncoras das outras aparições da mesma referência (links da hierarquia,
+    // da lista alfabética e das perguntas continuam funcionando)
+    (ancorasExtras[id] || []).forEach(idExtra => {
+      card.insertAdjacentHTML('afterbegin', `<span id="${idExtra}-contexto"></span>`);
+    });
     containerCtx.appendChild(card);
   });
 
@@ -1844,7 +1887,7 @@ async function buscarTodosVersiculos(refsUnicas, somenteFalhas = false) {
     el.classList.remove('loading');
     if (texto) {
       el.classList.add('ok');
-      el.innerHTML = `<strong>✝️ ${item.referencia}:</strong><br>"${texto}"`;
+      el.innerHTML = `<strong>✝️ ${item.referencia}:</strong><br>${textoComVerMais(texto)}`;
     } else {
       el.innerHTML = `<em style="color:#c62828;">Não encontrado na Bíblia local nem na bible-api.com.</em>
         <br><button onclick="tentarComIA('${item.id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#3b5e3b;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar com IA (Groq/Mistral)</button>`;
@@ -1870,7 +1913,7 @@ async function tentarComIA(id) {
   el.classList.remove('loading');
   if (texto) {
     el.classList.add('ok');
-    el.innerHTML = `<strong>✝️ ${item.referencia} <span style="font-size:11px;color:#999;font-weight:400;">(via IA)</span>:</strong><br>"${texto}"`;
+    el.innerHTML = `<strong>✝️ ${item.referencia} <span style="font-size:11px;color:#999;font-weight:400;">(via IA)</span>:</strong><br>${textoComVerMais(texto)}`;
   } else {
     el.innerHTML = `<em style="color:#c62828;">A IA também não conseguiu buscar. Verifique as chaves configuradas.</em>
       <br><button onclick="tentarComIA('${id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#3b5e3b;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar novamente com IA</button>`;
@@ -1945,21 +1988,26 @@ function salvarDelay() {
 // ============================================
 // LIÇÕES DISPONÍVEIS NA V4
 // ============================================
+// O trimestre mais recente vem primeiro e abre por padrão;
+// dentro dele, abre a lição mais recente (a última da lista).
 const licoesDisponiveisV4 = {
+  "4T2026": [6],
   "3T2026": [7, 13]
 };
 
 function popularSeletoresV4() {
   const selTrimestre = document.getElementById('seletorTrimestre');
   const selLicao = document.getElementById('seletorLicao');
-  const nomesTrimestre = { "3T2026": "3º Trimestre 2026", "2T2026": "2º Trimestre 2026" };
+  const nomesTrimestre = { "4T2026": "4º Trimestre 2026", "3T2026": "3º Trimestre 2026", "2T2026": "2º Trimestre 2026" };
 
   selTrimestre.innerHTML = Object.keys(licoesDisponiveisV4)
     .map(t => `<option value="${t}">${nomesTrimestre[t] || t}</option>`).join('');
+  selTrimestre.value = "4T2026";
 
   function popularLicoes() {
     const licoes = licoesDisponiveisV4[selTrimestre.value] || [];
     selLicao.innerHTML = licoes.map(n => `<option value="${n}">Lição ${n}</option>`).join('');
+    if (licoes.length) selLicao.value = String(licoes[licoes.length - 1]);
   }
   selTrimestre.addEventListener('change', () => { popularLicoes(); carregarLicao(); });
   popularLicoes();

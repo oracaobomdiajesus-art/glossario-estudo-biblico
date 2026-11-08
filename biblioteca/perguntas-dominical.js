@@ -772,3 +772,16 @@ window.bibliotecaPerguntas["3T2026-licao13"] = [
     refs: ["2sm7.12-16"]
   }
 ];
+
+// ── 4º Trimestre 2026 · Lição 6 — modo só Bíblia ──
+// 2 perguntas por título (I, II, III), só sobre o que o versículo diz;
+// tags = as mesmas palavras-chave do versículo da listaAparicao.
+// As perguntas da Hora da Revisão da revista não são copiadas.
+window.bibliotecaPerguntas["4T2026-licao6"] = [
+  { pergunta: "Segundo 2 Timóteo 2.20, que vasos há numa grande casa, e para que uso servem?", topicoOrigem: "I", pagina: 41, tags: "numa grande casa / vasos de ouro e de prata / de madeira e de barro / para uso honroso / para uso desonroso", refs: ["2tm2.20"] },
+  { pergunta: "Segundo Mateus 7.15, como os falsos profetas vêm até nós, e o que são por dentro?", topicoOrigem: "I.2", pagina: 42, tags: "guardai-vos dos falsos profetas / disfarçados em ovelhas / interiormente são lobos devoradores", refs: ["mt7.15"] },
+  { pergunta: "Segundo Apocalipse 22.15, quem ficará de fora?", topicoOrigem: "II.1", pagina: 43, tags: "ficarão de fora os cães / os feiticeiros, os adúlteros, os homicidas, os idólatras / todo o que ama e pratica a mentira", refs: ["ap22.15"] },
+  { pergunta: "Segundo Filipenses 3.3, quem é a circuncisão, e em que não confiamos?", topicoOrigem: "II.3", pagina: 43, tags: "a circuncisão somos nós / servimos a Deus em espírito / nos gloriamos em Cristo Jesus / não confiamos na carne", refs: ["fp3.3a"] },
+  { pergunta: "Segundo Gálatas 5.9, o que um pouco de fermento faz com a massa?", topicoOrigem: "III", pagina: 44, tags: "um pouco de fermento / leveda a massa toda", refs: ["gl5.9b"] },
+  { pergunta: "Segundo Tito 1.10,11, por que é preciso tapar a boca dos enganadores?", topicoOrigem: "III.3", pagina: 45, tags: "muitos insubordinados, faladores vãos e enganadores / especialmente os da circuncisão / é preciso tapar a boca / transtornam casas inteiras / por torpe ganância", refs: ["tt1.10-11a"] }
+];

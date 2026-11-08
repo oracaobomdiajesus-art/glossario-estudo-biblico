@@ -266,3 +266,33 @@ window.bibliotecaMermaid["3T2026-licao13"] = `mindmap
         Igreja como instrumento do Senhor
         Cristo reinará em plenitude
 `;
+
+// ── 4º Trimestre 2026 · Lição 6 (modo só Bíblia: 1 versículo por ramo,
+//    2 níveis — referência e, logo abaixo, palavras do próprio versículo) ──
+window.bibliotecaMermaid["4T2026-licao6"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+mindmap
+  root((Lição 6 · 8 nov 2026))
+    Texto Principal · Fp 3.2
+      acautelai-vos dos maus obreiros
+    Seção I · 2 Tm 2.20
+      numa grande casa
+      I.1 · Lv 10.1,2
+        fogo estranho
+      I.2 · Mt 7.15
+        lobos devoradores
+      I.3 · At 20.29,30
+        dentre vós mesmos
+    Seção II
+      II.1 · Ap 22.15
+        ficarão de fora os cães
+      II.3 · Fp 3.3
+        a circuncisão somos nós
+    Seção III · Gl 5.9
+      um pouco de fermento
+      III.1 · 2 Tm 4.3
+        ajuntarão para si mestres
+      III.2 · Gn 3.5
+        sereis como Deus
+      III.3 · Tt 1.10,11
+        transtornam casas inteiras
+`;

@@ -1,10 +1,11 @@
 // ============================================
-// BANCO DE TAGS DOS VERSÍCULOS — Teologia Descomplicada para Jovens (v5)
+// BANCO DE TAGS DOS VERSÍCULOS — Teologia v5 e Escola Dominical v5
 //
 // Uma entrada por referência bíblica, do jeito que a apostila cita.
 //   tags  = palavras-chave do PRÓPRIO versículo (Almeida), separadas por " / "
 //   mapa  = palavra curta do sub-ramo do mapa mental (quando já existe)
-//   usos  = capítulos onde a referência já apareceu (livro-capítulo)
+//   usos  = onde a referência já apareceu: capítulo da teologia (lv8-cp1)
+//           ou lição da dominical (4T2026-licao6)
 //
 // REGRA: antes de criar tags para um capítulo novo, procure a referência
 // aqui e use exatamente o que está no banco. Só versículos que ainda não
@@ -12,7 +13,8 @@
 // O mesmo versículo tem sempre as mesmas tags no site todo.
 //
 // Este arquivo é consulta de trabalho; a página não precisa carregá-lo.
-// Gerado a partir dos Livros 7 e 8 (473 referências).
+// Gerado a partir dos Livros 7 e 8 da Teologia e da Lição 6 (4T2026)
+// da Escola Dominical (514 referências).
 // ============================================
 
 window.bancoTagsVersiculos = {
@@ -25,6 +27,7 @@ window.bancoTagsVersiculos = {
   "Gn 3.1-6": { tags: "serpente astuta / árvore do jardim / certamente não morrereis / sereis como Deus / comeu e deu ao marido", mapa: "serpente astuta", usos: ["lv7-cp1","lv7-cp2"] },
   "Gn 3.4": { tags: "a serpente à mulher / certamente não morrereis", usos: ["lv7-cp3"] },
   "Gn 3.4-6": { tags: "certamente não morrereis / olhos se abrirão / sereis como Deus / tomou do fruto e comeu", usos: ["lv7-cp2"] },
+  "Gn 3.5": { tags: "vossos olhos se abrirão / sereis como Deus / conhecendo o bem e o mal", mapa: "sereis como Deus", usos: ["4T2026-licao6"] },
   "Gn 3.6": { tags: "árvore boa para comer / agradável aos olhos / desejável / comeu e deu ao marido", usos: ["lv7-cp2","lv7-cp3"] },
   "Gn 3.8-10": { tags: "voz do Senhor no jardim / esconderam-se / onde estás? / tive medo, estava nu", mapa: "esconderam-se", usos: ["lv7-cp1","lv7-cp6"] },
   "Gn 3.9": { tags: "chamou o Senhor Deus ao homem / onde estás?", mapa: "onde estás", usos: ["lv8-cp5"] },
@@ -46,6 +49,7 @@ window.bancoTagsVersiculos = {
   "Êx 17.15": { tags: "Moisés edificou um altar / Jeová-Níssi", usos: ["lv8-cp2"] },
   "Êx 20.4-5": { tags: "não farás para ti imagem esculpida / não te encurvarás diante delas / Deus zeloso", usos: ["lv8-cp1"] },
   "Êx 23.2": { tags: "não seguirás a multidão para o mal / acompanhando a maioria / perverter a justiça", mapa: "não seguirás a multidão", usos: ["lv7-cp3"] },
+  "Lv 10.1,2": { tags: "Nadabe e Abiú / ofereceram fogo estranho perante o Senhor / saiu fogo de diante do Senhor e os devorou", mapa: "fogo estranho", usos: ["4T2026-licao6"] },
   "Nm 15.27-31": { tags: "pecar sem querer / expiação / será perdoada / temerariamente / blasfema ao Senhor / será extirpada", mapa: "pecar sem querer", usos: ["lv7-cp2"] },
   "Nm 23.19": { tags: "Deus não é homem, para que minta / tendo ele dito, não o fará", mapa: "Deus não é homem para que minta", usos: ["lv8-cp2"] },
   "Dt 4.15-16": { tags: "não vistes forma alguma / do meio do fogo / alguma imagem esculpida", usos: ["lv8-cp1"] },
@@ -54,6 +58,8 @@ window.bancoTagsVersiculos = {
   "Js 7.1,20-26": { tags: "Acã / anátema / cobicei e tomei / escondidos na tenda / vale de Acor / todo Israel o apedrejou", mapa: "Acã e o anátema", usos: ["lv7-cp3"] },
   "Jz 6.24": { tags: "Gideão edificou ali um altar ao Senhor / Jeová-Salom", usos: ["lv8-cp2"] },
   "1 Sm 1.10-16": { tags: "com amargura de alma orou ao Senhor / Ana falava no seu coração / derramei a minha alma perante o Senhor", usos: ["lv8-cp6"] },
+  "1 Sm 2.12-17,22-25": { tags: "os filhos de Eli eram homens ímpios / não conheciam ao Senhor / muito grande o pecado destes mancebos / não ouviram a voz de seu pai", usos: ["4T2026-licao6"] },
+  "1 Sm 8.3": { tags: "não andaram nos caminhos dele / desviaram-se após o lucro / recebendo peitas / perverteram a justiça", usos: ["4T2026-licao6"] },
   "1 Sm 15.22-23": { tags: "o obedecer é melhor do que o sacrificar / rejeitaste a palavra do Senhor / ele também te rejeitou", usos: ["lv8-cp6"] },
   "1 Sm 16.7": { tags: "Samuel / não atentes para a aparência / o homem vê o que está diante dos olhos / o Senhor olha para o coração", mapa: "o Senhor olha o coração", usos: ["lv7-cp2"] },
   "1 Sm 16.11-13": { tags: "ainda falta o menor / apascentando as ovelhas / levanta-te, e unge-o / o Espírito do Senhor se apoderou de Davi", mapa: "ainda falta o menor", usos: ["lv8-cp3"] },
@@ -151,6 +157,7 @@ window.bancoTagsVersiculos = {
   "Ez 36.26-27": { tags: "coração novo / espírito novo / coração de pedra / coração de carne / porei o meu Espírito / andeis nos meus estatutos", mapa: "coração novo", usos: ["lv7-cp4"] },
   "Dn 2.21": { tags: "ele muda os tempos e as estações / remove os reis e estabelece os reis / dá a sabedoria aos sábios", mapa: "muda os tempos e as estações", usos: ["lv8-cp3"] },
   "Dn 4.35": { tags: "segundo a sua vontade ele opera / não há quem lhe possa deter a mão / nem lhe dizer: Que fazes?", mapa: "quem lhe possa deter a mão", usos: ["lv8-cp3"] },
+  "Dn 12.3": { tags: "os que forem sábios / resplandecerão como o fulgor do firmamento / os que converterem a muitos para a justiça / como as estrelas", usos: ["4T2026-licao6"] },
   "Os 6.3": { tags: "conheçamos / prossigamos em conhecer ao Senhor / como a alva / como a chuva", usos: ["lv8-cp1"] },
   "Am 2.6-8": { tags: "três e quatro transgressões de Israel / vendem o justo por dinheiro / pisam a cabeça dos pobres", usos: ["lv7-cp2"] },
   "Am 5.11-12": { tags: "pisais o pobre / casas de pedras lavradas / afligis o justo / aceitais peitas / negais o direito", usos: ["lv7-cp3"] },
@@ -167,15 +174,20 @@ window.bancoTagsVersiculos = {
   "Mt 1.21": { tags: "dará à luz um filho / chamarás Jesus / salvará o seu povo dos seus pecados", usos: ["lv7-cp1"] },
   "Mt 3.8": { tags: "produzi frutos dignos de arrependimento", mapa: "frutos de arrependimento", usos: ["lv7-cp5"] },
   "Mt 3.16-17": { tags: "batizado que foi Jesus / o Espírito de Deus descendo como uma pomba / este é o meu Filho amado", mapa: "este é o meu Filho amado", usos: ["lv8-cp4"] },
+  "Mt 4.9": { tags: "tudo isto te darei / se, prostrado, me adorares", usos: ["4T2026-licao6"] },
   "Mt 5.23-24": { tags: "oferta no altar / teu irmão tem alguma coisa contra ti / vai conciliar-te primeiro com teu irmão", usos: ["lv7-cp5"] },
   "Mt 5.44-45": { tags: "amai aos vossos inimigos / orai pelos que vos perseguem / filhos do vosso Pai que está nos céus", usos: ["lv8-cp5"] },
   "Mt 6.9": { tags: "orai deste modo / Pai nosso que estás nos céus / santificado seja o teu nome", usos: ["lv7-cp4"] },
   "Mt 6.9,31-32": { tags: "Pai nosso que estás nos céus / santificado seja o teu nome / não vos inquieteis / vosso Pai celestial sabe", usos: ["lv8-cp5"] },
   "Mt 6.33": { tags: "buscai primeiro o seu reino / e a sua justiça / todas estas coisas vos serão acrescentadas", mapa: "buscai primeiro o seu reino", usos: ["lv8-cp5"] },
+  "Mt 7.15": { tags: "guardai-vos dos falsos profetas / disfarçados em ovelhas / interiormente são lobos devoradores", mapa: "lobos devoradores", usos: ["4T2026-licao6"] },
   "Mt 10.29-30": { tags: "dois passarinhos por um asse / sem a vontade de vosso Pai / os cabelos da vossa cabeça estão todos contados", usos: ["lv8-cp2"] },
   "Mt 10.29-31": { tags: "dois passarinhos por um asse / os cabelos da vossa cabeça estão todos contados / não temais / mais valeis vós", usos: ["lv8-cp2","lv8-cp3"] },
   "Mt 11.21-24": { tags: "ai de ti Corazim e Betsaida / Tiro e Sidom / Cafarnaum / menos rigor no dia do juízo / Sodoma", mapa: "menos rigor no juízo", usos: ["lv7-cp2"] },
+  "Mt 13.24-28,36-43": { tags: "semeou boa semente no seu campo / veio o inimigo dele, semeou joio no meio do trigo / o joio são os filhos do maligno / os justos resplandecerão como o sol", usos: ["4T2026-licao6"] },
   "Mt 18.6-7": { tags: "fazer tropeçar os pequeninos / pedra de moinho / ai do mundo por causa dos tropeços", mapa: "fazer tropeçar os pequeninos", usos: ["lv7-cp3"] },
+  "Mt 23.1-39": { tags: "dizem e não praticam / ai de vós, escribas e fariseus, hipócritas / guias cegos / sepulcros caiados / serpentes, raça de víboras", usos: ["4T2026-licao6"] },
+  "Mt 24.11,24": { tags: "hão de surgir muitos falsos profetas / enganarão a muitos / falsos cristos e falsos profetas / enganariam até os escolhidos", usos: ["4T2026-licao6"] },
   "Mt 27.20-26": { tags: "multidões pediram Barrabás / Pilatos / seja crucificado / lavou as mãos / soltou Barrabás", usos: ["lv7-cp3"] },
   "Mt 28.19": { tags: "fazei discípulos de todas as nações / batizando-os em nome do Pai, e do Filho, e do Espírito Santo", mapa: "em nome do Pai, do Filho e do Espírito Santo", usos: ["lv8-cp4"] },
   "Mc 1.15": { tags: "o tempo está cumprido / é chegado o reino de Deus / arrependei-vos e crede no evangelho", mapa: "arrependei-vos e crede", usos: ["lv7-cp5"] },
@@ -248,7 +260,9 @@ window.bancoTagsVersiculos = {
   "At 16.31": { tags: "crê no Senhor Jesus / e serás salvo / tu e tua casa", mapa: "crê no Senhor Jesus", usos: ["lv7-cp5"] },
   "At 17.25,28": { tags: "ele mesmo é quem dá a todos a vida, a respiração / nele vivemos, e nos movemos, e existimos", mapa: "nele vivemos", usos: ["lv8-cp1"] },
   "At 20.21": { tags: "judeus e gregos / arrependimento para com Deus / fé em nosso Senhor Jesus", usos: ["lv7-cp5"] },
+  "At 20.29,30": { tags: "lobos cruéis / não pouparão rebanho / dentre vós mesmos se levantarão homens / falando coisas perversas", mapa: "dentre vós mesmos", usos: ["4T2026-licao6"] },
   "At 26.20": { tags: "Damasco e Jerusalém / se arrependessem e se convertessem a Deus / obras dignas de arrependimento", usos: ["lv7-cp5"] },
+  "Rm 1.17": { tags: "no evangelho é revelada / de fé em fé / a justiça de Deus / o justo viverá da fé", usos: ["4T2026-licao6"] },
   "Rm 1.19-20": { tags: "o que de Deus se pode conhecer / atributos invisíveis / eterno poder e divindade / percebidos mediante as coisas criadas", usos: ["lv8-cp1"] },
   "Rm 1.21-22": { tags: "conheceram a Deus e não o glorificaram / coração insensato obscurecido / dizendo-se sábios, tornaram-se estultos", mapa: "coração insensato obscurecido", usos: ["lv7-cp2"] },
   "Rm 1.24-25": { tags: "Deus os entregou às concupiscências / trocaram a verdade de Deus pela mentira / serviram à criatura antes que ao Criador", usos: ["lv7-cp6"] },
@@ -259,6 +273,8 @@ window.bancoTagsVersiculos = {
   "Rm 2.6": { tags: "retribuirá a cada um / segundo as suas obras", usos: ["lv7-cp2"] },
   "Rm 2.6-11": { tags: "retribuirá a cada um segundo as suas obras / glória, honra e paz a todo aquele que pratica o bem / não há acepção de pessoas", usos: ["lv8-cp2"] },
   "Rm 2.14-16": { tags: "a obra da lei escrita em seus corações / testificando juntamente a sua consciência / Deus há de julgar os segredos dos homens", mapa: "lei escrita nos corações", usos: ["lv8-cp1"] },
+  "Rm 2.25-29": { tags: "a circuncisão é, na verdade, proveitosa / se guardares a lei / não é judeu o que o é exteriormente / circuncisão é a do coração / no espírito, e não na letra", usos: ["4T2026-licao6"] },
+  "Rm 2.29": { tags: "é judeu aquele que o é interiormente / circuncisão é a do coração / no espírito, e não na letra", usos: ["4T2026-licao6"] },
   "Rm 3.19,23-24": { tags: "cale toda boca / juízo de Deus / todos pecaram / justificados gratuitamente pela graça / redenção", usos: ["lv7-cp1"] },
   "Rm 3.20": { tags: "obras da lei / ninguém justificado / pela lei o conhecimento do pecado", usos: ["lv7-cp1"] },
   "Rm 3.23": { tags: "todos pecaram / destituídos da glória de Deus", mapa: "todos pecaram", usos: ["lv7-cp1","lv7-cp2"] },
@@ -312,6 +328,7 @@ window.bancoTagsVersiculos = {
   "Rm 14.13": { tags: "não nos julguemos / não pôr tropeço ou escândalo ao irmão", usos: ["lv7-cp3"] },
   "1 Co 1.2": { tags: "igreja de Deus em Corinto / santificados em Cristo Jesus / chamados para serem santos / invocam o nome do Senhor", mapa: "santificados em Cristo", usos: ["lv7-cp5"] },
   "1 Co 5.6": { tags: "jactância / um pouco de fermento / leveda a massa toda", mapa: "pouco fermento", usos: ["lv7-cp3"] },
+  "1 Co 6.9-10": { tags: "os injustos não herdarão o reino de Deus / não vos enganeis / nem os idólatras, nem os adúlteros / nem os ladrões, nem os avarentos", usos: ["4T2026-licao6"] },
   "1 Co 6.11": { tags: "tais fostes alguns de vós / fostes lavados, santificados e justificados / no Espírito do nosso Deus", usos: ["lv7-cp5"] },
   "1 Co 6.19-20": { tags: "o corpo é santuário do Espírito Santo / não sois de vós mesmos / comprados por preço / glorificai a Deus", mapa: "comprados por preço", usos: ["lv7-cp4","lv8-cp5"] },
   "1 Co 8.4": { tags: "o ídolo nada é no mundo / não há outro Deus, senão um só", mapa: "não há outro Deus", usos: ["lv8-cp4"] },
@@ -335,20 +352,26 @@ window.bancoTagsVersiculos = {
   "2 Co 7.5-7": { tags: "em tudo fomos atribulados / Deus, que consola os abatidos / nos consolou com a vinda de Tito", usos: ["lv8-cp6"] },
   "2 Co 7.9-10": { tags: "contristados para o arrependimento / tristeza segundo Deus / arrependimento para a salvação / tristeza do mundo opera a morte", mapa: "tristeza segundo Deus", usos: ["lv7-cp5"] },
   "2 Co 11.3": { tags: "a serpente enganou Eva com astúcia / entendimentos corrompidos / simplicidade e pureza em Cristo", usos: ["lv7-cp2"] },
+  "2 Co 11.15": { tags: "os seus ministros se disfarcem em ministros da justiça / o fim dos quais será conforme as suas obras", usos: ["4T2026-licao6"] },
   "2 Co 12.8-10": { tags: "três vezes roguei ao Senhor / a minha graça te basta / o poder se aperfeiçoa na fraqueza / quando estou fraco, então sou forte", mapa: "a minha graça te basta", usos: ["lv8-cp6"] },
   "2 Co 12.9": { tags: "a minha graça te basta / o poder se aperfeiçoa na fraqueza / gloriarei nas minhas fraquezas", usos: ["lv7-cp6"] },
   "2 Co 13.13": { tags: "a graça do Senhor Jesus Cristo / o amor de Deus / a comunhão do Espírito Santo", mapa: "graça, amor e comunhão", usos: ["lv8-cp4"] },
+  "Gl 1.9": { tags: "se alguém vos pregar outro evangelho / além do que já recebestes / seja anátema", usos: ["4T2026-licao6"] },
+  "Gl 2.4": { tags: "falsos irmãos intrusos / furtivamente entraram a espiar a nossa liberdade / para nos escravizar", usos: ["4T2026-licao6"] },
   "Gl 2.11-14": { tags: "Cefas em Antioquia / resisti-lhe na cara / comia com os gentios / dissimularam / não andavam retamente", mapa: "Cefas em Antioquia", usos: ["lv7-cp6"] },
+  "Gl 2.12": { tags: "alguns da parte de Tiago / comia com os gentios / se apartava deles / temendo os que eram da circuncisão", usos: ["4T2026-licao6"] },
   "Gl 2.16": { tags: "não justificado por obras da lei / pela fé em Cristo Jesus / nenhuma carne será justificada", mapa: "não por obras da lei", usos: ["lv7-cp4"] },
   "Gl 4.4-5": { tags: "plenitude dos tempos / Deus enviou seu Filho / nascido de mulher / debaixo de lei / adoção de filhos", mapa: "plenitude dos tempos", usos: ["lv7-cp4","lv8-cp3"] },
   "Gl 4.4-7": { tags: "plenitude dos tempos / adoção de filhos / Espírito de seu Filho clama: Aba, Pai / não mais servo, mas filho", usos: ["lv8-cp5"] },
   "Gl 4.6": { tags: "porque sois filhos / Espírito de seu Filho / clama: Aba, Pai", usos: ["lv7-cp4","lv8-cp5"] },
   "Gl 4.6-7": { tags: "porque sois filhos / Espírito de seu Filho / Aba, Pai / não mais servo, mas filho / herdeiro por Deus", usos: ["lv7-cp4"] },
   "Gl 4.7": { tags: "não mais servo, mas filho / se és filho, és também herdeiro por Deus", usos: ["lv7-cp4"] },
+  "Gl 5.9": { tags: "um pouco de fermento / leveda a massa toda", mapa: "um pouco de fermento", usos: ["4T2026-licao6"] },
   "Gl 5.16": { tags: "andai pelo Espírito / não cumprireis a cobiça da carne", usos: ["lv7-cp2"] },
   "Gl 5.16-17": { tags: "andai pelo Espírito / cobiça da carne / a carne luta contra o Espírito", usos: ["lv7-cp2"] },
   "Gl 5.16,22-25": { tags: "andai pelo Espírito / fruto do Espírito: amor, gozo, paz / domínio próprio / crucificaram a carne / vivemos pelo Espírito", mapa: "fruto do Espírito", usos: ["lv7-cp5"] },
   "Gl 5.17": { tags: "a carne luta contra o Espírito / o Espírito contra a carne / opõem-se um ao outro", mapa: "carne contra o Espírito", usos: ["lv7-cp3"] },
+  "Gl 5.19-21": { tags: "as obras da carne são manifestas / a idolatria, a feitiçaria / as facções, as dissensões / não herdarão o reino de Deus", usos: ["4T2026-licao6"] },
   "Gl 5.22-23": { tags: "o fruto do Espírito / amor, gozo, paz / longanimidade, benignidade, bondade / fidelidade, mansidão, domínio próprio", mapa: "o fruto do Espírito", usos: ["lv8-cp5"] },
   "Gl 6.2": { tags: "levai as cargas uns dos outros / cumprireis a lei de Cristo", mapa: "levai as cargas uns dos outros", usos: ["lv8-cp6"] },
   "Gl 6.7": { tags: "não vos enganeis / Deus não se deixa escarnecer / o que o homem semear, isso também ceifará", usos: ["lv8-cp3"] },
@@ -378,10 +401,18 @@ window.bancoTagsVersiculos = {
   "Ef 4.30": { tags: "não entristeçais o Espírito Santo / selados para o dia da redenção", mapa: "não entristeçais o Espírito", usos: ["lv7-cp4","lv8-cp4"] },
   "Ef 4.32": { tags: "sede bondosos uns para com os outros / compassivos / perdoando-vos / como Deus vos perdoou em Cristo", mapa: "perdoando-vos uns aos outros", usos: ["lv8-cp6"] },
   "Ef 5.1-2": { tags: "sede imitadores de Deus / como filhos amados / andai em amor, como Cristo vos amou", mapa: "imitadores de Deus", usos: ["lv8-cp5"] },
+  "Ef 5.5-6": { tags: "nenhum devasso, ou impuro, ou avarento / herança no reino de Cristo e de Deus / ninguém vos engane com palavras vãs / a ira de Deus sobre os filhos da desobediência", usos: ["4T2026-licao6"] },
   "Fp 1.9-10": { tags: "amor aumente / pleno conhecimento e discernimento / aproveis as coisas excelentes / sinceros até o dia de Cristo", usos: ["lv7-cp3"] },
+  "Fp 1.15-17": { tags: "alguns pregam a Cristo até por inveja e contenda / outros o fazem de boa mente / por contenda anunciam a Cristo, não sinceramente", usos: ["4T2026-licao6"] },
+  "Fp 1.17": { tags: "por contenda anunciam a Cristo / não sinceramente / suscitar aflição às minhas prisões", usos: ["4T2026-licao6"] },
   "Fp 2.6-8": { tags: "subsistindo em forma de Deus / esvaziou-se a si mesmo / forma de servo / obediente até a morte, e morte de cruz", mapa: "forma de servo", usos: ["lv8-cp4"] },
   "Fp 2.12-13": { tags: "efetuai a vossa salvação com temor e tremor / Deus opera em vós o querer e o efetuar / boa vontade", mapa: "Deus opera o querer", usos: ["lv7-cp5"] },
+  "Fp 3.1-11": { tags: "regozijai-vos no Senhor / acautelai-vos dos maus obreiros / a circuncisão somos nós / como perda por amor de Cristo / a justiça que vem de Deus pela fé / o poder da sua ressurreição", usos: ["4T2026-licao6"] },
+  "Fp 3.2": { tags: "acautelai-vos dos cães / acautelai-vos dos maus obreiros / acautelai-vos da falsa circuncisão", mapa: "acautelai-vos dos maus obreiros", usos: ["4T2026-licao6"] },
+  "Fp 3.3": { tags: "a circuncisão somos nós / servimos a Deus em espírito / nos gloriamos em Cristo Jesus / não confiamos na carne", mapa: "a circuncisão somos nós", usos: ["4T2026-licao6"] },
+  "Fp 3.4": { tags: "eu poderia até confiar na carne / ainda mais eu", usos: ["4T2026-licao6"] },
   "Fp 3.8-10": { tags: "excelência do conhecimento de Cristo Jesus / para que possa ganhar a Cristo / para conhecê-lo / o poder da sua ressurreição", mapa: "para conhecê-lo", usos: ["lv8-cp1"] },
+  "Fp 3.9": { tags: "seja achado nele / não tendo como minha justiça a que vem da lei / a justiça que vem de Deus pela fé", usos: ["4T2026-licao6"] },
   "Fp 3.12": { tags: "não que já a tenha alcançado / ou que seja perfeito / vou prosseguindo / alcançado por Cristo Jesus", mapa: "ainda não perfeito", usos: ["lv7-cp6"] },
   "Fp 3.12-14": { tags: "não que seja perfeito / vou prosseguindo / esquecendo o que fica atrás / prossigo para o alvo", usos: ["lv7-cp6"] },
   "Fp 3.13-14": { tags: "não julgo que o haja alcançado / esquecendo-me das coisas que atrás ficam / prossigo para o alvo / prêmio da vocação celestial", usos: ["lv7-cp6"] },
@@ -392,6 +423,7 @@ window.bancoTagsVersiculos = {
   "Cl 1.17": { tags: "ele é antes de todas as coisas / nele subsistem todas as coisas", usos: ["lv8-cp1"] },
   "Cl 2.6-7": { tags: "assim como recebestes a Cristo / nele andai / arraigados e edificados nele / confirmados na fé", usos: ["lv8-cp6"] },
   "Cl 2.9": { tags: "nele habita corporalmente / toda a plenitude da divindade", mapa: "toda a plenitude da divindade", usos: ["lv8-cp4"] },
+  "Cl 2.11": { tags: "fostes circuncidados / circuncisão não feita por mãos / no despojar do corpo da carne / a circuncisão de Cristo", usos: ["4T2026-licao6"] },
   "Cl 2.13-14": { tags: "mortos nos delitos / vivificou com ele / perdoando todos os delitos / riscado o escrito de dívida / cravando-o na cruz", mapa: "dívida cravada na cruz", usos: ["lv7-cp2"] },
   "Cl 2.15": { tags: "despojado os principados e potestades / exibiu publicamente / triunfou na cruz", usos: ["lv7-cp2"] },
   "Cl 3.1-3": { tags: "ressuscitados com Cristo / coisas de cima / destra de Deus / vida escondida com Cristo", usos: ["lv7-cp1"] },
@@ -409,11 +441,19 @@ window.bancoTagsVersiculos = {
   "1 Tm 2.5": { tags: "há um só Deus / um só Mediador entre Deus e os homens / Cristo Jesus, homem", usos: ["lv8-cp6"] },
   "1 Tm 2.5-6": { tags: "um só Deus / um só Mediador / Cristo Jesus homem / resgate por todos", usos: ["lv7-cp1"] },
   "1 Tm 4.2": { tags: "hipocrisia / falam mentiras / consciência cauterizada", mapa: "consciência cauterizada", usos: ["lv7-cp3"] },
+  "1 Tm 6.3-5": { tags: "alguma doutrina diversa / as sãs palavras de nosso Senhor Jesus Cristo / é soberbo, e nada sabe / a piedade é fonte de lucro", usos: ["4T2026-licao6"] },
   "2 Tm 2.13": { tags: "se somos infiéis, ele permanece fiel / não pode negar-se a si mesmo", mapa: "ele permanece fiel", usos: ["lv8-cp2"] },
+  "2 Tm 2.20": { tags: "numa grande casa / vasos de ouro e de prata / de madeira e de barro / para uso honroso / para uso desonroso", mapa: "numa grande casa", usos: ["4T2026-licao6"] },
   "2 Tm 2.24-25": { tags: "o servo do Senhor não convém contender / brando para com todos / corrigindo com mansidão", usos: ["lv8-cp6"] },
+  "2 Tm 3.5": { tags: "aparência de piedade / negando-lhe o poder / afasta-te também desses", usos: ["4T2026-licao6"] },
   "2 Tm 3.16": { tags: "toda Escritura é divinamente inspirada / proveitosa para ensinar", usos: ["lv8-cp1"] },
   "2 Tm 3.16-17": { tags: "toda Escritura é divinamente inspirada / proveitosa para ensinar / perfeitamente preparado para toda boa obra", usos: ["lv8-cp5","lv8-cp6"] },
+  "2 Tm 4.3": { tags: "não suportarão a sã doutrina / desejo de ouvir coisas agradáveis / ajuntarão para si mestres / segundo os seus próprios desejos", mapa: "ajuntarão para si mestres", usos: ["4T2026-licao6"] },
+  "2 Tm 4.9,10": { tags: "procura vir ter comigo breve / Demas me abandonou / tendo amado o mundo presente", usos: ["4T2026-licao6"] },
+  "2 Tm 4.14-17": { tags: "Alexandre, o latoeiro, me fez muito mal / guarda-te dele / todos me desampararam / o Senhor esteve ao meu lado e me fortaleceu", usos: ["4T2026-licao6"] },
   "Tt 1.2": { tags: "esperança da vida eterna / Deus, que não pode mentir / prometeu antes dos tempos eternos", usos: ["lv8-cp2"] },
+  "Tt 1.10,11": { tags: "muitos insubordinados, faladores vãos e enganadores / especialmente os da circuncisão / é preciso tapar a boca / transtornam casas inteiras / por torpe ganância", mapa: "transtornam casas inteiras", usos: ["4T2026-licao6"] },
+  "Tt 1.11": { tags: "é preciso tapar a boca / transtornam casas inteiras / ensinando o que não convém / por torpe ganância", usos: ["4T2026-licao6"] },
   "Tt 2.11": { tags: "a graça de Deus se manifestou / trazendo salvação a todos os homens", usos: ["lv7-cp5"] },
   "Tt 2.11-12": { tags: "a graça de Deus se manifestou / salvação a todos os homens / renunciando à impiedade / vivamos sóbria, justa e piamente", usos: ["lv7-cp6"] },
   "Tt 2.14": { tags: "deu a si mesmo por nós / remir de toda iniquidade / povo todo seu / zeloso de boas obras", usos: ["lv7-cp4"] },
@@ -448,7 +488,7 @@ window.bancoTagsVersiculos = {
   "Tg 1.27": { tags: "religião pura e imaculada / visitar os órfãos e as viúvas / guardar-se isento da corrupção do mundo", usos: ["lv8-cp3"] },
   "Tg 2.10-11": { tags: "guardar toda a lei / tropeçar em um só ponto / culpado de todos / transgressor da lei", mapa: "culpado de todos", usos: ["lv7-cp2"] },
   "Tg 2.23": { tags: "creu Abraão a Deus / imputado como justiça / foi chamado amigo de Deus", usos: ["lv8-cp5"] },
-  "Tg 3.1": { tags: "não sejais muitos mestres / juízo mais severo", usos: ["lv7-cp2"] },
+  "Tg 3.1": { tags: "não sejais muitos mestres / juízo mais severo", usos: ["lv7-cp2","4T2026-licao6"] },
   "Tg 3.2": { tags: "todos tropeçamos em muitas coisas / não tropeça em palavra / homem perfeito / refrear todo o corpo", usos: ["lv7-cp6"] },
   "Tg 4.1-2": { tags: "guerras e contendas / deleites / cobiçais e invejais / nada tendes porque não pedis", mapa: "guerras e contendas", usos: ["lv7-cp3","lv8-cp3"] },
   "Tg 4.8": { tags: "chegai-vos para Deus / e ele se chegará para vós / purificai os corações", mapa: "chegai-vos para Deus", usos: ["lv8-cp6"] },
@@ -464,6 +504,7 @@ window.bancoTagsVersiculos = {
   "1 Pe 3.18": { tags: "Cristo morreu uma só vez pelos pecados / o justo pelos injustos / para levar-nos a Deus", usos: ["lv8-cp2"] },
   "1 Pe 3.20": { tags: "a longanimidade de Deus esperava / nos dias de Noé / enquanto se preparava a arca / oito almas se salvaram", usos: ["lv8-cp3"] },
   "1 Pe 5.7": { tags: "lançando sobre ele toda a vossa ansiedade / ele tem cuidado de vós", mapa: "ele tem cuidado de vós", usos: ["lv8-cp5"] },
+  "2 Pe 2.17": { tags: "fontes sem água / névoas levadas por uma tempestade / o negrume das trevas", usos: ["4T2026-licao6"] },
   "2 Pe 3.8": { tags: "um dia para o Senhor é como mil anos / e mil anos como um dia", mapa: "um dia como mil anos", usos: ["lv8-cp3"] },
   "2 Pe 3.9": { tags: "o Senhor não retarda a sua promessa / é longânimo / não querendo que ninguém se perca / todos venham a arrepender-se", mapa: "não retarda a sua promessa", usos: ["lv8-cp3"] },
   "2 Pe 3.18": { tags: "crescei na graça e no conhecimento / nosso Senhor e Salvador Jesus Cristo / a ele a glória", mapa: "crescei no conhecimento", usos: ["lv7-cp6","lv8-cp1"] },
@@ -481,6 +522,7 @@ window.bancoTagsVersiculos = {
   "1 Jo 4.19": { tags: "nós amamos / porque ele nos amou primeiro", usos: ["lv8-cp5"] },
   "1 Jo 5.11-12": { tags: "Deus nos deu a vida eterna / esta vida está em seu Filho / quem tem o Filho tem a vida", usos: ["lv7-cp1","lv8-cp3"] },
   "1 Jo 5.20": { tags: "já veio o Filho de Deus / nos deu entendimento para conhecermos aquele que é verdadeiro", usos: ["lv8-cp1"] },
+  "2 Jo 1.10": { tags: "se alguém vem ter convosco e não traz este ensino / não o recebais em casa / nem tampouco o saudeis", usos: ["4T2026-licao6"] },
   "Ap 1.8": { tags: "eu sou o Alfa e o Ômega / aquele que é, que era e que há de vir / o Todo-Poderoso", mapa: "o Alfa e o Ômega", usos: ["lv8-cp3"] },
   "Ap 1.18": { tags: "fui morto / estou vivo pelos séculos / chaves da morte e do hades", usos: ["lv7-cp1"] },
   "Ap 4.11": { tags: "digno és, Senhor / tu criaste todas as coisas / por tua vontade existiram e foram criadas", usos: ["lv8-cp1"] },
@@ -488,5 +530,6 @@ window.bancoTagsVersiculos = {
   "Ap 12.9": { tags: "grande dragão / antiga serpente / Diabo e Satanás / engana todo o mundo / precipitado na terra", usos: ["lv7-cp2"] },
   "Ap 20.14": { tags: "morte e hades / lago de fogo / segunda morte", usos: ["lv7-cp1"] },
   "Ap 21.1-5": { tags: "novo céu e nova terra / o tabernáculo de Deus com os homens / enxugará toda lágrima / faço novas todas as coisas", usos: ["lv8-cp3"] },
-  "Ap 21.3-4": { tags: "tabernáculo de Deus com os homens / Deus mesmo estará com eles / enxugará toda lágrima / não haverá mais morte, pranto nem dor", usos: ["lv7-cp6"] }
+  "Ap 21.3-4": { tags: "tabernáculo de Deus com os homens / Deus mesmo estará com eles / enxugará toda lágrima / não haverá mais morte, pranto nem dor", usos: ["lv7-cp6"] },
+  "Ap 22.15": { tags: "ficarão de fora os cães / os feiticeiros, os adúlteros, os homicidas, os idólatras / todo o que ama e pratica a mentira", mapa: "ficarão de fora os cães", usos: ["4T2026-licao6"] }
 };
