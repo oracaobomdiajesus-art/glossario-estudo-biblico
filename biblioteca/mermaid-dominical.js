@@ -296,3 +296,28 @@ mindmap
       III.3 · Tt 1.10,11
         transtornam casas inteiras
 `;
+
+// ── 4º Trimestre 2026 · Lição 7 (modo só Bíblia: 1 versículo por ramo,
+//    2 níveis — referência e, logo abaixo, palavras do próprio versículo) ──
+window.bibliotecaMermaid["4T2026-licao7"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+mindmap
+  root((Lição 7 · 15 nov 2026))
+    Texto Principal · Fp 3.14
+      prossigo para o alvo
+    Seção I
+      I.1 · Fp 3.10,11
+        o poder da sua ressurreição
+      I.2 · Is 40.31
+        asas como águias
+      I.3 · Os 6.3
+        prossigamos em conhecer
+    Seção II · Sl 27.4
+      uma coisa pedi
+    Seção III
+      III.1 · Ef 4.1
+        andeis como é digno
+      III.2 · Fp 3.20
+        pátria nos céus
+      III.3 · Fp 3.21
+        transformará o corpo
+`;
