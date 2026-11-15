@@ -384,3 +384,23 @@ mindmap
       II.3 · Hb 11.4
         mais excelente sacrifício
 `;
+
+window.bibliotecaMermaid["4T2026-licao13"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+mindmap
+  root((Lição 13 · 27 dez 2026))
+    Texto Principal · Fp 4.23
+      a graça do Senhor Jesus Cristo
+    Seção I
+      I.1 · Fm 1.18
+        lança-o minha conta
+      I.2 · Jo 15.15
+        chamei-vos amigos
+    Seção II
+      II.2 · Fp 4.22
+        os da casa de César
+    Seção III
+      III.2 · Rm 3.24
+        justificados gratuitamente
+      III.3 · 2 Co 12.9
+        a minha graça te basta
+`;
