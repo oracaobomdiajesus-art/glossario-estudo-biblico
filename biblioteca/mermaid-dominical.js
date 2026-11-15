@@ -404,3 +404,28 @@ mindmap
       III.3 · 2 Co 12.9
         a minha graça te basta
 `;
+
+window.bibliotecaMermaid["4T2026-licao9"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+mindmap
+  root((Lição 9 · 29 nov 2026))
+    Texto Principal · Fp 4.7
+      guardará os vossos corações
+    Seção I
+      I.1 · Pv 13.12
+        a esperança adiada entristece o coração
+      I.3 · Fp 4.5
+        perto está o Senhor
+    Seção II
+      II.1 · Mt 6.9-13
+        Pai nosso, que estás nos céus
+      II.2 · Mt 7.7
+        pedi e dar-se-vos-á
+      II.3 · 1 Ts 5.18
+        em tudo dai graças
+    Seção III · Gl 5.22
+      o fruto do Espírito é o amor, o gozo, a paz
+      III.2 · Jo 14.27
+        a minha paz vos dou
+      III.3 · Ef 2.14
+        ele é a nossa paz
+`;
