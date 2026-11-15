@@ -321,3 +321,66 @@ mindmap
       III.3 · Fp 3.21
         transformará o corpo
 `;
+
+window.bibliotecaMermaid["4T2026-licao8"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+mindmap
+  root((Lição 8 · 22 nov 2026))
+    Texto Principal · Fp 4.4
+      regozijai-vos sempre
+    Seção II
+      II.1 · 1 Co 1.10
+        unidos no mesmo pensamento
+      II.2 · Gn 4.9
+        guarda do meu irmão
+      II.3 · Mt 24.13
+        perseverar até o fim
+    Seção III · Fp 3.1
+      regozijai-vos no Senhor
+      III.1 · Lc 10.20
+        nomes escritos nos céus
+      III.2 · Mt 11.29
+        manso e humilde
+      III.3 · Sl 145.18
+        perto está o Senhor
+`;
+
+window.bibliotecaMermaid["4T2026-licao10"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+mindmap
+  root((Lição 10 · 6 dez 2026))
+    Texto Principal · Fp 4.8
+      nisso pensai
+    Seção I
+      I.2 · Fp 3.8
+        tenho como perda todas as coisas
+      I.3 · Rm 1.14-16
+        não me envergonho do evangelho
+    Seção II
+      II.2 · Mt 5.16
+        vossa luz diante dos homens
+      II.3 · Fp 3.20
+        pátria nos céus
+    Seção III
+      III.1 · Fp 4.9
+        isso praticai
+      III.2 · Ef 2.10
+        criados para boas obras
+`;
+
+window.bibliotecaMermaid["4T2026-licao12"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+mindmap
+  root((Lição 12 · 20 dez 2026))
+    Texto Principal · Fp 4.19
+      suprirá as necessidades
+    Seção I
+      I.1 · Rm 12.13
+        acudi aos santos
+      I.2 · Tg 2.15-17
+        fé sem obras é morta
+      I.3 · Pv 27.21
+        provado pelos louvores
+    Seção II
+      II.1 · Mt 10.8
+        de graça dai
+      II.3 · Hb 11.4
+        mais excelente sacrifício
+`;
