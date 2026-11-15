@@ -429,3 +429,21 @@ mindmap
       III.3 · Ef 2.14
         ele é a nossa paz
 `;
+
+window.bibliotecaMermaid["4T2026-licao11"] = `%%{init: {"mindmap": {"useMaxWidth": false}}}%%
+mindmap
+  root((Lição 11 · 13 dez 2026))
+    Texto Principal · Fp 4.13
+      posso todas as coisas
+    Seção I
+      I.1 · Sl 119.63
+        companheiro sou de todos
+    Seção II
+      II.2 · Sl 103.2
+        nenhum dos seus benefícios
+      II.3 · Fp 4.12,13
+        sei passar falta
+    Seção III
+      III.3 · Rm 11.36
+        dele, por ele e para ele
+`;
