@@ -362,8 +362,8 @@
 <script src="biblioteca/titulos-biblicos.js"></script>
 <script src="biblioteca/motor-contextos.js"></script>
 <script src="biblioteca/legendas-emogis.js"></script>
-<script src="biblioteca/perguntas-teologia.js?v=20261023m"></script>
-<script src="biblioteca/mermaid-teologia.js?v=20261023m"></script>
+<script src="biblioteca/perguntas-teologia.js?v=20261116a"></script>
+<script src="biblioteca/mermaid-teologia.js?v=20261116a"></script>
 
 <script>
 // ============================================
@@ -1556,6 +1556,11 @@ async function renderizarConteudo(dados) {
   const refsVistas = new Set();
   const idsParaRenderizar = [];
   const referenciaPorId = new Map(listaRef.filter(i => i.id).map(i => [i.id, i.referencia]));
+  // Repetições da mesma referência (ids com sufixo b, c, d…) não ganham card
+  // próprio; guardamos para qual card cada uma deve apontar, para que os links
+  // da hierarquia, da lista alfabética e das perguntas continuem funcionando.
+  const idCardPorRef = new Map();
+  const idsApelido = [];
   listaRef.forEach(item => {
     if (!item.id || idsVistos.has(item.id)) return;
     idsVistos.add(item.id);
@@ -1564,8 +1569,9 @@ async function renderizarConteudo(dados) {
     // a referência aparece no capítulo.
     const refNorm = (item.referencia || '').trim().toLowerCase();
     if (refNorm) {
-      if (refsVistas.has(refNorm)) return;
+      if (refsVistas.has(refNorm)) { idsApelido.push([item.id, idCardPorRef.get(refNorm)]); return; }
       refsVistas.add(refNorm);
+      idCardPorRef.set(refNorm, item.id);
     }
     idsParaRenderizar.push(item.id);
   });
@@ -1692,6 +1698,16 @@ async function renderizarConteudo(dados) {
         </div>`;
     }
     containerCtx.appendChild(card);
+  });
+
+  // Âncoras das repetições: um marcador invisível dentro do card da mesma
+  // referência, com o id que os links esperam (ex.: mt28.19b-contexto).
+  idsApelido.forEach(([idApelido, idCard]) => {
+    const card = document.getElementById(`${idCard}-contexto`);
+    if (!card || document.getElementById(`${idApelido}-contexto`)) return;
+    const ancora = document.createElement('span');
+    ancora.id = `${idApelido}-contexto`;
+    card.prepend(ancora);
   });
 
   const refsUnicas = [...new Map(listaRef.filter(i => i.id && idsParaRenderizar.includes(i.id)).map(r => [r.id, r])).values()];
